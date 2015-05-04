@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Modify queue entry: {{ event.name }}</h2>
+  <form action="{{ url_for('modifyQueueHandler', eventID=event.eventID) }}" method=post>
+    <b>{{ booking.primaryDetails.name }}</b><br />
+    Diet option: <select name="primaryDiet">
+      {% for dietOption in event.dietaryOptions %}
+        <option value="{{ dietOption }}"
+          {%- if booking.primaryDetails.diet == dietOption -%}
+            selected
+          {%- endif -%}
+        >{{ dietOption }}</option>
+      {% endfor %}
+    </select>
+    <br />
+    Other requirements: <input type="text" name="primaryOther" value="{{ booking.primaryDetails.other }}">
+    <br />
+    <br />
+    {% for guestDetails in booking.guestDetails %}
+      Guest name: <input type="text" name="guest{{ guestDetails.detailsID }}Name" value="{{ guestDetails.name }}">
+
+      <br />
+      Diet option: <select name="guest{{ guestDetails.detailsID }}Diet">
+        {% for dietOption in event.dietaryOptions %}
+          <option value="{{ dietOption }}"
+            {%- if guestDetails.diet == dietOption -%}
+              selected
+            {%- endif -%}
+          >{{ dietOption }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      Other requirements: <input type="text" name="guest{{ guestDetails.detailsID }}Other" value="{{ guestDetails.other }}">
+    <br />
+    <a href="{{ url_for('removeGuestFromQueueHandler', eventID=event.eventID, bookingID=booking.bookingID, detailsID=guestDetails.detailsID) }}">Remove guest</a>
+    <br />
+    <br />
+    {% endfor %}
+
+    {# TODO - or maybe omit entirely?
+    {% if (booking.numTickets < (event.maxGuests + 1)) %}
+      <a href="{{ url_for('addAnotherGuestToQueue', eventID=event.eventID, bookingID=booking.bookingID) }}">Add another guest to queue</a>
+      <br />
+      <br />
+    {% endif %}
+    #}
+
+    <input type="submit" name="action" value="Apply">
+
+    <input type="reset" value="Reset values">
+    <input type="submit" name="action" value="Cancel">
+  </form>
+{% endblock %}

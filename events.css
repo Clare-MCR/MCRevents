@@ -1,0 +1,290 @@
+/* Style Sheet for Clare MCR Events Booker */
+/* Author: Mark Schenk (m652) */
+/* 2010- */
+
+@font-face {
+	font-family: "Veteran Typewriter"; /* http://www.dafont.com/veteran-typewriter.font */
+	src: url("veteran typewriter.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Underwood 1913"; /* http://www.dafont.com/underwood1913.font */
+	src: url("underwood 1913.ttf") format("truetype");
+}
+
+
+html { 
+	height: 100%;
+	padding: 0;
+	background-color:white;	
+     }
+
+body {
+	padding-left: 15%; padding-right: 10%; padding-top: 20px;
+	margin: 0;
+	
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 13px;
+	color: rgb(46,46,46);
+	line-height: 1.3;
+  
+  	background-image: url("clare_crest_small.png"); 
+	background-repeat: no-repeat; 
+	background-position: 3% 20px; 
+	background-color: white;
+
+	position: relative; /* provides reference for positioning */
+	
+	max-width: 50em;
+ }
+
+div#mainheader h1 {
+	font-family: "Arial", sans-serif;
+	font-size: 2em;
+	margin: 0;
+	line-height: 0.8em;
+	background-color: black;
+	color: #132D6C!important;
+	padding: 0.5em 0.2em 0.3em 0.3em;
+	border-bottom-style: none;
+}
+
+div#user_welcome {
+	font-weight: bold;
+	margin-bottom: 2em;
+	background-color: #f0aa00;
+	background-color: #F7B900;
+	line-height: 1.8em;
+	padding-left: 0.6em
+}
+
+div#user_welcome a, div#user_welcome a:visited {
+	float: right;
+	padding: 0em 0.6em;
+	border-left: 3px black solid;
+	color: inherit;
+	text-decoration: none;
+}
+
+div#user_welcome a:hover {
+	color: #820000;
+	background-color: #FAD200;
+	text-decoration: underline;
+}
+
+h1 {
+/*	font-family: "Underwood 1913","Veteran Typewriter", sans-serif;	*/
+	font-size: 1.8em; 
+	color: #820000;
+	border-bottom: 2px solid #820000;
+	padding-bottom: 0.2em;
+}
+
+h2 { 
+	font-size: 1.3em; 
+	margin-top: 1.0em; 
+	margin-bottom: 0em;
+}
+
+h3 {
+	font-size: 1.1em;
+}
+
+h3.event_name, h3.app_book_number {
+	margin-top: 1.5em;
+	background-color: #DBE5ED;
+	margin-bottom: 0.2em;
+	padding: 0em 5px;
+	line-height: 1.7em;
+	text-transform: capitalize;
+	border-bottom: 1px #38709D solid;
+}
+
+h3.event_name span.date {
+	float:right;
+	color: gray;
+	border-left: 1px #38709D solid;
+	padding: 0em 1em;
+}
+
+a:link, a:visited, a:hover { color: navy; }
+a:hover { text-decoration: underline; }
+
+hr { 
+	color: gray; 
+	border-style: solid; 
+	border-bottom-style: inset;
+}
+
+form { border: none; margin: 0; padding: 0}
+
+div#test_warning {
+	padding: 0em 1em;
+	color: red;
+	border: 2px red solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: none;
+}
+
+div.footer {
+	color: gray;
+	font-size: 0.6em;
+	border-top: 1px gray solid;
+	margin-top: 4em;
+}
+
+div#adminview {
+	padding-bottom: 1em;
+	border-bottom: 2px gray solid;
+}
+
+dt { line-height: 1.3em; }
+dd { padding: 0.2em 0em; }
+
+
+/* Event Tables */
+
+table.event_table, table.edit_booking, table.book_event {
+	width: 100%;
+	text-align: left;
+	margin: 0em;
+}
+
+table th {
+	text-align: left;
+	font-weight: bold;
+}
+
+table.book_event td {
+	vertical-align: top;
+	border-bottom: 1px gray solid;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+table.event_table td.event_full {
+	font-weight: bold;
+	color: #820000;
+	text-align: center;
+}
+
+table.booking_controls {
+	/* FF doesn't collapse margins through a form element, so remove this to avoid double margins */
+	/* margin-bottom: 1.5em; */
+	
+}
+
+/* Account Management */
+table.account_management td {
+	vertical-align: top;
+}
+table.account_management input[type="text"] { width: 100%; }
+
+
+/* Guest List Styling */
+
+ol.guest_list {
+	padding-left: 0; 
+	list-style-position: inside; 
+}
+
+ol.guest_list li {
+	padding: 0.2em 1em;
+}
+
+ol.guest_list li:nth-child(odd), table.guest_list tr:nth-child(even) td, table.billing_list tr:nth-child(even) td {
+	background-color: #EDF2F6;
+}
+
+table.guest_list, table.billing_list {
+	border-collapse: collapse;
+}
+
+div.admin_groupevents {
+	margin: 2em 0em;
+}
+
+div.admin_groupevents p + h3.event_name { margin-top: 0; }
+
+
+/* Notices/Warnings/etc. get post-it styling */
+
+.note {
+	background-color: #FFFF99;
+	background-color: rgba(255,255,153,0.6);
+	border: 1px black solid;
+	margin: 1em 2em;
+	padding: 0.5em;
+	-moz-box-shadow: 4px 4px 2px #888;
+	-webkit-box-shadow: 4px 4px 2px #888;
+	box-shadow: 4px 4px 2px #888;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.error {
+	background-color: #EFEFEF;
+	padding: 1em;
+	margin: 1em auto;
+	border: 2px red solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* Styling of buttons */
+
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #696 #363 #363 #696;
+	border-color: #38709d;
+	background-color: #EFEFEF;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	color: #38709d;
+	background-color: #c4def3;
+}
+
+input[type="submit"]:active {
+	border-style: solid;
+	border-color: #38709d;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	color: #38709d;
+	background-color: #a4c9ea;
+}
+
+input[type="submit"][name^="cancel"], input[type="submit"][name^="close"],input[type="submit"][name^="remove"] { color: #820000; border-color: #820000; }
+
+
+/* make it readable on small screens */
+@media (max-width:450px) {
+
+	body { padding: 1% 1% 0 1%; background-image: none; }
+
+	div#mainheader h1 {font-size: 1.2em; }
+	div#user_welcome a, div#user_welcome a:visited { float:none; }
+
+	table.booking_controls td { display: block; }
+	table.booking_controls { clear: both; }
+
+	.event_table td, .event_table th { display:block; border-bottom: 1px grey solid; height:1.2em; }
+	.event_table tr { float:left; margin-right: 1em; }
+
+	h3.event_name, div.admin_groupevents { clear: both; margin-top:2em; }
+	h3.event_name span.date { float:none; position: static; display: block; padding-left: 0;  border-left: none;  }
+
+	div#admin_tasks input { display:block; }
+
+	hr {clear:both;}
+	
+	.note { margin: 1em 0.5em; }
+}

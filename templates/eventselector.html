@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Events</h2>
+  {% if session.user.isAdmin and moreEntriesToShow %}
+    {% if showAllEntries %}
+      <p><a href="{{ url_for('eventselector', showAllEntries=0) }}">Show fewer</a></p>
+    {% else %}
+      <p><a href="{{ url_for('eventselector', showAllEntries=1) }}">Show all</a></p>
+    {% endif %}
+    <br />
+  {% endif %}
+
+  {% for event in events %}
+  <p> {{ event.eventDate }}
+    <a href="{{ url_for('eventDetails', eventID=event.eventID) }}">{{ event.name|safe }}</a>:
+    {{ event.allocatedTickets }}/{{ event.totalTickets }}
+    {% if event.showQueue %}
+      ({{ event.numQueued }} queued)
+    {% endif %}
+
+    {% if event.isOpen() %}
+      {% if not event.hasUserBooked and not event.isUserInQueue %}
+        {% if event.allocatedTickets < event.totalTickets %}
+          <a href="{{ url_for('bookEvent', eventID=event.eventID, isAdminBooking=False) }}">Book</a>
+        {% else %}
+          <a href="{{ url_for('joinQueueForEvent', eventID=event.eventID) }}">Join queue</a>
+        {% endif %}
+      {% endif %}
+
+      {% if event.hasUserBooked %}
+        <a href="{{ url_for('modifyBooking', eventID=event.eventID, isAdminBooking=False) }}">Modify</a>
+        <a href="{{ url_for('unbookEventHandler', eventID=event.eventID, isAdminBooking=False) }}">Unbook</a>
+      {% endif %}
+
+      {% if event.isUserInQueue %}
+        <a href="{{ url_for('modifyQueue', eventID=event.eventID) }}">Modify request</a>
+        <a href="{{ url_for('leaveQueueForEventHandler', eventID=event.eventID) }}">Leave queue</a>
+      {% endif %}
+    {% endif %}
+
+    {% if session.user.isAdmin -%}
+      <br />
+      <span style="padding-bottom:20px; padding-left:50px;">
+      {% if event.hasUserBookedAdmin -%}
+        <a href="{{ url_for('modifyBooking', eventID=event.eventID, isAdminBooking=True) }}">Modify admin booking</a>
+        <a href="{{ url_for('unbookEventHandler', eventID=event.eventID, isAdminBooking=True) }}">Unbook admin</a>
+      {% else %}
+        <a href="{{ url_for('bookEvent', eventID=event.eventID, isAdminBooking=True) }}">Admin booking</a>
+      {% endif %} 
+      <a href="{{ url_for('deleteEventHandler', eventID=event.eventID) }}">Delete</a></span>
+    {%- endif %}
+  </p>
+  {% endfor %}
+
+  {% if session.user.isAdmin %}
+    <br />
+    <p><a href="{{ url_for('createEvent') }}">Create event</a></p>
+  {% endif %}
+{% endblock %}

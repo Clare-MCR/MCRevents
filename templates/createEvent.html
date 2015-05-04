@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Create Event</h2>
+  <form action="{{ url_for('createEventHandler') }}" method=post>
+    <dl>
+      {% import 'formfields.html' as formfields %}
+      <dt>Event name:
+        <dd><input type="text" name="name">
+      <dt>Total tickets:
+        <dd><input type="number" name="totalTickets" min="1" size="5" value="{{ defaults.totalTickets }}">
+      <dt>Max guests per person:
+        <dd><input type="number" name="maxGuests" min="0" size="5" value="{{ defaults.maxGuests }}">
+      <dt>Open to MCR members:
+        {# TODO set default from database! #}
+        <dd><input type="checkbox" name="openTo" value="MCRMembers" checked>
+      <dt>Open to associate members:
+        {# TODO set default from database! #}
+        <dd><input type="checkbox" name="openTo" value="AssociateMembers">
+      <dt>Open to CRAs:
+        {# TODO set default from database! #}
+        <dd><input type="checkbox" name="openTo" value="CRAs">
+      <dt>Open to non-Clare associate members:
+        {# TODO set default from database! #}
+        <dd><input type="checkbox" name="openTo" value="NonClareAssociateMembers">
+      <dt>Price for standard ticket:
+        <dd>£<input type="text" name="costPrimary" value="{{ '%.2f' % defaults.costPrimary }}">
+      <dt>Price for guest ticket:
+        <dd>£<input type="text" name="costGuest" value="{{ '%.2f' % defaults.costGuest }}">
+      <dt>Event Date:
+        <dd>{{ formfields.datetime('event', months, today) }}
+      <dt>Event booking open:
+        <dd>{{ formfields.datetime('bookingOpen', months, today) }}
+      <dt>Event booking close:
+        <dd>{{ formfields.datetime('bookingClose', months, today) }}
+      <br />
+      <br />
+      <dt><input type="submit" value="Create">
+    </dl>
+  </form>
+{% endblock %}

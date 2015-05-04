@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>{{ event.name|safe }}</h2>
+  {% for booking in bookings %}
+    <p>
+    {% if booking.isAdminBooking %}
+      (ADMIN - {{ booking.userID }})
+    {% endif %}
+    
+    {{ booking.primaryDetails.name }}<br />
+    {% for guest in booking.guestDetails %}
+      {{ guest.name }}<br />
+    {% endfor %}
+    </p>
+  {% endfor %}
+
+  {% if showQueue %}
+    <h3>Queue:</h3>
+    {% for booking in queued %}
+      <p>
+      {% if booking.isAdminBooking %}
+      (ADMIN - {{ booking.userID }})
+      {% endif %}
+      
+      {{ booking.primaryDetails.name }}<br />
+      {% for guest in booking.guestDetails %}
+        {{ guest.name }}<br />
+      {% endfor %}
+      </p>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

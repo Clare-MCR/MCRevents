@@ -1,0 +1,18 @@
+DirectoryIndex mealbooker.py
+IndexIgnore *
+
+<Files ravenlogin.py>
+  AuthType Ucam-WebAuth
+  Require valid-user
+</Files>
+
+<Files admin.php>
+  AuthType Ucam-WebAuth
+  Require valid-user
+</Files>
+
+<Files index.php>
+  AuthType Ucam-WebAuth
+  Require valid-user
+</Files>
+

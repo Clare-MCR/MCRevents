@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Book: {{ event.name }}</h2>
+  {% if isAdminBooking %}<i><b>Admin booking!</b></i>{% endif %}
+  <form action="{{ url_for('bookEventHandler', eventID=event.eventID, isAdminBooking=isAdminBooking) }}" method=post>
+    Number of tickets:
+    <select name="numTickets">
+      {% if isAdminBooking %}
+        {% for i in range(1, 31) %}
+          <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+      {% else %}
+        {% for i in range(1, event.maxGuests+2) %}
+          <option value="{{ i }}">{{ i }} -- £{{ event.costPrimary + (i-1) * event.costGuest }}</option>
+        {% endfor %}
+      {% endif %}
+    </select> 
+    <br />
+    <input type="submit" value="Book">
+  </form>
+{% endblock %}

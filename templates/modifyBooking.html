@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Modify booking: {{ event.name }}</h2>
+  <form action="{{ url_for('modifyBookingHandler', eventID=event.eventID, isAdminBooking=isAdminBooking) }}" method=post>
+    <b>{{ booking.primaryDetails.name }}</b><br />
+    Diet option: <select name="primaryDiet">
+      {% for dietOption in event.dietaryOptions %}
+        <option value="{{ dietOption }}"
+          {%- if booking.primaryDetails.diet == dietOption -%}
+            selected
+          {%- endif -%}
+        >{{ dietOption }}</option>
+      {% endfor %}
+    </select>
+    <br />
+    Other information / requirements: <input type="text" name="primaryOther" value="{{ booking.primaryDetails.other }}">
+    <br />
+    <br />
+    {% for guestDetails in booking.guestDetails %}
+      Guest name: <input type="text" name="guest{{ guestDetails.detailsID }}Name" value="{{ guestDetails.name }}">
+
+      <br />
+      Diet option: <select name="guest{{ guestDetails.detailsID }}Diet">
+        {% for dietOption in event.dietaryOptions %}
+          <option value="{{ dietOption }}"
+            {%- if guestDetails.diet == dietOption -%}
+              selected
+            {%- endif -%}
+          >{{ dietOption }}</option>
+        {% endfor %}
+      </select>
+      <br />
+      Other information / requirements: <input type="text" name="guest{{ guestDetails.detailsID }}Other" value="{{ guestDetails.other }}">
+    <br />
+    <a href="{{ url_for('unbookGuestHandler', eventID=event.eventID, bookingID=booking.bookingID, detailsID=guestDetails.detailsID, isAdminBooking=isAdminBooking) }}">Unbook guest</a>
+    <br />
+    <br />
+    {% endfor %}
+
+    {% if (event.allocatedTickets < event.totalTickets) and (isAdminBooking or ((not event.blockExtraGuests) and (booking.numTickets < (event.maxGuests + 1)))) %}
+    <a href="{{ url_for('bookAnotherGuest', eventID=event.eventID, bookingID=booking.bookingID, isAdminBooking=isAdminBooking) }}">Book another guest (£
+      {%- if isAdminBooking -%}
+        {{ event.costPrimary }}
+      {%- else -%}
+        {{ event.costGuest }}
+      {%- endif -%}
+      )</a>
+      <br />
+      <br />
+    {% endif %}
+
+    <input type="submit" name="action" value="Apply">
+    <input type="reset" value="Reset values">
+    <input type="submit" name="action" value="Cancel">
+  </form>
+{% endblock %}

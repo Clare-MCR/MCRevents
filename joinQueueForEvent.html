@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Join queue: {{ event.name }}</h2>
+  <form action="{{ url_for('joinQueueForEventHandler', eventID=event.eventID) }}" method=post>
+    Number of tickets desired:
+    <select name="numTickets">
+      {% for i in range(1, event.maxGuests+2) %}
+        <option value="{{ i }}">{{ i }} -- £{{ event.costPrimary + (i-1) * event.costGuest }}</option>
+      {% endfor %}
+    </select> 
+    <br />
+    <input type="submit" value="Join queue">
+  </form>
+{% endblock %}

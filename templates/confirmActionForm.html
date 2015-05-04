@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>{{ confirmText }}</h2>
+  <form action="{{ url_for('confirmActionHandler') }}" method=post>
+    <input type="submit" name="action" value="Cancel">
+    <input type="submit" name="action" value="Proceed">
+  </form>
+{% endblock %}

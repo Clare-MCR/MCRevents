@@ -1,0 +1,21 @@
+/* Work around a floating error; floats are pushed down a line */
+h3.event_name span.date {
+    margin-top: -1.7em;
+}
+div#user_welcome a {
+    margin-top: -1.8em;
+    color: rgb(46,46,46);
+}
+
+/* Work around some weird painting bug, where background is drawn too wide */
+h1, #user_welcome, h3.event_name,div.footer, #adminview, .error, .note { width: 100%; padding-right: 0; }
+
+/* IE doesn't do proper cascading of colours when using rgba */
+.note { background-color: rgb(255,255,153);}
+
+/* Some list issues; move list marker outside */
+ol.guest_list {
+	padding-left: 0; 
+	list-style-position: outside; 
+}
+
