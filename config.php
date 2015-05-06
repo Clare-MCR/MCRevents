@@ -26,7 +26,7 @@ $logger = &Log::singleton("file", $logfile);
 
 # Make the dbh
 try {
-    $dbh = new PDO("mysql:host=localhost;dbname=$database", $username, $pwd);
+    $dbh = new PDO("mysql:host=localhost;dbname=$database", $user, $pwd);
 } catch(PDOException $e) {
     $logger->log($e->getMessage(), PEAR_LOG_CRIT);
     die();
