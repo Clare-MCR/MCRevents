@@ -19,7 +19,7 @@ require_once('/home/rjg70/mcrpwd.php');
 $database = "claremcr";
 $my_pre = "mcrevents_";
 $host = "localhost";
-$logfile = "/societies/claremcr/events.log";
+$logfile = "/home/rjg70/events.log";
 
 # Create the logger
 $logger = &Log::singleton("file", $logfile);
