@@ -352,6 +352,14 @@ def removeGuestFromQueue(eventID, bookingID, detailsID):
   db.close()
   _notifyUserEventPairs(shouldNotifyList)
 
+def updateQueue(eventID):
+  cur, db = getMySQLCursorAndDb()
+  _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_queue, mcrevents_queue_details, mcrevents_eventslist])
+  shouldNotifyList = _fillEmptySpacesFromQueueWorker(cur, db, eventID)
+  _unlockTables(cur)
+  db.close()
+  _notifyUserEventPairs(shouldNotifyList)
+
 def bookAnotherGuestIfSpace(eventID, bookingID, user, isAdminBooking=False):
   cur, db = getMySQLCursorAndDb()
   _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_eventslist])
