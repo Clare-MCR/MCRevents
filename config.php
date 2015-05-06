@@ -15,7 +15,7 @@ require_once("Log.php");
 
 # Variables which tell the application where to look
 $user = "claremcr";
-require_once('/home/rjg70/mcrpwd.php);
+require_once('/home/rjg70/mcrpwd.php');
 $database = "claremcr";
 $my_pre = "mcrevents_";
 $host = "localhost";
