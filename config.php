@@ -17,7 +17,7 @@ require_once("Log.php");
 $user = "claremcr";
 require_once('/home/rjg70/mcrpwd.php');
 $database = "claremcr";
-$my_pre = "mcrevents_";
+$my_pre = "test_mcrevents_";
 $host = "localhost";
 $logfile = "/home/rjg70/events.log";
 
