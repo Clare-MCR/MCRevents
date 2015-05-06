@@ -10,6 +10,9 @@
     Hello, {{ session.user.displayName() }}
     <a href="{{ url_for('eventselector') }}">Event Selector</a>
     <a href="{{ url_for('logout') }}">Log out</a>
+    {% if session.user.isAdmin -%}
+      <a href="{{ url_for('static', filename='admin.php') }}">Admin</a>
+    {% endif %}
   {% endif %}
   </div>
 
