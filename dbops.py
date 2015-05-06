@@ -1,6 +1,6 @@
 # Global variables for table names
-#_dbPrefix = 'test_'
-_dbPrefix = ''
+_dbPrefix = 'test_'
+#_dbPrefix = ''
 
 mcrevents_booking = _dbPrefix+'mcrevents_booking'
 mcrevents_booking_details = _dbPrefix+'mcrevents_booking_details'
@@ -13,10 +13,10 @@ mcrevents_queue_details = _dbPrefix+'mcrevents_queue_details'
 def _getMySQLPassword():
   password = None
   # TODO this will probably need to be changed
-  passwordFilename = '/societies/claremcr/mcrpwd.php'
+  #passwordFilename = '/societies/claremcr/mcrpwd.php'
   #passwordFilename = '/home/tpsg2/mcrpwd.php'
   #passwordFilename = '/home/aph36/mcrpwd.php'
-  #passwordFilename = '/home/rjg70/mcrpwd.php'
+  passwordFilename = '/home/rjg70/mcrpwd.php'
   f = open(passwordFilename)
   for line in f:
     if line.startswith('$pwd'):
