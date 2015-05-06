@@ -498,6 +498,15 @@ def deleteEventHandler(eventID):
   flask.flash('Event deleted!')
   return flask.redirect(flask.url_for('eventselector'))
 
+@app.route('/updateHandler/<int:eventID>')
+@requireAdmin
+@confirmAction('Update Queue?')
+def updateHandler(eventID):
+  from dbops import updateQueue
+  updateQueue(eventID)
+  flask.flash('Event updated!')
+  return flask.redirect(flask.url_for('eventselector'))
+
 @app.route('/login')
 @displayErrors
 def login():
