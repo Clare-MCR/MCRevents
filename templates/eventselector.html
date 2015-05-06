@@ -46,6 +46,7 @@
         <a href="{{ url_for('unbookEventHandler', eventID=event.eventID, isAdminBooking=True) }}">Unbook admin</a>
       {% else %}
         <a href="{{ url_for('bookEvent', eventID=event.eventID, isAdminBooking=True) }}">Admin booking</a>
+        <a href="{{ url_for('updateHandler', eventID=event.eventID, isAdminBooking=True) }}">Update booking</a>
       {% endif %} 
       <a href="{{ url_for('deleteEventHandler', eventID=event.eventID) }}">Delete</a></span>
     {%- endif %}
