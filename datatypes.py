@@ -19,8 +19,6 @@ class User(object):
       return True
     if event.openToCRAs and self.isCRA:
       return True
-    if event.openToNonClareAssociateMembers and self.isCollegeBill:
-      return True
     return False
 
   def __repr__(self):
@@ -52,7 +50,6 @@ class Event(object):
     self.openToAssociateMembers = openToAssociateMembers
     self.openToMCRMembers = openToMCRMembers
     self.openToCRAs = openToCRAs
-    self.openToNonClareAssociateMembers = openToNonClareAssociateMembers
     self.costPrimary = costPrimary
     self.costGuest = costGuest
     self.eventDate = eventDate
