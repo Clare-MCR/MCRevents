@@ -1919,7 +1919,7 @@ function editEvent($eventid) {
     echo "<dd>&pound; <input type=\"text\" name=\"second_price\" size=\"5\" value=\"" . $def_guest_price . "\" required pattern=\"\d+\.\d\d\" title=\"Enter price in pounds and pence, e.g. 7.50\"></dd>";
     echo "</dl>"; ?>
     <h3>Guest Type</h3>
-    <input type="hidden" name="guest_type[mcr_member]" value="0">";
+    <input type="hidden" name="guest_type[mcr_member]" value="0">
     <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member=1){echo "checked"} ?>>MCR Members
     <input type="hidden" name="guest_type[associate_member]" value="0">
     <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member=1){echo "checked"} ?>>Associate Members
