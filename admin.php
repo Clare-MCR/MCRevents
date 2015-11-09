@@ -1917,19 +1917,20 @@ function editEvent($eventid) {
     echo "<dd>&pound; <input type=\"text\" name=\"standard_price\" size=\"5\" value=\"" . $def_main_price . "\" required pattern=\"\d+\.\d\d\" title=\"Enter price in pounds and pence, e.g. 7.50\"></dd>";
     echo "<dt>Price for first guest ticket</dt>";
     echo "<dd>&pound; <input type=\"text\" name=\"second_price\" size=\"5\" value=\"" . $def_guest_price . "\" required pattern=\"\d+\.\d\d\" title=\"Enter price in pounds and pence, e.g. 7.50\"></dd>";
-    echo "</dl>"; ?>
+    echo "</dl>"; 
+    ?>
     <h3>Guest Type</h3>
     <input type="hidden" name="guest_type[mcr_member]" value="0">
-    <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member=1){echo "checked"} ?>>MCR Members
+    <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member=1){echo "checked";} ?>>MCR Members
     <input type="hidden" name="guest_type[associate_member]" value="0">
-    <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member=1){echo "checked"} ?>>Associate Members
+    <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member=1){echo "checked";} ?>>Associate Members
     <input type="hidden" name="guest_type[cra]" value="0">
-    <input type="checkbox" name="guest_type[cra]" value="1" <?php if($cra=1){echo "checked"} ?>>CRAs
+    <input type="checkbox" name="guest_type[cra]" value="1" <?php if($cra=1){echo "checked";} ?>>CRAs
 
     <hr/>
 
     <table border="0" cellspacing="0">
-    <input type="hidden" name="eventid" value="<?php echo $eventid ?>">
+    <input type="hidden" name="eventid" value="<?php echo $eventid; ?>">
     <tr><td><input type="submit" name="commit_edit_event" value="Edit Event"></td>
     <td><input type="submit" value="Return to Admin"></td>
     </tr></table>
