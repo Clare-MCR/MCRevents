@@ -50,6 +50,7 @@ class Event(object):
     self.openToAssociateMembers = openToAssociateMembers
     self.openToMCRMembers = openToMCRMembers
     self.openToCRAs = openToCRAs
+    self.openToNonClareAssociateMembers = 0
     self.costPrimary = costPrimary
     self.costGuest = costGuest
     self.eventDate = eventDate
