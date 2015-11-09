@@ -1921,11 +1921,11 @@ function editEvent($eventid) {
     ?>
     <h3>Guest Type</h3>
     <input type="hidden" name="guest_type[mcr_member]" value="0">
-    <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member=1){echo "checked";} ?>>MCR Members
+    <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member){echo "checked";} ?>>MCR Members
     <input type="hidden" name="guest_type[associate_member]" value="0">
-    <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member=1){echo "checked";} ?>>Associate Members
+    <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member){echo "checked";} ?>>Associate Members
     <input type="hidden" name="guest_type[cra]" value="0">
-    <input type="checkbox" name="guest_type[cra]" value="1" <?php if($cra=1){echo "checked";} ?>>CRAs
+    <input type="checkbox" name="guest_type[cra]" value="1" <?php if($cra){echo "checked";} ?>>CRAs
 
     <hr/>
 
