@@ -1868,9 +1868,9 @@ function editEvent($eventid) {
 	$event_date= new Datetime($event->getValue('event_date'));
 	$open_date= new Datetime($event->getValue('open_date'));
 	$close_date= new Datetime($event->getValue('close_date'));
-	$mcr_member = $event->getValue('$mcr_member')
-	$cra = $event->getValue('$cra')
-	$associate_member = $event->getValue('$associate_member')
+	$mcr_member = $event->getValue('mcr_member')
+	$cra = $event->getValue('cra')
+	$associate_member = $event->getValue('associate_member')
 
     echo "<h1>Edit Event</h1>\n";
     echo "<h3>Event Details</h3>";
