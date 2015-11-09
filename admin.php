@@ -886,9 +886,9 @@ function newEventForm() {
     echo "<input type=\"hidden\" name=\"guest_type[mcr_member]\" value=\"0\">";
     echo "<input type=\"checkbox\" name=\"guest_type[mcr_member]\" value=\"1\" checked>MCR Members";
     echo "<input type=\"hidden\" name=\"guest_type[associate]\" value=\"0\">";
-    echo "<input type=\"checkbox\" name=\"guest_type[associate]\" value=\"1\">Clare Associate Members";
+    echo "<input type=\"checkbox\" name=\"guest_type[associate]\" value=\"1\" checked>Clare Associate Members";
     echo "<input type=\"hidden\" name=\"guest_type[cra]\" value=\"0\">";
-    echo "<input type=\"checkbox\" name=\"guest_type[cra]\" value=\"1\">CRAs";
+    echo "<input type=\"checkbox\" name=\"guest_type[cra]\" value=\"1\" checked>CRAs";
 
     echo "<h3>Booking Details</h3>";
     echo "<div class=\"note\">";
@@ -1868,7 +1868,9 @@ function editEvent($eventid) {
 	$event_date= new Datetime($event->getValue('event_date'));
 	$open_date= new Datetime($event->getValue('open_date'));
 	$close_date= new Datetime($event->getValue('close_date'));
-
+	$mcr_member = $event->getValue('$mcr_member')
+	$cra = $event->getValue('$cra')
+	$associate_member = $event->getValue('$associate_member')
 
     echo "<h1>Edit Event</h1>\n";
     echo "<h3>Event Details</h3>";
@@ -1916,24 +1918,24 @@ function editEvent($eventid) {
     echo "<dt>Price for first guest ticket</dt>";
     echo "<dd>&pound; <input type=\"text\" name=\"second_price\" size=\"5\" value=\"" . $def_guest_price . "\" required pattern=\"\d+\.\d\d\" title=\"Enter price in pounds and pence, e.g. 7.50\"></dd>";
     echo "</dl>";
+?>
+    <h3>Guest Type</h3>
+    <input type="hidden" name="guest_type[mcr_member]" value="0">";
+    <input type="checkbox" name="guest_type[mcr_member]" value="1" <?php if($mcr_member=1){echo "checked"} ?>>MCR Members";
+    <input type="hidden" name="guest_type[associate_member]" value="0">";
+    <input type="checkbox" name="guest_type[associate_member]" value="1" <?php if($associate_member=1){echo "checked"} ?>>Associate Members";
+    <input type="hidden" name="guest_type[cra]" value="0">";
+    <input type="checkbox" name="guest_type[cra]" value="1" <?php if($cra=1){echo "checked"} ?>>CRAs";
 
-    echo "<h3>Guest Type</h3>";
-    echo "<input type=\"hidden\" name=\"guest_type[mcr_member]\" value=\"0\">";
-    echo "<input type=\"checkbox\" name=\"guest_type[mcr_member]\" value=\"1\" checked>MCR Members";
-    echo "<input type=\"hidden\" name=\"guest_type[associate_member]\" value=\"0\">";
-    echo "<input type=\"checkbox\" name=\"guest_type[associate_member]\" value=\"1\">Associate Members";
-    echo "<input type=\"hidden\" name=\"guest_type[cra]\" value=\"0\">";
-    echo "<input type=\"checkbox\" name=\"guest_type[cra]\" value=\"1\">CRAs";
+    <hr/>
 
-    echo "<hr/>";
-
-    echo "<table border=\"0\" cellspacing=\"0\">";
-    echo "<input type=\"hidden\" name=\"eventid\" value=\"".$eventid."\">";
-    echo "<tr><td><input type=\"submit\" name=\"commit_edit_event\" value=\"Edit Event\"></td>";
-    echo "<td><input type=\"submit\" value=\"Return to Admin\"></td>";
-    echo "</tr></table>";
-    echo "</form>";
-
+    <table border="0" cellspacing="0">
+    <input type="hidden" name="eventid" value="<?php echo $eventid ?>">
+    <tr><td><input type="submit" name="commit_edit_event" value="Edit Event"></td>
+    <td><input type="submit" value="Return to Admin"></td>
+    </tr></table>
+    </form>
+	<?php
 }
 
 function CommiteditEvent($eventid) {
