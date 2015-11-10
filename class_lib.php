@@ -547,7 +547,7 @@ class Event extends genericItem {
         global $my_pre;
         global $dbh;
 
-        $statement = $dbh->prepare("INSERT INTO " . $my_pre . "eventslist (name,total_guests,current_guests,max_guests,mcr_member,4th_year,cra,cost_normal,cost_second,event_date,open_date,close_date,sent) VALUES (:name,:total_guests,:current_guests,:max_guests,:mcr_member,:4th_year,:cra,:cost_normal,:cost_second,:event_date,:open_date,:close_date,:sent)");
+        $statement = $dbh->prepare("INSERT INTO " . $my_pre . "eventslist (name,total_guests,current_guests,max_guests,mcr_member,associate_member,cra,non_clare_associate_member,cost_normal,cost_second,guest_type,event_date,open_date,close_date,sent) VALUES (:name,:total_guests,:current_guests,:max_guests,:mcr_member,:associate_member,:cra,0,:cost_normal,:cost_second,NULL,:event_date,:open_date,:close_date,:sent)");
         $statement->bindValue(':name',$this->getValue('name'));
         $statement->bindValue(':total_guests',$this->getValue('total_guests'));
         $statement->bindValue(':current_guests',$this->getValue('current_guests'));
@@ -567,10 +567,10 @@ class Event extends genericItem {
             $statement->bindValue(':mcr_member',0);
         }
 
-        if ($this->getValue('4th_year') == 1) {
-            $statement->bindValue(':4th_year',$this->getValue('4th_year'));
+        if ($this->getValue('associate_member') == 1) {
+            $statement->bindValue(':associate_member',$this->getValue('associate_member'));
         } else {
-            $statement->bindValue(':4th_year',0);
+            $statement->bindValue(':associate_member',0);
         }
 
         if ($this->getValue('cra') == 1) {
@@ -590,8 +590,8 @@ class Event extends genericItem {
 
  		$statement = $dbh->prepare('UPDATE '. $my_pre.'eventslist SET name=:name,
  									total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
- 									mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra,
- 									cost_normal=:cost_normal, cost_second=:cost_second, cra=:cra,
+ 									mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
+ 									cost_normal=:cost_normal, cost_second=:cost_second, guest_type=NULL
  									event_date=:event_date, open_date=:open_date,
  									close_date=:close_date, sent=:sent WHERE id=:id ');
 
