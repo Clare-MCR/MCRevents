@@ -588,15 +588,15 @@ class Event extends genericItem {
         global $my_pre;
         global $dbh;
 
- 		$statement = $dbh->prepare('UPDATE '. $my_pre.'eventslist SET name=:name,
- 									total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
- 									mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
- 									cost_normal=:cost_normal, cost_second=:cost_second, guest_type=NULL
- 									event_date=:event_date, open_date=:open_date,
- 									close_date=:close_date, sent=:sent WHERE id=:id ');
+ 	$statement = $dbh->prepare('UPDATE '. $my_pre.'eventslist SET name=:name,
+ 					total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
+ 					mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
+ 					cost_normal=:cost_normal, cost_second=:cost_second, guest_type=NULL,
+ 					event_date=:event_date, open_date=:open_date,
+ 					close_date=:close_date, sent=:sent WHERE id=:id ');
 
-		# Bind the access types
-		$statement->bindValue(':id', $this->id);
+	# Bind the access types
+	$statement->bindValue(':id', $this->id);
         $statement->bindValue(':name',$this->name);
         $statement->bindValue(':total_guests',$this->total_guests);
         $statement->bindValue(':current_guests',$this->current_guests);
