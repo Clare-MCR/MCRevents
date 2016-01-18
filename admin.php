@@ -1976,7 +1976,7 @@ function CommiteditEvent($eventid) {
     }
     # Commit the changed event to the database
     $event->commit();
-    $command = escapeshellcmd("updatequeue.py $eventid");
+    $command = escapeshellcmd("./updatequeue.py $eventid");
     $output = shell_exec($command);
     echo $output;
     # Let the user know what we've changed.
