@@ -1975,10 +1975,12 @@ function CommiteditEvent($eventid) {
         $event->setValue($guesttype, $value);
     }
     # Commit the changed event to the database
-	$event->commit();
-
+    $event->commit();
+    $command = escapeshellcmd("updatequeue.py $eventid");
+    $output = shell_exec($command);
+    echo $output;
     # Let the user know what we've changed.
-	echo "<p>Congratulations, you have successfully edited the following event:</p>";
+    echo "<p>Congratulations, you have successfully edited the following event:</p>";
     echo "<p><b>Event Name: </b>" . $event->getValue('name') . "</p>";
     echo "<p><b>On the Date: </b>" . $event->getValue('event_date')  . "</p>";
     echo "<p><b>Total Guests: </b>" . $event->getValue('total_guests') . "</p>";
