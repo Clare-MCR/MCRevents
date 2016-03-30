@@ -1,3 +1,7 @@
+DEBUG=True
+if DEBUG:
+  from datetime import datetime
+
 # Global variables for table names
 #_dbPrefix = 'test_'
 _dbPrefix = ''
@@ -68,11 +72,17 @@ def displayNameForCRSID(crsid):
   l = ldap.open('ldap.lookup.cam.ac.uk')
   res = l.search_s('uid={0},ou=people,o=University of Cambridge,dc=cam,dc=ac,dc=uk'.format(str(crsid)), ldap.SCOPE_SUBTREE)
   if len(res) > 0:
-    displayName = str(res[0][1]['displayName'][0])
-    cn = str(res[0][1]['cn'][0])
-    if displayName != '':
-      return displayName
-    return cn
+    try:
+      displayName = str(res[0][1]['displayName'][0])
+      if displayName == '':
+	raise Exception('Blank Display Name')
+    except (KeyError, Exception):
+      displayName = str(res[0][1]['cn'][0])    
+    finally:
+      if DEBUG:
+        with open('/societies/claremcr/events.log', 'a') as f:
+          read_data = f.write(str(datetime.today()) +'\tUser login:' + displayName + ' (' + crsid + ')\n')
+    return displayName
   return str(crsid)
 
 
