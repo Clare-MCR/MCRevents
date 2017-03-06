@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
-  <h2>{{ event.name|safe }}</h2>
+  <h2>{{ event.name|safe }} - {{ event.eventDate }}</h2>
   {% for booking in bookings %}
     <p>
     {% if booking.isAdminBooking %}

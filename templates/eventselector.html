@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
   <h2>Events</h2>
-  {% if session.user.isAdmin and moreEntriesToShow %}
+  {% if moreEntriesToShow %}
     {% if showAllEntries %}
       <p><a href="{{ url_for('eventselector', showAllEntries=0) }}">Show fewer</a></p>
     {% else %}

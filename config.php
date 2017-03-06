@@ -163,8 +163,11 @@ function dietform($guests, $eventid, $admin, $user) {
         }
         echo "<td>";
 	echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"None\" id=\"nodiet_" . $i . "\" checked=\"checked\"><label for=\"nodiet_" . $i . "\">None/Not Applicable</label><br/>";
+	echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"None+Wine\" id=\"nodiet_" . $i . "\" checked=\"checked\"><label for=\"nodiet_" . $i . "\">None/Not Applicable + wine (£5)</label><br/>";
         echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"Vegetarian\" id=\"vgt_" . $i . "\"><label for=\"vgt_" . $i . "\">Vegetarian</label><br/>";
+        echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"Vegetarian+Wine\" id=\"vgt_" . $i . "\"><label for=\"vgt_" . $i . "\">Vegetarian + wine (£5)</label><br/>";
         echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"Vegan\"  id=\"vgn_" . $i . "\"><label for=\"vgn_" . $i . "\">Vegan</label><br/>";
+        echo "<input type=\"radio\" name=\"tickets[" . $i . "][diet]\" value=\"Vegan+Wine\"  id=\"vgn_" . $i . "\"><label for=\"vgn_" . $i . "\">Vegan + wine (£5)</label><br/>";
 	echo "Further requirements: <input type=\"text\" name=\"tickets[" . $i . "][other]\" value=\"\" placeholder=\"e.g. No Nuts\"></td>";
         echo "</tr>\n";
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+ # -*- coding: utf-8 -*-
 # Flask configuration
 DEBUG = True
 SECRET_KEY = 'development moooo key'
