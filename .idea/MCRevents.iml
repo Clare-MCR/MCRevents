@@ -6,20 +6,20 @@
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/usage/composer.phar/" />
+          <root url="phar:///Users/rg12/PhpstormProjects/MCRevents/usage/composer.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/usage/composer.phar/" />
+          <root url="phar:///Users/rg12/PhpstormProjects/MCRevents/usage/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="PHP" type="php">
+      <library name="PHP">
         <CLASSES>
           <root url="file://$MODULE_DIR$/usage/vendor/composer" />
           <root url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />

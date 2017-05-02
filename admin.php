@@ -83,6 +83,10 @@ if ( is_locked() == 'Y' ) {
         <!--[if lt IE 8]>
         <link type="text/css" rel="stylesheet" href="ie_old.css">
         <![endif]-->
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
         <script src="js/modernizr.min.js"></script>
         <script>Modernizr.load({
                 test: Modernizr.inputtypes.time,
