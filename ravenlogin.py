@@ -2,7 +2,7 @@
 import os
 from wsgiref.handlers import CGIHandler
 
-from flask import session, flash, redirect, url_for
+import flask
 
 from dbops import ravenUserNames, ravenUsers
 from mealbooker import app, display_errors
@@ -15,8 +15,8 @@ logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=
 @app.route('/ravenlogin')
 @display_errors
 def ravenlogin():
-    errorurl = url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
-    homeurl = url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
+    errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
+    homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
 
     crsid = None
     logging.debug(os.environ)
@@ -26,24 +26,24 @@ def ravenlogin():
 
     if crsid is None:
         logging.warning('No Raven crsid found!')
-        flash('No Raven crsid found!', 'error')
-        session['logged_in'] = False
-        return redirect(errorurl)
+        flask.flash('No Raven crsid found!', 'error')
+        flask.session['logged_in'] = False
+        return flask.redirect(errorurl)
 
     if crsid not in ravenUserNames():
         logging.warning('User Not registered')
-        flash('User ' + crsid + ' not registered for booking', 'error')
-        session['logged_in'] = False
-        return redirect(errorurl)
+        flask.flash('User ' + crsid + ' not registered for booking', 'error')
+        flask.session['logged_in'] = False
+        return flask.redirect(errorurl)
     logging.debug('user in allowed usernames')
     logging.debug('Getting name')
-    session['user'] = ravenUsers(crsid)[0]
+    flask.session['user'] = ravenUsers(crsid)[0]
 
-    session['logged_in'] = True
+    flask.session['logged_in'] = True
     logging.debug('You are logged in')
-    flash('You were logged in, ' + session['user'].displayName())
+    flask.flash('You were logged in, ' + flask.session['user'].displayName())
     logging.debug(homeurl)
-    return redirect(homeurl)
+    return flask.redirect(homeurl)
 
 
 if __name__ == '__main__':
