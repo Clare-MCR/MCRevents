@@ -53,14 +53,11 @@ if ( $user->has_perm( 'enabled' ) != true ) {
 }
 $logger->info("User has permissions");
 
-echo "3";
 # Check that the user has view permissions.
 if ( ! $user->has_perm( 'e_view' ) ) {
 	trigger_error( "User does not have view permissions on this system.", E_USER_ERROR );
 }
-echo "4";
-echo "Admin.php";
-print_r( $user->has_perm( 'e_adm' ) );
+
 # Check user has admin permissions
 if ( $user->has_perm( 'e_adm' ) != true ) {
 	if ( $user->has_perm( 's_adm' ) != true ) {
@@ -68,6 +65,7 @@ if ( $user->has_perm( 'e_adm' ) != true ) {
 	}
 }
 
+$logger->info("User Has permissions");
 # User has view permissions, check that Allocator isn't running.
 if ( is_locked() == 'Y' ) {
 	trigger_error( "System Locked for Allocator Run, please try back later.", E_USER_ERROR );
@@ -114,7 +112,7 @@ if ( is_locked() == 'Y' ) {
     </div>
 
 	<?php
-
+    $logger->info("laying out the welcome mat");
 	if ( $user->has_perm( 'e_adm' ) or $user->has_perm( 's_adm' ) ) {
 		echo "<div id=\"user_welcome\">Welcome Administrator " . $user->getValue( 'name' ) . " <a href='mealbooker.py'>Go to Main</a><a href='admin.php'>Go to Admin</a></div>\n";
 	}
