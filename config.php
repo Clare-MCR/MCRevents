@@ -34,11 +34,6 @@ $logger = new Logger(__DIR__.'/logs/',LogLevel::DEBUG, array (
 ));
 $logger->info('Logger Created'); // Will be NOT logged
 
-if (!class_exists("database",true)) {
-	$logger->info("database class doesn't exist"); // Will be NOT logged
-
-}
-
 # Make the dbh
 try {
 	$logger->debug("Creating Database"); // Will be NOT logged
