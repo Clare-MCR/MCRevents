@@ -33,6 +33,8 @@ class genericitem {
 	 * @return string $val
 	 */
 	function getValue( $val ) {
+		global $logger;
+		$logger->info($val);
 		return $this->$val;
 	}
 
