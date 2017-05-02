@@ -1,0 +1,40 @@
+{
+  "name": "rgunning/ClareFormals",
+  "version": "0.0.1",
+  "type": "project",
+  "description": "clare Formals AngularJS project",
+  "keywords": [
+    "php",
+    "rest",
+    "rest-server",
+    "light-weight",
+    "http",
+    "json",
+    "mit"
+  ],
+  "homepage": "https://github.com/Clare-MCR/ClareFormals",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Richard Gunning",
+      "email": "rjgunning@gmail.com",
+      "homepage": "http://rjgunning.com",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.3",
+    "jacwright/restserver": "dev-master"
+  },
+  "scripts": {
+    "test": [
+      "@clearCache",
+      "phpunit"
+    ],
+    "clearCache": "rm -rf cache/*"
+  }
+}
