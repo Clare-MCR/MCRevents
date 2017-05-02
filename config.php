@@ -46,8 +46,6 @@ try {
 }
 # Validation functions
 
-
-
 # Set the error level for E_USER_ERROR
 set_error_handler("user_warning_error", E_USER_ERROR);
 
