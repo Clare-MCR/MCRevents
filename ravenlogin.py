@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-from mealbooker import app, displayErrors
+from mealbooker import app, display_errors
 
 @app.route('/ravenlogin')
-@displayErrors
+@display_errors
 def ravenlogin():
   from flask import request, session, flash, render_template, redirect, url_for
   errorurl = url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
