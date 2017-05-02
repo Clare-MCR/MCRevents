@@ -46,7 +46,7 @@ def require_login(func):
     def dec(*args, **kwargs):
        if not flask.session.get('logged_in'):
             return flask.redirect(flask.url_for('login'))
-        return func(*args, **kwargs)
+       return func(*args, **kwargs)
     logging.debug("Running login functions")
     return dec
 
