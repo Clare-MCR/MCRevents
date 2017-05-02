@@ -24,23 +24,31 @@ require_once('/societies/claremcr/mcrpwd.php');
 $my_pre = "mcrevents_";
 
 define("DB_HOST", "localhost");
-define("DB_USER", "clareMCR");
+define("DB_USER", "claremcr");
 define("DB_NAME", "claremcr");
 
 
 # Create the logger
-$logger = new Logger(__DIR__.'/logs/',LogLevel::WARNING, array (
+$logger = new Logger(__DIR__.'/logs/',LogLevel::DEBUG, array (
 	'extension' => 'log', // changes the log file extension
 ));
+$logger->info('Logger Created'); // Will be NOT logged
+
+if (!class_exists("database",true)) {
+	$logger->info("database class doesn't exist"); // Will be NOT logged
+
+}
 
 # Make the dbh
 try {
-    $dbh = new database();
+	$logger->debug("Creating Database"); // Will be NOT logged
+	$dbh = new classes\database();
+    $logger->info("Database created");
 } catch(PDOException $e) {
+	$logger->error("error creating db");
     $logger->error($e->getMessage());
     die();
 }
-
 # Validation functions
 
 

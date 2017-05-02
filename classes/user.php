@@ -40,14 +40,21 @@ class user extends genericitem {
 	private $bookings;
 	private $queue;
 	private $queuedetails;
+	private $logger;
 
 	function __construct() {
 		parent::__construct();
+		global $logger;
+		$this->logger = &$logger;
+		$this->logger->debug("setting variables");
+		$this->logger->debug("my+pre",$this->my_pre);
 		$this->eventslist     = $this->my_pre . 'eventslist';
 		$this->bookingdetails = $this->my_pre . 'booking_details';
 		$this->bookings       = $this->my_pre . 'booking';
 		$this->queue          = $this->my_pre . 'queue';
 		$this->queuedetails   = $this->my_pre . 'queue_details';
+		$this->logger->info("User created");
+
 	}
 
 	/**

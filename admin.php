@@ -20,22 +20,24 @@ use function claremcr\clareevents\functions\validate_is_number;
 use claremcr\clareevents\classes;
 use DateTime;
 
+error_reporting(E_ALL);
 session_unset();
 
 #include( 'class_lib.php' );
-require_once( 'config.php' );
-echo "-2";
+require_once( "config.php" );
+global $logger;
+$logger->info("Admin.PHP called");
 # First do some User checks.
 
 # Are we logged in with Raven?
 if ( ! isset( $_SERVER['REMOTE_USER'] ) ) {
 	trigger_error( "User is not logged in with Raven, something is wrong.", E_USER_ERROR );
 }
-echo "-1";
 # Initiate the new user object
-$user = new classes\user();
 
-echo "1";
+$logger->info("creating user");
+$user = new classes\user();
+$logger->debug("user", $user->getValue("eventslist"));
 # Get user info given the Raven crsid, if they don't exist, exit with error.
 if ( $user->getFromCRSID( $_SERVER['REMOTE_USER'] ) == false ) {
 	trigger_error( "User does not exist on this system. Please contact the administrators.", E_USER_ERROR );

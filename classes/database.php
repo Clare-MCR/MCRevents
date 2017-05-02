@@ -50,6 +50,9 @@ class database{
 	 */
 	public function __construct()
 	{
+		global $logger;
+		$logger->debug("Constructing Database");
+
 		// Set DSN
 		$dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
 		// Set options
@@ -65,8 +68,10 @@ class database{
 			// Catch any errors
 		catch(PDOException $e){
 			$this->error = $e->getMessage();
+			$logger->error($this->error);
 		}
 		$this->stmt = $this->dbh->prepare("");
+		$logger->debug("Database Constructed");
 	}
 	/**
 	 *Send database query
