@@ -34,7 +34,7 @@ class genericitem {
 	 */
 	function getValue( $val ) {
 		global $logger;
-		$logger->info($val);
+		$logger->info($val,get_object_vars ( $this ));
 		return $this->$val;
 	}
 
