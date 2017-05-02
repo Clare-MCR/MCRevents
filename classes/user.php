@@ -96,9 +96,9 @@ class user extends genericitem {
 		$this->logger->debug("user data",$results);
 		# Get the username from LDAP
 		# ldap lookup the user's name, and if we can, put their name into the name field
-
+		$this->logger->info("Users CRSID=".$this->crsid);
 		$ds      = ldap_connect( "ldap.lookup.cam.ac.uk" );
-		$lsearch = ldap_search( $ds, "ou=people,o=University of Cambridge,dc=cam,dc=ac,dc=uk", "uid=" . $this->getValue( 'crsid' ) . "" );
+		$lsearch = ldap_search( $ds, "ou=people,o=University of Cambridge,dc=cam,dc=ac,dc=uk", "uid=" . $this->crsid . "" );
 		$info    = ldap_get_entries( $ds, $lsearch );
 		$name    = $info[0]["cn"][0];
 
