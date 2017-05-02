@@ -5,7 +5,7 @@ import logging
 import sys
 import traceback
 from functools import wraps
-from wsgiref.handlers import CGIHandler
+#from wsgiref.handlers import CGIHandler
 
 import flask
 
@@ -638,4 +638,5 @@ if __name__ == '__main__':
     ##         use_reloader=use_debugger, host='0.0.0.0')
     logging.debug("Starting App")
 
-    CGIHandler().run(app)
+    app.run()
+    #CGIHandler().run(app)
