@@ -1,7 +1,7 @@
 <?php
-namespace clareevents\functions;
-use clareevents\classes\database;
-use clareevents\classes\user;
+namespace claremcr\clareevents\functions;
+use claremcr\clareevents\classes\database;
+use claremcr\clareevents\classes\user;
 
 /**
  * Created by PhpStorm.

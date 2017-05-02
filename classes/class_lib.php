@@ -1,5 +1,6 @@
 <?php
-namespace clareevents\classes;
+namespace claremcr\clareevents\classes;
+use claremcr\clareevents\classes\genericitem;
 
 /**
  * MCR Events Booker class libraries

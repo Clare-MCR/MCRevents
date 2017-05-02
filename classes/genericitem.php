@@ -6,7 +6,8 @@
  * Time: 13:22
  */
 
-namespace clareevents\classes;
+namespace claremcr\clareevents\classes;
+use claremcr\clareevents\classes\database;
 
 
 /** @class genericItem

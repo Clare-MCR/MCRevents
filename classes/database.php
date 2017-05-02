@@ -6,7 +6,7 @@
  * Time: 11:54
  */
 
-namespace clareevents\classes;
+namespace claremcr\clareevents\classes;
 use \PDO;
 use \PDOException;
 /**

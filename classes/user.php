@@ -6,8 +6,8 @@
  * Time: 13:23
  */
 
-namespace clareevents\classes;
-
+namespace claremcr\clareevents\classes;
+use claremcr\clareevents\classes\genericitem;
 
 /**
  * User class

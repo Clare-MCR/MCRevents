@@ -11,9 +11,15 @@
         "katzgrau/klogger": "dev-master"
     },
     "autoload": {
+      "psr-4": {
+        "claremcr\\clareevents\\": "./"
+      },
         "classmap": [
-            "classes/",
-            "functions/"
-        ]
+            "classes/"
+        ],
+      "files": [
+        "functions/functions.php"
+      ]
+
     }
 }

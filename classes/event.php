@@ -6,7 +6,8 @@
  * Time: 13:24
  */
 
-namespace clareevents\classes;
+namespace claremcr\clareevents\classes;
+use claremcr\clareevents\classes\genericitem;
 
 
 class event extends genericitem {

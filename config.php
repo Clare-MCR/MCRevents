@@ -1,7 +1,9 @@
-<? namespace clareevents;
+<? namespace claremcr\clareevents;
 
-use clareevents\classes\database;
+use claremcr\clareevents\classes\database;
 use \PDOException;
+use Katzgrau\KLogger\Logger;
+use Psr\Log\LogLevel;
 require 'vendor/autoload.php';
 /**
  * config.php
@@ -27,7 +29,7 @@ define("DB_NAME", "claremcr");
 
 
 # Create the logger
-$logger = new Katzgrau\KLogger\Logger(__DIR__.'/logs/',Psr\Log\LogLevel::WARNING, array (
+$logger = new Logger(__DIR__.'/logs/',LogLevel::WARNING, array (
 	'extension' => 'log', // changes the log file extension
 ));
 
