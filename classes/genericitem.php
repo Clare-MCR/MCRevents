@@ -7,7 +7,6 @@
  */
 
 namespace claremcr\clareevents\classes;
-use claremcr\clareevents\classes\database;
 
 
 /** @class genericItem

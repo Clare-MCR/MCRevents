@@ -47,7 +47,8 @@ class user extends genericitem {
 		global $logger;
 		$this->logger = &$logger;
 		$this->logger->debug("setting variables");
-		$this->logger->debug("my+pre",$this->my_pre);
+		property_exists($this,"my_pre");
+		$this->logger->debug("my_pre",$this->my_pre);
 		$this->eventslist     = $this->my_pre . 'eventslist';
 		$this->bookingdetails = $this->my_pre . 'booking_details';
 		$this->bookings       = $this->my_pre . 'booking';
