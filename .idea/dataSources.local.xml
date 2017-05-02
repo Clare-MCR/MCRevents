@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="claremcr@localhost" uuid="5011780e-7503-487c-a5da-d3d80bac571c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:claremcr</introspection-schemas>
+    </data-source>
+  </component>
+</project>
