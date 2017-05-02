@@ -5,6 +5,8 @@ import logging
 import sys
 import traceback
 from functools import wraps
+from wsgiref.handlers import CGIHandler
+
 import flask
 
 FORMAT = '%(asctime)-15s %(message)s'
@@ -635,6 +637,5 @@ if __name__ == '__main__':
     ## app.run(use_debugger=use_debugger, debug=app.debug,
     ##         use_reloader=use_debugger, host='0.0.0.0')
     logging.debug("Starting App")
-    from wsgiref.handlers import CGIHandler
 
     CGIHandler().run(app)
