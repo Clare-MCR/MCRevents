@@ -47,6 +47,7 @@ def require_login(func):
        if not flask.session.get('logged_in'):
             logging.debug("We're not logged in")
             return flask.redirect(flask.url_for('login'))
+       logging.debug("We're Back")
        return func(*args, **kwargs)
     return dec
 

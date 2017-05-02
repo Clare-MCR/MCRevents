@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ravenlogin.py" afterPath="$PROJECT_DIR$/ravenlogin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage/formalController.php" afterPath="$PROJECT_DIR$/usage/formalController.php" />
@@ -31,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3788">
-              <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+            <state relative-caret-position="139">
+              <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -110,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ravenlogin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ravenlogin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ravenlogin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
+            <state relative-caret-position="177">
               <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
@@ -137,8 +137,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dbops.py" />
-        <option value="$PROJECT_DIR$/mealbooker.py" />
         <option value="$PROJECT_DIR$/ravenlogin.py" />
+        <option value="$PROJECT_DIR$/mealbooker.py" />
       </list>
     </option>
   </component>
@@ -584,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493768986174</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add debug spots">
+      <created>1493769160991</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1493769160991</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,22 +713,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mealbooker.py">
+    <entry file="file://$PROJECT_DIR$/ravenlogin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3788">
-          <caret line="303" column="0" lean-forward="true" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+        <state relative-caret-position="177">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding>
-            <element signature="e#68#82#0" expanded="true" />
+            <element signature="e#22#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ravenlogin.py">
+    <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        <state relative-caret-position="139">
+          <caret line="49" column="32" lean-forward="false" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
           <folding>
-            <element signature="e#22#31#0" expanded="true" />
+            <element signature="e#68#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
