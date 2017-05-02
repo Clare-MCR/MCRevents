@@ -19,27 +19,27 @@ class event extends genericitem {
 	 */
 
 	# Event associated variables
-	public $id;
-	public $name;
-	public $event_date;
-	public $open_date;
-	public $close_date;
-	public $max_guests;
-	public $total_guests;
-	public $current_guests;
-	public $cost_normal;
-	public $cost_second;
-	public $guest_type;
-	public $sent;
+	protected $id;
+	protected $name;
+	protected $event_date;
+	protected $open_date;
+	protected $close_date;
+	protected $max_guests;
+	protected $total_guests;
+	protected $current_guests;
+	protected $cost_normal;
+	protected $cost_second;
+	protected $guest_type;
+	protected $sent;
 
-	public $mcr_member;
-	public $cra;
-	public $associate_member;
-	private $eventslist;
-	private $bookingdetails;
-	private $bookings;
-	private $queue;
-	private $queuedetails;
+	protected $mcr_member;
+	protected $cra;
+	protected $associate_member;
+	protected $eventslist;
+	protected $bookingdetails;
+	protected $bookings;
+	protected $queue;
+	protected $queuedetails;
 
 	function __construct() {
 		parent::__construct();

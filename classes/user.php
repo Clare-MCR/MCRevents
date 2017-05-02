@@ -19,28 +19,28 @@ use claremcr\clareevents\classes\genericitem;
 class user extends genericitem {
 
 	# User associated variables
-	private $id;
-	private $crsid;
-	private $e_view;
-	private $e_book;
-	private $e_adm;
-	private $s_adm;
-	private $p_view;
-	private $p_book;
-	private $p_adm;
-	private $mcr_member;
-	private $associate_member;
-	private $cra;
-	private $college_bill;
-	private $type;
-	private $enabled;
-	private $name;
-	private $eventslist;
-	private $bookingdetails;
-	private $bookings;
-	private $queue;
-	private $queuedetails;
-	private $logger;
+	protected $id;
+	protected $crsid;
+	protected $e_view;
+	protected $e_book;
+	protected $e_adm;
+	protected $s_adm;
+	protected $p_view;
+	protected $p_book;
+	protected $p_adm;
+	protected $mcr_member;
+	protected $associate_member;
+	protected $cra;
+	protected $college_bill;
+	protected $type;
+	protected $enabled;
+	protected $name;
+	protected $eventslist;
+	protected $bookingdetails;
+	protected $bookings;
+	protected $queue;
+	protected $queuedetails;
+	protected $logger;
 
 	function __construct() {
 		parent::__construct();
