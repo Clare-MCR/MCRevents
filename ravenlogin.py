@@ -25,15 +25,17 @@ def ravenlogin():
 
 
     if crsid is None:
+        logging.warning('No Raven crsid found!')
         flash('No Raven crsid found!', 'error')
         session['logged_in'] = False
         return redirect(errorurl)
 
     if crsid not in ravenUserNames():
+        logging.warning('User Not registered')
         flash('User ' + crsid + ' not registered for booking', 'error')
         session['logged_in'] = False
         return redirect(errorurl)
-
+    logging.debug('should be good now')
     session['user'] = ravenUsers(crsid)[0]
 
     session['logged_in'] = True
