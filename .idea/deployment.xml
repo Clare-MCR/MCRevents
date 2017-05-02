@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="mcrevents" uploadOnCheckin="51f0ebe8-48a1-4007-bb53-5253a43883b7">
+    <serverData>
+      <paths name="mcrevents">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="mcrevents" />
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
