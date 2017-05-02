@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Flask configuration
+import logging
 import sys
 import traceback
 from functools import wraps
-import logging
+import flask
+
 FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 
-import flask
 
 DEBUG = True
 SECRET_KEY = 'development moooo key'
