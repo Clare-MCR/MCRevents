@@ -42,6 +42,7 @@ def ravenlogin():
     session['logged_in'] = True
     logging.debug('You are logged in')
     flash('You were logged in, ' + session['user'].displayName())
+    logging.debug(homeurl)
     return redirect(homeurl)
 
 
