@@ -639,4 +639,7 @@ if __name__ == '__main__':
     logging.debug("Starting App")
 
     #app.run()
-    CGIHandler().run(app)
+    try:
+        CGIHandler().run(app)
+    except (RuntimeError, TypeError, NameError) as err:
+        logging.error(err)
