@@ -64,6 +64,7 @@ class user extends genericitem {
 	 * @return bool True/False
 	 */
 	function has_perm( $perm ) {
+		$this->logger->debug($perm);
 		$this->logger->info("permission value=".$this->getValue( $perm ));
 		if ( $this->getValue( $perm ) != 1 ) {
 			return false;
