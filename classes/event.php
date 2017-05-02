@@ -64,7 +64,9 @@ class event extends genericitem {
 
 		# Set the fetch mode to pull the variables into this instance
 		$results = $this->db->resultset();
-		extract( $results );
+		foreach($results as $key => $value){
+			$this->{$key} = $value;
+		}
 
 	}
 

@@ -92,7 +92,9 @@ class user extends genericitem {
 
 		# Set the fetch mode to pull the variables into this instance
 		$results = $this->db->single();
-		extract( $results );
+		foreach($results as $key => $value){
+			$this->{$key} = $value;
+		}
 		$this->logger->debug("user data",$results);
 		# Get the username from LDAP
 		# ldap lookup the user's name, and if we can, put their name into the name field
