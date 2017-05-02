@@ -1,3 +1,9 @@
+import MySQLdb
+import logging
+
+FORMAT = '%(asctime)-15s %(message)s'
+logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
+
 DEBUG = True
 if DEBUG:
     from datetime import datetime
@@ -31,7 +37,6 @@ def _getMySQLPassword():
 
 def getMySQLCursorAndDb():
     # TODO should call cur.close() and db.commit() when we're making modifications
-    import MySQLdb
     db = MySQLdb.connect(host='localhost', db='claremcr', user='claremcr', passwd=_getMySQLPassword())
     cur = db.cursor()
     return cur, db
@@ -52,6 +57,7 @@ def ravenUserNames():
 
 def ravenUsers(crsid=None):
     cur = getMySQLCursor()
+    logging.debug('ravenUsers: get user')
     if crsid is None:
         cur.execute(
             'SELECT crsid, e_adm, mcr_member, associate_member, cra, college_bill FROM access WHERE e_view = 1 AND e_book = 1 AND enabled = 1')

@@ -35,10 +35,12 @@ def ravenlogin():
         flash('User ' + crsid + ' not registered for booking', 'error')
         session['logged_in'] = False
         return redirect(errorurl)
-    logging.debug('should be good now')
+    logging.debug('user in allowed usernames')
+    logging.debug('Getting name')
     session['user'] = ravenUsers(crsid)[0]
 
     session['logged_in'] = True
+    logging.debug('You are logged in')
     flash('You were logged in, ' + session['user'].displayName())
     return redirect(homeurl)
 
