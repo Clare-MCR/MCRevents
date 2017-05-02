@@ -105,11 +105,11 @@ class user extends genericitem {
 		$name    = $info[0]["cn"][0];
 
 		if ( $name == "" ) {
-			$this->setValue( 'name', $this->getValue( 'crsid' ) );
+			$this->name=$this->crsid;
 		} else {
-			$this->setValue( 'name', $name );
+			$this->name=$name;
 		}
-
+		$this->logger->info("name=".$this->name);
 		return true;
 	}
 
