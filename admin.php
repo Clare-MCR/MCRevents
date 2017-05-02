@@ -90,12 +90,10 @@ if ( is_locked() == 'Y' ) {
         <script src="js/modernizr.min.js"></script>
         <script>Modernizr.load({
                 test: Modernizr.inputtypes.time,
-                nope: ['http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css',
-                    'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css',
-                    'http://code.jquery.com/jquery-1.11.1.min.js',
-                    'http://code.jquery.com/ui/1.11.1/jquery-ui.min.js',
-                    'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.js',
-                    'http://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-sliderAccess.js'],
+                nope: ['http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css',
+                    'https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.css',
+                    'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
+                    'https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.js'],
                 complete: function () {
                     $('input[type=time]').timepicker({
                         controlType: 'select',
