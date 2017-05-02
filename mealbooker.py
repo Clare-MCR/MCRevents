@@ -44,10 +44,10 @@ def require_login(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
-        if not flask.session.get('logged_in'):
+       if not flask.session.get('logged_in'):
             return flask.redirect(flask.url_for('login'))
         return func(*args, **kwargs)
-
+    logging.debug("Running login functions")
     return dec
 
 
@@ -639,7 +639,4 @@ if __name__ == '__main__':
     logging.debug("Starting App")
 
     #app.run()
-    try:
-        CGIHandler().run(app)
-    except (RuntimeError, TypeError, NameError) as err:
-        logging.error(err)
+    CGIHandler().run(app)
