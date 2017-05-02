@@ -5,7 +5,8 @@ import sys
 import traceback
 from functools import wraps
 import logging
-logging.basicConfig(filename='logs/mealbooker.log',level=logging.DEBUG)
+FORMAT = '%(asctime)-15s %(clientip)s %(user)-8s %(message)s'
+logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 
 import flask
 
