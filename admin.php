@@ -40,17 +40,18 @@ $user = new classes\user();
 $logger->info("user created continuing");
 
 # Get user info given the Raven crsid, if they don't exist, exit with error.
-$logger->info("User=".$_SERVER['REMOTE_USER']);
 if ( $user->getFromCRSID( $_SERVER['REMOTE_USER'] ) == false ) {
     $logger->error("Error creating user");
 	trigger_error( "User does not exist on this system. Please contact the administrators.", E_USER_ERROR );
 }
 
-echo "2";
 # Check the user is not disabled
+$logger->debug("Checking User Permissions");
 if ( $user->has_perm( 'enabled' ) != true ) {
+    $logger->error("User Doesn't Have Permissions");
 	trigger_error( "User disabled, please contact administrators", E_USER_ERROR );
 }
+$logger->info("User has permissions");
 
 echo "3";
 # Check that the user has view permissions.
