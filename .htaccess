@@ -1,18 +1,8 @@
-DirectoryIndex mealbooker.py
+AuthType Ucam-WebAuth
+Require valid-user
+order deny,allow
+deny from all
+Satisfy any
+
+DirectoryIndex ../maintenance.html
 IndexIgnore *
-
-<Files ravenlogin.py>
-  AuthType Ucam-WebAuth
-  Require valid-user
-</Files>
-
-<Files admin.php>
-  AuthType Ucam-WebAuth
-  Require valid-user
-</Files>
-
-<Files index.php>
-  AuthType Ucam-WebAuth
-  Require valid-user
-</Files>
-

@@ -1,5 +1,4 @@
-<?
-
+<?php
 /**
  * MCR Events Booker class libraries
  *
@@ -15,6 +14,7 @@
  *  @description A superclass to provide getter and setter functions
  *  for subclasses
  */
+echo "Class_lib.php";
 class genericItem {
 
     /**

@@ -11,36 +11,43 @@
  *
  */
 
+echo "-4";
 session_unset();
-
+echo "-3";
 include('class_lib.php');
+echo "-3.5";
 require_once('config.php');
-
+echo "-2";
 # First do some User checks.
 
 # Are we logged in with Raven?
 if (! isset($_SERVER['REMOTE_USER'])) {
      trigger_error("User is not logged in with Raven, something is wrong.", E_USER_ERROR);
 }
-
+echo "-1";
 # Initiate the new user object
 $user = new User();
 
+echo "1";
 # Get user info given the Raven crsid, if they don't exist, exit with error.
 if ($user->getFromCRSID($_SERVER['REMOTE_USER']) == False) {
     trigger_error("User does not exist on this system. Please contact the administrators.", E_USER_ERROR);
 }
 
+echo "2";
 # Check the user is not disabled
 if ($user->has_perm('enabled') != True) {
     trigger_error("User disabled, please contact administrators", E_USER_ERROR);
 }
 
+echo "3";
 # Check that the user has view permissions.
 if (! $user->has_perm('e_view')) {
     trigger_error("User does not have view permissions on this system.", E_USER_ERROR);
 }
-
+echo "4";
+echo "Admin.php";
+print_r($user->has_perm('e_adm'));
 # Check user has admin permissions
 if ($user->has_perm('e_adm') != True) {
     if ($user->has_perm('s_adm') !=True) {
