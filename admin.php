@@ -37,9 +37,10 @@ if ( ! isset( $_SERVER['REMOTE_USER'] ) ) {
 
 $logger->info("creating user");
 $user = new classes\user();
+$logger->info("user created continuing");
 $logger->debug($user->getValue("eventslist"));
 # Get user info given the Raven crsid, if they don't exist, exit with error.
-$logger->info("Server",$_SERVER);
+$logger->info("User=".$_SERVER['REMOTE_USER']);
 if ( $user->getFromCRSID( $_SERVER['REMOTE_USER'] ) == false ) {
 	trigger_error( "User does not exist on this system. Please contact the administrators.", E_USER_ERROR );
 }
