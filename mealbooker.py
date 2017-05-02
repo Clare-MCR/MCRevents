@@ -48,7 +48,6 @@ def require_login(func):
             logging.debug("We're not logged in")
             return flask.redirect(flask.url_for('login'))
        return func(*args, **kwargs)
-    logging.debug("Running login functions")
     return dec
 
 
@@ -298,6 +297,7 @@ def confirmActionHandler():
 def eventselector(showAllEntries):
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
+    logging.degug("We're logged in and ready to rumble")
     user = flask.session['user']
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
