@@ -45,6 +45,7 @@ def require_login(func):
     @display_errors
     def dec(*args, **kwargs):
        if not flask.session.get('logged_in'):
+            logging.debug("We're not logged in")
             return flask.redirect(flask.url_for('login'))
        return func(*args, **kwargs)
     logging.debug("Running login functions")
@@ -575,6 +576,7 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
+    logging.debug("this is where the problems happen")
     return flask.redirect(flask.url_for('ravenloginredirect'))
     # TODO remove me!
     if flask.session.get('logged_in'):
@@ -605,6 +607,7 @@ def alternatelogin():
 @display_errors
 def ravenloginredirect():
     url = flask.url_for('ravenloginredirect')
+    logging.debug(url)
     url = url.replace('redirect', '')
     url = url.replace('mealbooker.py', 'ravenlogin.py')
     return flask.redirect(url)
