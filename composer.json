@@ -1,0 +1,19 @@
+{
+    "name": "claremcr/clareevents",
+    "type": "project",
+    "authors": [
+        {
+            "name": "RGunning",
+            "email": "rjgunning@gmail.com"
+        }
+    ],
+    "require": {
+        "katzgrau/klogger": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "classes/",
+            "functions/"
+        ]
+    }
+}

@@ -14,7 +14,7 @@
 
 session_unset();
 
-include('class_lib.php');
+include( 'class_lib.php' );
 require_once('config.php');
 
 # First do some User checks.

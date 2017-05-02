@@ -1,4 +1,4 @@
-<?php
+<?php namespace clareevents;
 
 /**
  * admin.php
@@ -11,11 +11,10 @@
  *
  */
 
-echo "-4";
+use clareevents\classes;
 session_unset();
-echo "-3";
-include('class_lib.php');
-echo "-3.5";
+
+#include( 'class_lib.php' );
 require_once('config.php');
 echo "-2";
 # First do some User checks.
@@ -26,7 +25,7 @@ if (! isset($_SERVER['REMOTE_USER'])) {
 }
 echo "-1";
 # Initiate the new user object
-$user = new User();
+$user = new classes\user();
 
 echo "1";
 # Get user info given the Raven crsid, if they don't exist, exit with error.
@@ -136,9 +135,9 @@ function mainStuff($user) {
         # Run the allocator before sending.
         #exec('./allocator.py', $output, $retvar);
 
-        if (!$retvar == 0) {
-            trigger_error("There is an error with the allocator run, please inform the administrator", E_USER_ERROR);
-        }
+//        if (!$retvar == 0) {
+//            trigger_error("There is an error with the allocator run, please inform the administrator", E_USER_ERROR);
+//        }
 
         send_guestlist($_POST['eventid']);
         echo "<br/>";
