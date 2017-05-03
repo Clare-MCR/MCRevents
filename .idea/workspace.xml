@@ -31,8 +31,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-257">
-              <caret line="688" column="10" lean-forward="false" selection-start-line="688" selection-start-column="10" selection-end-line="688" selection-end-column="10" />
+            <state relative-caret-position="543">
+              <caret line="690" column="50" lean-forward="false" selection-start-line="690" selection-start-column="50" selection-end-line="690" selection-end-column="50" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -796,7 +796,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493806750249</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add debug to every function">
+      <created>1493806991989</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1493806991990</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1439,8 +1446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
-          <caret line="688" column="10" lean-forward="false" selection-start-line="688" selection-start-column="10" selection-end-line="688" selection-end-column="10" />
+        <state relative-caret-position="543">
+          <caret line="690" column="50" lean-forward="false" selection-start-line="690" selection-start-column="50" selection-end-line="690" selection-end-column="50" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
