@@ -583,12 +583,12 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
-    app.logger.debug("this is where the problems happen")
-    return flask.redirect(flask.url_for('ravenlogin'))
+    #app.logger.debug("this is where the problems happen")
+    #return flask.redirect(flask.url_for('ravenlogin'))
     # TODO remove me!
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
-    return flask.render_template('login.html')
+    return flask.redirect(flask.url_for('ravenlogin'))#flask.render_template('login.html')
 
 
 @app.route('/alternatelogin', methods=['POST'])
@@ -651,8 +651,8 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
-    app.logger.debug(eventselector)
-    return flask.redirect(eventselector)
+    app.logger.debug(flask.url_for(eventselector))
+    return flask.redirect(flask.url_for(eventselector))
 
 
 @app.route('/logout')
