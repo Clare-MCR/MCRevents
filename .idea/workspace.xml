@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="356" column="51" lean-forward="true" selection-start-line="356" selection-start-column="51" selection-end-line="356" selection-end-column="51" />
+            <state relative-caret-position="470">
+              <caret line="361" column="28" lean-forward="true" selection-start-line="361" selection-start-column="28" selection-end-line="361" selection-end-column="28" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -450,13 +450,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00026" summary="better login">
-      <created>1493796158835</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1493796158835</updated>
-    </task>
     <task id="LOCAL-00027" summary="print session">
       <created>1493796794585</created>
       <option name="number" value="00027" />
@@ -793,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493829419664</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="debug session">
+      <created>1493829575803</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1493829575804</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="356" column="51" lean-forward="true" selection-start-line="356" selection-start-column="51" selection-end-line="356" selection-end-column="51" />
+        <state relative-caret-position="470">
+          <caret line="361" column="28" lean-forward="true" selection-start-line="361" selection-start-column="28" selection-end-line="361" selection-end-column="28" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
