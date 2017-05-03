@@ -1,3 +1,4 @@
+from mealbooker import app
 class User(object):
     def __init__(self, userID, isAdmin, isMCRMember, isAssociateMember, isCRA, isCollegeBill):
         self.userID = userID
@@ -22,9 +23,11 @@ class User(object):
         return False
 
     def __repr__(self):
-        return '{0}:[{1}:{isAdmin: {2}, isMCRMember: {3}, isAssociateMember: {4}, isCRA: {5}, isCollegeBill: {6}}]'.format(
+        jsonstring = '{0}:[{1}:{isAdmin: {2}, isMCRMember: {3}, isAssociateMember: {4}, isCRA: {5}, isCollegeBill: {6}}]'.format(
             self.displayName(), self.userID, self.isAdmin, self.isMCRMember, self.isAssociateMember, self.isCRA,
             self.isCollegeBill)
+        app.logger.debug(jsonstring)
+        return jsonstring
 
 class RavenUser(User):
     def displayName(self):
