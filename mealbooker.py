@@ -106,7 +106,6 @@ def require_event_existing(func):
 
 
 def requireEligibilityForEvent(func):
-    from functools import wraps
     @wraps(func)
     @require_event_existing
     def dec(*args, **kwargs):
@@ -122,7 +121,6 @@ def requireEligibilityForEvent(func):
 
 
 def requireEventOpen(func):
-    from functools import wraps
     @wraps(func)
     @require_event_existing
     def dec(*args, **kwargs):
@@ -143,7 +141,6 @@ def requireEventOpen(func):
 
 
 def requireNoBooking(func):
-    from functools import wraps
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
@@ -162,7 +159,6 @@ def requireNoBooking(func):
 
 
 def requireBooking(func):
-    from functools import wraps
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
@@ -181,7 +177,6 @@ def requireBooking(func):
 
 
 def requireGuestSpacesLeftForUser(func):
-    from functools import wraps
     @wraps(func)
     @requireBooking
     def dec(*args, **kwargs):
@@ -200,7 +195,6 @@ def requireGuestSpacesLeftForUser(func):
 
 
 def requireEmptyQueue(func):
-    from functools import wraps
     @wraps(func)
     @requireBooking
     def dec(*args, **kwargs):
@@ -216,7 +210,6 @@ def requireEmptyQueue(func):
 
 
 def requireNotInQueue(func):
-    from functools import wraps
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
@@ -231,7 +224,6 @@ def requireNotInQueue(func):
 
 
 def requireInQueue(func):
-    from functools import wraps
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
@@ -246,7 +238,6 @@ def requireInQueue(func):
 
 
 def cancellable(func):
-    from functools import wraps
     @wraps(func)
     def dec(*args, **kwargs):
         if flask.request.form['action'] == 'Cancel':
@@ -259,7 +250,6 @@ def cancellable(func):
 
 def confirmAction(confirmText):
     def outerDec(func):
-        from functools import wraps
         @wraps(func)
         @require_login
         def dec(*args, **kwargs):
@@ -588,6 +578,8 @@ def login():
     # app.logger.debug("this is where the problems happen")
     # return flask.redirect(flask.url_for('ravenlogin'))
     # TODO remove me!
+    app.logger.info("Checking if we need to login")
+    app.logger.debug(flask.session)
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
     return flask.redirect(flask.url_for('ravenlogin'))  # flask.render_template('login.html')
@@ -626,7 +618,6 @@ def ravenloginredirect():
 @app.route('/ravenlogin')
 @display_errors
 def ravenlogin():
-    from flask import request, session, flash, redirect, url_for
     # errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
     # homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
 
@@ -654,7 +645,6 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
-    app.logger.debug(flask.session)
     app.logger.debug(flask.url_for('eventselector'))
     return flask.redirect(flask.url_for('eventselector'))
 
@@ -673,18 +663,47 @@ def goodbye():
     return flask.render_template('goodbye.html')
 
 
-if __name__ == '__main__':
-    ## # To allow aptana to receive errors, set use_debugger=False
-    ## app = create_app(config="config.yaml")
+@app.errorhandler(404)
+def page_not_found(error):
+    """
+    The server has not found anything matching the Request-URI. No indication
+    is given of whether the condition is temporary or permanent. The 410 (Gone)
+    status code SHOULD be used if the server knows, through some internally
+    configurable mechanism, that an old resource is permanently unavailable
+    and has no forwarding address. This status code is commonly used when the
+    server does not wish to reveal exactly why the request has been refused,
+    or when no other response is applicable.
+    """
+    return flask.render_template("errorinfo.html"), 404
 
-    ## if app.debug: use_debugger = True
-    ## try:
-    ##   # Disable Flask's debugger if external debugger is requested
-    ##   use_debugger = not(app.config.get('DEBUG_WITH_APTANA'))
-    ## except:
-    ##   pass
-    ## app.run(use_debugger=use_debugger, debug=app.debug,
-    ##         use_reloader=use_debugger, host='0.0.0.0')
+
+@app.errorhandler(405)
+def method_not_allowed_page(error):
+    """
+    The method specified in the Request-Line is not allowed for the resource
+    identified by the Request-URI. The response MUST include an Allow header
+    containing a list of valid methods for the requested resource.
+    """
+    return flask.render_template("errorinfo.html"), 405
+
+
+@app.errorhandler(500)
+def server_error_page(error):
+    return flask.render_template("servererror.html"), 500
+
+
+if __name__ == '__main__':
+    """ To allow aptana to receive errors, set use_debugger=False
+    # app = create_app(config="config.yaml")
+    # if app.debug: use_debugger = True
+    # try:
+    #   # Disable Flask's debugger if external debugger is requested
+    #   use_debugger = not(app.config.get('DEBUG_WITH_APTANA'))
+    # except:
+    #   pass
+    # app.run(use_debugger=use_debugger, debug=app.debug,
+    #         use_reloader=use_debugger, host='0.0.0.0')
+    """
     app.logger.debug("Starting App")
 
     # app.run()
