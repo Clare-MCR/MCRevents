@@ -51,14 +51,13 @@ def require_login(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
-        app.logger.debug(func.__name__)
+        app.logger.debug(require_login.__name__)
         if not flask.session.get('logged_in'):
             app.logger.debug("We're not logged in")
             app.logger.info('going to {}'.format(flask.url_for('login')))
             return flask.redirect(flask.url_for('login'))
         app.logger.debug("We're Back")
         return func(*args, **kwargs)
-
     return dec
 
 
@@ -99,6 +98,7 @@ def require_event_existing(func):
     @wraps(func)
     @require_login
     def dec(*args, **kwargs):
+        app.logger.debug(require_event_existing.__name__)
         event_id = kwargs['eventID']
         from dbops import getEvents
         if len(getEvents(event_id)) == 0:
@@ -113,6 +113,7 @@ def requireEligibilityForEvent(func):
     @wraps(func)
     @require_event_existing
     def dec(*args, **kwargs):
+        app.logger.debug(requireEligibilityForEvent.__name__)
         eventID = kwargs['eventID']
         from dbops import getEvent
         event = getEvent(eventID)
@@ -128,6 +129,7 @@ def requireEventOpen(func):
     @wraps(func)
     @require_event_existing
     def dec(*args, **kwargs):
+        app.logger.debug(requireEventOpen.__name__)
         if 'isAdminBooking' in kwargs:
             isAdminBooking = kwargs['isAdminBooking']
         else:
@@ -148,6 +150,7 @@ def requireNoBooking(func):
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
+        app.logger.debug(requireNoBooking.__name__)
         if 'isAdminBooking' in kwargs:
             isAdminBooking = kwargs['isAdminBooking']
         else:
@@ -166,6 +169,7 @@ def requireBooking(func):
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
+        app.logger.debug(requireBooking.__name__)
         if 'isAdminBooking' in kwargs:
             isAdminBooking = kwargs['isAdminBooking']
         else:
@@ -184,6 +188,7 @@ def requireGuestSpacesLeftForUser(func):
     @wraps(func)
     @requireBooking
     def dec(*args, **kwargs):
+        app.logger.debug(requireGuestSpacesLeftForUser.__name__)
         if 'isAdminBooking' in kwargs:
             isAdminBooking = kwargs['isAdminBooking']
         else:
@@ -202,6 +207,7 @@ def requireEmptyQueue(func):
     @wraps(func)
     @requireBooking
     def dec(*args, **kwargs):
+        app.logger.debug(requireEmptyQueue.__name__)
         eventID = kwargs['eventID']
         from dbops import numPeopleInQueueForEvent
         numQueued = numPeopleInQueueForEvent(eventID)
@@ -217,6 +223,7 @@ def requireNotInQueue(func):
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
+        app.logger.debug(requireNotInQueue.__name__)
         eventID = kwargs['eventID']
         from dbops import isUserInQueueForEvent
         if isUserInQueueForEvent(eventID, userID=flask.session['user'].userID):
@@ -231,6 +238,7 @@ def requireInQueue(func):
     @wraps(func)
     @requireEligibilityForEvent
     def dec(*args, **kwargs):
+        app.logger.debug(requireInQueue.__name__)
         eventID = kwargs['eventID']
         from dbops import isUserInQueueForEvent
         if not isUserInQueueForEvent(eventID, userID=flask.session['user'].userID):
@@ -244,6 +252,7 @@ def requireInQueue(func):
 def cancellable(func):
     @wraps(func)
     def dec(*args, **kwargs):
+        app.logger.debug(cancellable.__name__)
         if flask.request.form['action'] == 'Cancel':
             flask.flash('Operation cancelled')
             return flask.redirect(flask.url_for('eventselector'))
@@ -257,6 +266,7 @@ def confirmAction(confirmText):
         @wraps(func)
         @require_login
         def dec(*args, **kwargs):
+            app.logger.debug(confirmAction.__name__)
             if 'confirmProceed' in flask.session and flask.session['confirmProceed']:
                 flask.session.pop('confirmProceed', None)
                 return func(*args, **kwargs)
@@ -274,6 +284,7 @@ def confirmAction(confirmText):
 @app.route('/confirmActionForm/<confirmText>')
 @require_login
 def confirmActionForm(confirmText):
+    app.logger.debug(confirmActionForm.__name__)
     return flask.render_template('confirmActionForm.html', confirmText=confirmText)
 
 
@@ -281,6 +292,7 @@ def confirmActionForm(confirmText):
 @cancellable
 @require_login
 def confirmActionHandler():
+    app.logger.debug(confirmActionHandler.__name__)
     if flask.session['confirmProceedPressed']:
         return
     flask.session['confirmProceedPressed'] = True
@@ -298,6 +310,7 @@ def confirmActionHandler():
 @app.route('/showAllEntries/<int:showAllEntries>')
 @require_login
 def eventselector(showAllEntries):
+    app.logger.debug(eventselector.__name__)
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
     app.logger.debug("We're logged in and ready to rumble")
@@ -328,6 +341,7 @@ def eventselector(showAllEntries):
 @app.route('/eventDetails/<int:eventID>')
 @requireEligibilityForEvent
 def eventDetails(eventID):
+    app.logger.debug(eventDetails.__name__)
     from dbops import getEvent, getBookings, getQueueEntries
     event = getEvent(eventID)
     bookings = getBookings(eventID)
@@ -344,6 +358,7 @@ def eventDetails(eventID):
 @requireEventOpen
 @require_admin_for_admin_booking
 def bookEvent(eventID, isAdminBooking):
+    app.logger.debug(bookEvent.__name__)
     from dbops import getEvent
     event = getEvent(eventID)
     return flask.render_template('bookEvent.html', event=event, isAdminBooking=isAdminBooking)
@@ -356,6 +371,7 @@ def bookEvent(eventID, isAdminBooking):
 @requireEventOpen
 @require_admin_for_admin_booking
 def bookEventHandler(eventID, isAdminBooking):
+    app.logger.debug(bookEventHandler.__name__)
     from dbops import getEvent, makeBookingIfSpace
     event = getEvent(eventID)
     bookingSucceeded = makeBookingIfSpace(event, flask.session['user'], isAdminBooking=isAdminBooking,
@@ -378,6 +394,7 @@ def bookEventHandler(eventID, isAdminBooking):
 @requireNotInQueue
 @requireEventOpen
 def joinQueueForEvent(eventID):
+    app.logger.debug(joinQueueForEvent.__name__)
     from dbops import getEvent
     event = getEvent(eventID)
     return flask.render_template('joinQueueForEvent.html', event=event)
@@ -388,6 +405,7 @@ def joinQueueForEvent(eventID):
 @requireNotInQueue
 @requireEventOpen
 def joinQueueForEventHandler(eventID):
+    app.logger.debug(joinQueueForEventHandler.__name__)
     # Due to locking, if there is space in the queue, then we are always allowed
     # to try to make a booking -- the queue is filtered upwards on an unbooking
     from dbops import getEvent, makeBookingIfSpace
@@ -410,6 +428,7 @@ def joinQueueForEventHandler(eventID):
 @requireInQueue
 @requireEventOpen
 def modifyQueue(eventID):
+    app.logger.debug(modifyQueue.__name__)
     from dbops import getEvent, getQueueEntry
     event = getEvent(eventID)
     booking = getQueueEntry(eventID, flask.session['user'].userID)
@@ -422,6 +441,7 @@ def modifyQueue(eventID):
 @requireInQueue
 @requireEventOpen
 def modifyQueueHandler(eventID):
+    app.logger.debug(modifyQueueHandler.__name__)
     from dbops import getQueueEntry, updateQueueDetails
     booking = getQueueEntry(eventID, flask.session['user'].userID)
     from objectcreation import updateBookingFromForm
@@ -437,6 +457,7 @@ def modifyQueueHandler(eventID):
 @requireEventOpen
 @confirmAction('Remove guest from queue?')
 def removeGuestFromQueueHandler(eventID, bookingID, detailsID):
+    app.logger.debug(removeGuestFromQueueHandler.__name__)
     from dbops import removeGuestFromQueue
     removeGuestFromQueue(eventID, bookingID, detailsID)
     flask.flash('Guest unbooked')
@@ -448,6 +469,7 @@ def removeGuestFromQueueHandler(eventID, bookingID, detailsID):
 @requireEventOpen
 @confirmAction('Leave queue?')
 def leaveQueueForEventHandler(eventID):
+    app.logger.debug(leaveQueueForEventHandler.__name__)
     from dbops import leaveQueue
     leaveQueue(eventID, flask.session['user'].userID)
     flask.flash('Left queue')
@@ -460,6 +482,7 @@ def leaveQueueForEventHandler(eventID):
 @requireEventOpen
 @require_admin_for_admin_booking
 def modifyBooking(eventID, isAdminBooking):
+    app.logger.debug(modifyBooking.__name__)
     from dbops import getEvent, getBooking, numPeopleInQueueForEvent
     event = getEvent(eventID)
     numQueued = numPeopleInQueueForEvent(event.eventID)
@@ -475,6 +498,7 @@ def modifyBooking(eventID, isAdminBooking):
 @requireEventOpen
 @require_admin_for_admin_booking
 def modifyBookingHandler(eventID, isAdminBooking):
+    app.logger.debug(modifyBookingHandler.__name__)
     from dbops import getBooking, updateBookingDetails
     booking = getBooking(eventID, flask.session['user'].userID, isAdminBooking)
     from objectcreation import updateBookingFromForm
@@ -491,6 +515,7 @@ def modifyBookingHandler(eventID, isAdminBooking):
 @require_admin_for_admin_booking
 @confirmAction('Unbook guest?')
 def unbookGuestHandler(eventID, bookingID, detailsID, isAdminBooking):
+    app.logger.debug(unbookGuestHandler.__name__)
     from dbops import unbookGuest
     unbookGuest(eventID, bookingID, detailsID)
     flask.flash('Guest unbooked')
@@ -505,6 +530,7 @@ def unbookGuestHandler(eventID, bookingID, detailsID, isAdminBooking):
 @requireEventOpen
 @require_admin_for_admin_booking
 def bookAnotherGuest(eventID, bookingID, isAdminBooking):
+    app.logger.debug(bookAnotherGuest.__name__)
     from dbops import bookAnotherGuestIfSpace
     couldBook = bookAnotherGuestIfSpace(eventID, bookingID, flask.session['user'], isAdminBooking=isAdminBooking)
     if couldBook:
@@ -521,6 +547,7 @@ def bookAnotherGuest(eventID, bookingID, isAdminBooking):
 @require_admin_for_admin_booking
 @confirmAction('Unbook from event?')
 def unbookEventHandler(eventID, isAdminBooking):
+    app.logger.debug(unbookEventHandler.__name__)
     from dbops import deleteBookings
     deleteBookings(eventID, flask.session['user'], isAdminBooking)
     flask.flash('Booking removed')
@@ -530,6 +557,7 @@ def unbookEventHandler(eventID, isAdminBooking):
 @app.route('/createEvent')
 @require_admin
 def createEvent():
+    app.logger.debug(createEvent.__name__)
     from datetime import date
     import calendar
     from dbops import getEventDefaults
@@ -540,6 +568,7 @@ def createEvent():
 @app.route('/createEventHandler', methods=['POST'])
 @require_admin
 def createEventHandler():
+    app.logger.debug(createEventHandler.__name__)
     from objectcreation import eventFromForm
     try:
         event = eventFromForm(flask.request.form)
@@ -559,6 +588,7 @@ def createEventHandler():
 @require_admin
 @confirmAction('Delete event?')
 def deleteEventHandler(eventID):
+    app.logger.debug(deleteEventHandler.__name__)
     from dbops import deleteEvent
     deleteEvent(eventID)
     flask.flash('Event deleted!')
@@ -569,6 +599,7 @@ def deleteEventHandler(eventID):
 @require_admin
 @confirmAction('Update Queue?')
 def updateHandler(eventID):
+    app.logger.debug(updateHandler.__name__)
     from dbops import updateQueue
     updateQueue(eventID)
     flask.flash('Event updated!')
@@ -578,6 +609,7 @@ def updateHandler(eventID):
 @app.route('/login')
 @display_errors
 def login():
+    app.logger.debug(login.__name__)
     # TODO remove me!
     # app.logger.debug("this is where the problems happen")
     # return flask.redirect(flask.url_for('ravenlogin'))
@@ -592,6 +624,7 @@ def login():
 @app.route('/alternatelogin', methods=['POST'])
 @display_errors
 def alternatelogin():
+    app.logger.debug(alternatelogin.__name__)
     username = flask.request.form['username']
     password = flask.request.form['password']
 
@@ -611,6 +644,7 @@ def alternatelogin():
 @app.route('/ravenloginredirect')
 @display_errors
 def ravenloginredirect():
+    app.logger.debug(ravenloginredirect.__name__)
     url = flask.url_for('ravenloginredirect')
     app.logger.debug(url)
     url = url.replace('redirect', '')
@@ -622,6 +656,7 @@ def ravenloginredirect():
 @app.route('/ravenlogin')
 @display_errors
 def ravenlogin():
+    app.logger.debug(ravenlogin.__name__)
     from flask import redirect, url_for
 
     # errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
@@ -659,6 +694,7 @@ def ravenlogin():
 @app.route('/logout')
 @require_login
 def logout():
+    app.logger.debug(logout.__name__)
     flask.session.pop('logged_in', None)
     flask.session.pop('user', None)
     flask.flash('You were logged out')
@@ -667,6 +703,7 @@ def logout():
 
 @app.route('/goodbye')
 def goodbye():
+    app.logger.debug(goodbye.__name__)
     return flask.render_template('goodbye.html')
 
 
