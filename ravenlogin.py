@@ -41,6 +41,7 @@ def ravenlogin():
 
     flask.session['logged_in'] = True
     logging.debug('You are logged in')
+    logging.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
     logging.debug(homeurl)
     return flask.redirect(homeurl)
