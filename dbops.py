@@ -193,7 +193,7 @@ def deleteEvent(eventID):
 
 def isUserBookedInEvent(eventID, userID, isAdminBooking=False):
     cur = getMySQLCursor()
-    cur.execute('SELECT id FROM {0} WHERE eventid = {1} AND booker = {2} AND admin = {3}'.format(mcrevents_booking,
+    cur.execute('SELECT id FROM {0} WHERE eventid = {1} AND booker = "{2}" AND admin = {3}'.format(mcrevents_booking,
                                                                                                  eventID, userID,
                                                                                                  isAdminBooking))
     return len(list(cur.fetchall())) > 0
@@ -209,7 +209,7 @@ def areFreeGuestSpacesForUser(eventID, userID, isAdminBooking):
 
 def isUserInQueueForEvent(eventID, userID):
     cur = getMySQLCursor()
-    cur.execute('SELECT id FROM {} WHERE eventid = {} AND booker = {}'.format(mcrevents_queue, eventID, userID))
+    cur.execute('SELECT id FROM {} WHERE eventid = {} AND booker = "{}"'.format(mcrevents_queue, eventID, userID))
     return len(list(cur.fetchall())) > 0
 
 
@@ -231,7 +231,7 @@ def getBookings(eventID, userID=None, isAdminBooking=None):
                 mcrevents_booking, eventID, isAdminBooking))
     else:
         cur.execute(
-            'SELECT id, booker, admin, tickets FROM {0} WHERE eventid = {1} AND booker = {2} AND admin = {3}'.format(
+            'SELECT id, booker, admin, tickets FROM {0} WHERE eventid = {1} AND booker = "{2}" AND admin = {3}'.format(
                 mcrevents_booking, eventID, userID, isAdminBooking))
     bookings = []
     for row in cur.fetchall():
@@ -274,7 +274,7 @@ def _getQueueEntriesWorker(cur, eventID, userID=None):
                                                                                                     eventID))
     else:
         cur.execute(
-            'SELECT id, booker, admin, tickets FROM {0} WHERE eventid = {1} AND booker = {2} ORDER BY id ASC'.format(
+            'SELECT id, booker, admin, tickets FROM {0} WHERE eventid = {1} AND booker = "{2}" ORDER BY id ASC'.format(
                 mcrevents_queue, eventID, userID))
     queueEntries = []
     for row in cur.fetchall():
@@ -315,7 +315,7 @@ def makeBookingIfSpace(event, user, isAdminBooking, numTickets):
         return False
 
     cur.execute('INSERT INTO {0} (eventid, booker, admin, tickets) \
-      VALUES ({1}, {2}, {3}, {4})'.format(mcrevents_booking,
+      VALUES ({1}, "{2}", {3}, {4})'.format(mcrevents_booking,
                                           event.eventID, user.userID, isAdminBooking, numTickets))
     bookingID = db.insert_id()
     # Create blank rows in details table
