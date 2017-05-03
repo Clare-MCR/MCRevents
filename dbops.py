@@ -306,6 +306,7 @@ def makeBookingIfSpace(event, thisuser, isAdminBooking, numTickets):
     cur, db = getMySQLCursorAndDb()
     user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
                      thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
+    logging.debug(user)
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_eventslist])
     cur.execute('SELECT current_guests FROM {0} WHERE id = {1}'.format(mcrevents_eventslist, event.eventID))
 
