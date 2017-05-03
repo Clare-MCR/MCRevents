@@ -398,6 +398,7 @@ function show_guestlist( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
+    global $logger;
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -408,12 +409,15 @@ function show_guestlist( $eventid ) {
 
 	$result = $dbh->single();
 
+	$logger->debug($result);
+
 	$num_guests = $result[0];
 
 	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset();
+	$logger->debug($result);
 
 	echo "<h1>Official Guestlist</h1>\n";
 	echo "<p>This is the official guestlist for the following event:</p>\n";

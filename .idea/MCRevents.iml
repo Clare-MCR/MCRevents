@@ -5,30 +5,33 @@
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.3 (~/.pyenv/versions/2.7.3/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar:///Users/rg12/PhpstormProjects/MCRevents/usage/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/usage/composer.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar:///Users/rg12/PhpstormProjects/MCRevents/usage/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/usage/composer.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="PHP">
+      <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/usage/vendor/composer" />
-          <root url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />
-          <root url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+          <root url="file://$MODULE_DIR$/vendor/psr/log" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/usage/vendor/composer" />
-          <root url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />
-          <root url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+          <root url="file://$MODULE_DIR$/vendor/psr/log" />
         </SOURCES>
       </library>
     </orderEntry>
