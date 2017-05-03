@@ -26,16 +26,16 @@ app.logger.debug('Logger Initialised')
 app.logger.info(sys.version)
 
 
-class CustomJSONEncoder(JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, Passport):
-            # Implement code to convert Passport object to a dict
-            return passport_dict
-        else:
-            JSONEncoder.default(self, obj)
-
-# Now tell Flask to use the custom class
-app.json_encoder = CustomJSONEncoder
+# class CustomJSONEncoder(JSONEncoder):
+#     def default(self, obj):
+#         if isinstance(obj, Passport):
+#             # Implement code to convert Passport object to a dict
+#             return passport_dict
+#         else:
+#             JSONEncoder.default(self, obj)
+#
+# # Now tell Flask to use the custom class
+# app.json_encoder = CustomJSONEncoder
 
 
 def format_exception(e):
