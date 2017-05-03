@@ -135,11 +135,16 @@ def requireEligibilityForEvent(func):
     @wraps(func)
     @require_event_existing
     def dec(*args, **kwargs):
+        from datatypes import RavenUser
         app.logger.debug(requireEligibilityForEvent.__name__)
         eventID = kwargs['eventID']
         from dbops import getEvent
         event = getEvent(eventID)
-        if not flask.session['user'].isEligibleForEvent(event):
+        thisuser = flask.session['user']
+        app.logger.debug(thisuser)
+        user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
+                         thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
+        if not user.isEligibleForEvent(event):
             flask.flash('User not eligible for event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)

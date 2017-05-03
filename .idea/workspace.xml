@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbops.py" afterPath="$PROJECT_DIR$/dbops.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +32,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="126" column="44" lean-forward="true" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
+            <state relative-caret-position="370">
+              <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbops.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbops.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="577" column="120" lean-forward="false" selection-start-line="577" selection-start-column="120" selection-end-line="577" selection-end-column="120" />
+            <state relative-caret-position="350">
+              <caret line="587" column="13" lean-forward="true" selection-start-line="587" selection-start-column="13" selection-end-line="587" selection-end-column="13" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <marker date="1493832315000" expanded="true" signature="1484:1556" ph="SELECT crsid... access" />
@@ -222,8 +222,8 @@
         <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
-        <option value="$PROJECT_DIR$/mealbooker.py" />
         <option value="$PROJECT_DIR$/dbops.py" />
+        <option value="$PROJECT_DIR$/mealbooker.py" />
       </list>
     </option>
   </component>
@@ -498,13 +498,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00036" summary="add debugs">
-      <created>1493806111052</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1493806111052</updated>
     </task>
     <task id="LOCAL-00037" summary="add debug to every function">
       <created>1493806750249</created>
@@ -842,7 +835,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493830642135</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="rework dbops.py">
+      <created>1493832355440</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1493832355442</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -880,7 +880,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change structure of object" />
     <MESSAGE value="remove custom json encoder" />
     <MESSAGE value="print json string" />
     <MESSAGE value="DO Some Debugging" />
@@ -905,7 +904,8 @@
     <MESSAGE value="fix sql" />
     <MESSAGE value="fix layout" />
     <MESSAGE value="fix flash name" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix flash name" />
+    <MESSAGE value="rework dbops.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="rework dbops.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1263,20 +1263,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mealbooker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="126" column="44" lean-forward="true" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="44" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="577" column="120" lean-forward="false" selection-start-line="577" selection-start-column="120" selection-end-line="577" selection-end-column="120" />
+        <state relative-caret-position="350">
+          <caret line="587" column="13" lean-forward="true" selection-start-line="587" selection-start-column="13" selection-end-line="587" selection-end-column="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <marker date="1493832315000" expanded="true" signature="1484:1556" ph="SELECT crsid... access" />
@@ -1341,6 +1331,16 @@
             <marker date="1493832315000" expanded="true" signature="27103:27148" ph="UPDATE missi... " />
             <marker date="1493832315000" expanded="true" signature="27466:27596" ph="INSERT INTO missing_value... " />
             <marker date="1493832315000" expanded="true" signature="27595:27596" ph="INSERT INTO missing_value... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mealbooker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+          <folding>
+            <element signature="e#68#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
