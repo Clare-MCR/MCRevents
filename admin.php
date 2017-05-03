@@ -417,7 +417,7 @@ function show_guestlist( $eventid ) {
 	echo "<table border=\"0\" class=\"event_table guest_list\">";
 	echo "<tr><th>#</th><th>Name</th><th>Ticket ID</th><th>Booker</th><th>Diet</th><th>Other Requirements</th></tr>";
 	$j=0;
-	foreach ($result as $key => $value) {
+	foreach ($result as $value) {
 	    $j++;
 		echo "<tr>";
 		echo "<td>" . ( $j ) . "</td>";
@@ -579,13 +579,12 @@ function send_guestlist( $eventid ) {
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body    = $body . "Date: " . date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) ) . "\r\n------------------------------\r\n\n";
 	$body    = $body . "TicketID, Name, Booker, Diet, Other\r\n";
-
-	for ( $j = 0; $j < $num_attendees; $j ++ ) {
-		$body = $body . $result[ $j ]['id'] . ",";
-		$body = $body . $result[ $j ]['name'] . ",";
-		$body = $body . $result[ $j ]['booker'] . ",";
-		$body = $body . $result[ $j ]['diet'] . ",";
-		$body = $body . $result[ $j ]['other'] . "\r\n";
+    foreach ($result as $value){
+		$body = $body . $value['id'] . ",";
+		$body = $body . $value['name'] . ",";
+		$body = $body . $value['booker'] . ",";
+		$body = $body . $value['diet'] . ",";
+		$body = $body . $value['other'] . "\r\n";
 	}
 
 	mail( $to, $subject, $body, ( "Content-type: text/plain; charset=ISO-8859-1; format=flowed\r\nContent-Transfer-Encoding: quoted-printable" ) );
