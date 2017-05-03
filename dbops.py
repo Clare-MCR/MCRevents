@@ -157,7 +157,7 @@ def storeNewEvent(event):
     _lockTables(cur, [mcrevents_eventslist])
     cur.execute('INSERT INTO {0} (name, total_guests, current_guests, max_guests, associate_member,\
       mcr_member, cra, non_clare_associate_member, cost_normal, cost_second, event_date, open_date, close_date, sent)\
-      VALUES ({1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14})\
+      VALUES ("{1}", {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, "{14}")\
                 '.format(mcrevents_eventslist,
                          event.name,
                          event.totalTickets, 0,
@@ -367,7 +367,7 @@ def joinQueue(eventID, user, isAdminBooking, numTickets):
             name = user.displayName()
         cur.execute('INSERT INTO {} (bookingid, eventid, booker, admin, type, name,\
         diet, other) \
-        VALUES ({}, {}, {}, {}, {}, {}, {}, {})'.format(mcrevents_queue_details,
+        VALUES ({}, {}, "{}", {}, {}, "{}", "{}", "{}")'.format(mcrevents_queue_details,
                                                         queueID, eventID, user.userID, isAdminBooking, ticketType, name,
                                                         'None', ''))
     db.commit()
@@ -380,12 +380,12 @@ def joinQueue(eventID, user, isAdminBooking, numTickets):
 def updateBookingDetails(booking):
     cur, db = getMySQLCursorAndDb()
     _lockTables(cur, [mcrevents_booking_details])
-    cur.execute('UPDATE {} SET diet = {}, other = {} WHERE id = {}'.format(mcrevents_booking_details,
+    cur.execute('UPDATE {} SET diet = "{}", other = "{}" WHERE id = {}'.format(mcrevents_booking_details,
                                                                            booking.primaryDetails.diet,
                                                                            booking.primaryDetails.other,
                                                                            booking.primaryDetails.detailsID))
     for guestDetails in booking.guestDetails:
-        cur.execute('UPDATE {} SET name = {}, diet = {}, other = {} WHERE id = {}'.format(mcrevents_booking_details,
+        cur.execute('UPDATE {} SET name = "{}", diet = "{}", other = {} WHERE id = {}'.format(mcrevents_booking_details,
                                                                                           guestDetails.name,
                                                                                           guestDetails.diet,
                                                                                           guestDetails.other,
@@ -398,12 +398,12 @@ def updateBookingDetails(booking):
 def updateQueueDetails(booking):
     cur, db = getMySQLCursorAndDb()
     _lockTables(cur, [mcrevents_queue_details])
-    cur.execute('UPDATE {} SET diet = {}, other = {} WHERE id = {}'.format(mcrevents_queue_details,
+    cur.execute('UPDATE {} SET diet = "{}", other = "{}" WHERE id = {}'.format(mcrevents_queue_details,
                                                                            booking.primaryDetails.diet,
                                                                            booking.primaryDetails.other,
                                                                            booking.primaryDetails.detailsID))
     for guestDetails in booking.guestDetails:
-        cur.execute('UPDATE {} SET name = {}, diet = {}, other = {} WHERE id = {}'.format(mcrevents_queue_details,
+        cur.execute('UPDATE {} SET name = "{}", diet = "{}", other = "{}" WHERE id = {}'.format(mcrevents_queue_details,
                                                                                           guestDetails.name,
                                                                                           guestDetails.diet,
                                                                                           guestDetails.other,
@@ -484,7 +484,7 @@ def bookAnotherGuestIfSpace(eventID, bookingID, user, isAdminBooking=False):
     else:
         name = user.displayName() + ' (Guest ' + str(numTickets) + ')'
     cur.execute('INSERT INTO {} (bookingid, eventid, booker, admin, type, name, diet, other) \
-      VALUES ({}, {}, {}, {}, {}, {}, {}, {})'.format(mcrevents_booking_details,
+      VALUES ({}, {}, "{}", {}, {}, "{}", "{}", "{}")'.format(mcrevents_booking_details,
                                                       bookingID, eventID, user.userID, isAdminBooking, 0, name, 'None',
                                                       ''))
 
@@ -503,17 +503,17 @@ def deleteBookings(eventID, user, isAdminBooking=False):
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_queue, mcrevents_queue_details,
                       mcrevents_eventslist])
 
-    cur.execute('SELECT tickets FROM {} WHERE eventid = {} AND booker = {} AND admin = {}'.format(mcrevents_booking,
+    cur.execute('SELECT tickets FROM {} WHERE eventid = {} AND booker = "{}" AND admin = {}'.format(mcrevents_booking,
                                                                                                   eventID, user.userID,
                                                                                                   isAdminBooking))
     numTickets = cur.fetchone()[0]
     cur.execute('SELECT current_guests FROM {} WHERE id = {}'.format(mcrevents_eventslist, eventID))
     current_guests = cur.fetchone()[0]
 
-    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = {} AND admin = {}'.format(mcrevents_booking,
+    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = "{}" AND admin = {}'.format(mcrevents_booking,
                                                                                           eventID, user.userID,
                                                                                           isAdminBooking))
-    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = {} AND admin = {}'.format(mcrevents_booking_details,
+    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = "{}" AND admin = {}'.format(mcrevents_booking_details,
                                                                                           eventID, user.userID,
                                                                                           isAdminBooking))
     cur.execute('UPDATE {} SET current_guests = {} WHERE id = {}'.format(mcrevents_eventslist,
@@ -613,14 +613,14 @@ def leaveQueue(eventID, userID):
 
 
 def _leaveQueueWorker(cur, db, eventID, userID):
-    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = {}'.format(mcrevents_queue, eventID, userID))
-    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = {}'.format(mcrevents_queue_details, eventID, userID))
+    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = "{}"'.format(mcrevents_queue, eventID, userID))
+    cur.execute('DELETE FROM {} WHERE eventid = {} AND booker = "{}"'.format(mcrevents_queue_details, eventID, userID))
     db.commit()
 
 
 def _insertBookingWorker(cur, db, current_guests, eventID, booking):
     cur.execute('INSERT INTO {} (eventid, booker, admin, tickets) \
-      VALUES ({}, {}, {}, {})'.format(mcrevents_booking,
+      VALUES ({}, "{}", {}, {})'.format(mcrevents_booking,
                                       eventID, booking.userID, booking.isAdminBooking, booking.numTickets))
 
     booking.bookingID = db.insert_id()
@@ -640,7 +640,7 @@ def _insertDetailsWorker(cur, isGuest, eventID, booking, details):
 
     cur.execute('INSERT INTO {} (bookingid, eventid, booker, admin, type, name,\
       diet, other) \
-      VALUES ({}, {}, {}, {}, {}, {}, {}, {})'.format(mcrevents_booking_details,
+      VALUES ({}, {}, "{}", {}, {}, "{}", "{}", "{}")'.format(mcrevents_booking_details,
                                                       booking.bookingID, eventID, booking.userID,
                                                       booking.isAdminBooking, ticketType, details.name,
                                                       details.diet, details.other))
