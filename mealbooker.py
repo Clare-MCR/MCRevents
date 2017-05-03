@@ -59,6 +59,7 @@ def require_login(func):
             return flask.redirect(flask.url_for('login'))
         app.logger.debug("We're Back")
         return func(*args, **kwargs)
+
     return dec
 
 
@@ -686,7 +687,6 @@ def ravenlogin():
     app.logger.debug(flask.session)
 
     url = url_for('eventselector')
-    flask.render_template('servererror.html')
     app.logger.debug(url)
     return redirect(url)
 
