@@ -351,7 +351,7 @@ def eventselector(showAllEntries):
     for key, value in thisuser.iteritems():
         app.logger.debug('{} {}'.format(key, value))
     user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
-                     thisuser['isAssociateMember'], thisuser['.isCRA'], thisuser['isCollegeBill'])
+                     thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
 
