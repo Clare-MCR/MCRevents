@@ -24,6 +24,7 @@ logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=
 app.logger.debug('Logger Initialised')
 app.logger.info(sys.version)
 
+
 def format_exception(e):
     info = ''.join(traceback.format_tb(sys.exc_info()[2]))
     return str(e) + "\n\n" + info
@@ -625,9 +626,6 @@ def login():
 @display_errors
 def alternatelogin():
     app.logger.debug(alternatelogin.__name__)
-    username = flask.request.form['username']
-    password = flask.request.form['password']
-
     from flask import request, session, flash, redirect, url_for
     if request.form['username'] != 'cow':
         flash('Invalid username', 'error')
@@ -636,7 +634,7 @@ def alternatelogin():
     else:
         session['logged_in'] = True
         from datatypes import AlternateUser
-        session['user'] = AlternateUser('cow', 1, 1, 0, 0, 0)[0]
+        session['user'] = AlternateUser('cow', 1, 1, 0, 0, 0)
         flash('You were logged in')
     return redirect(url_for('eventselector'))
 
