@@ -671,13 +671,13 @@ def ravenlogin():
         app.logger.warning('No Raven crsid found!')
         flask.flash('No Raven crsid found!', 'error')
         flask.session['logged_in'] = False
-        return flask.redirect(flask.url_for('goodbye'))
+        return redirect(flask.url_for('goodbye'))
 
     if crsid not in ravenUserNames():
         app.logger.warning('User Not registered')
         flask.flash('User ' + crsid + ' not registered for booking', 'error')
         flask.session['logged_in'] = False
-        return flask.redirect(flask.url_for('goodbye'))
+        return redirect(flask.url_for('goodbye'))
     app.logger.debug('user in allowed usernames')
     app.logger.debug('Getting name')
     flask.session['user'] = ravenUsers(crsid)[0]
@@ -686,7 +686,7 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
-    url = flask.url_for('eventselector')
+    url = url_for('eventselector')
     app.logger.debug(url)
     return redirect(url)
 
@@ -718,6 +718,7 @@ def page_not_found(error):
     server does not wish to reveal exactly why the request has been refused,
     or when no other response is applicable.
     """
+    app.logger.debug(page_not_found.__name__)
     return flask.render_template("errorinfo.html"), 404
 
 
@@ -728,11 +729,13 @@ def method_not_allowed_page(error):
     identified by the Request-URI. The response MUST include an Allow header
     containing a list of valid methods for the requested resource.
     """
+    app.logger.debug(method_not_allowed_page.__name__)
     return flask.render_template("errorinfo.html"), 405
 
 
 @app.errorhandler(500)
 def server_error_page(error):
+    app.logger.debug(server_error_page.__name__)
     return flask.render_template("servererror.html"), 500
 
 
