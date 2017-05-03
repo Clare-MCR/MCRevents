@@ -22,10 +22,9 @@ class User(object):
         return False
 
     def __repr__(self):
-        return '{0} ({1}): isAdmin: {2}, isMCRMember: {3}, isAssociateMember: {4}, isCRA: {5}, isCollegeBill: {6}'.format(
+        return '{0}:[{1}:{isAdmin: {2}, isMCRMember: {3}, isAssociateMember: {4}, isCRA: {5}, isCollegeBill: {6}}]'.format(
             self.displayName(), self.userID, self.isAdmin, self.isMCRMember, self.isAssociateMember, self.isCRA,
             self.isCollegeBill)
-
 
 class RavenUser(User):
     def displayName(self):

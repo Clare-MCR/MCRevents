@@ -9,6 +9,7 @@ from functools import wraps
 from wsgiref.handlers import CGIHandler
 
 import flask
+from flask.json import JSONEncoder
 
 from dbops import ravenUserNames, ravenUsers
 
@@ -23,6 +24,18 @@ logging.getLogger(app.logger_name)
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 app.logger.debug('Logger Initialised')
 app.logger.info(sys.version)
+
+
+class CustomJSONEncoder(JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Passport):
+            # Implement code to convert Passport object to a dict
+            return passport_dict
+        else:
+            JSONEncoder.default(self, obj)
+
+# Now tell Flask to use the custom class
+app.json_encoder = CustomJSONEncoder
 
 
 def format_exception(e):
@@ -316,6 +329,15 @@ def eventselector(showAllEntries):
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
     app.logger.debug("We're logged in and ready to rumble")
+    app.logger.info("Creating user from json")
+
+    #  = user.userID
+    #  = user.isAdmin
+    # flask.session['isMCRMember'] = user.isMCRMember
+    # flask.session['isAssociateMember'] = user.isAssociateMember
+    # flask.session['isCRA'] = user.isCRA
+    # flask.session['isCollegeBill'] = user.isCollegeBill
+    # user = RavenUser(flask.session['userID'], flask.session['isAdmin'], row[2], row[3], row[4], row[5])
     user = flask.session['user']
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
@@ -682,10 +704,14 @@ def ravenlogin():
     user = ravenUsers(crsid)[0]
     app.logger.debug(user)
 
-    dict = {isAdmin:user.isAdmin,isMCRMember:user.isMCRMember,isAssociateMember:user.isAssociateMember,isCRA:user.isCRA,isCollegeBill:user.isCollegeBill}
-    flask.session['user'] = {user.displayName():dict}
-
-
+    flask.session['user'] = user\
+    #     .displayName()
+    # flask.session['userID'] = user.userID
+    # flask.session['isAdmin'] = user.isAdmin
+    # flask.session['isMCRMember'] = user.isMCRMember
+    # flask.session['isAssociateMember'] = user.isAssociateMember
+    # flask.session['isCRA'] = user.isCRA
+    # flask.session['isCollegeBill'] = user.isCollegeBill
 
     flask.session['logged_in'] = True
     app.logger.debug('You are logged in')
