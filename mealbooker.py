@@ -49,7 +49,7 @@ def display_errors(func):
 def require_login(func):
     @wraps(func)
     @display_errors
-    app.logger.debug(__name__)
+    app.logger.debug(self.__name__)
     def dec(*args, **kwargs):
         app.logger.debug("at require login")
         if not flask.session.get('logged_in'):
