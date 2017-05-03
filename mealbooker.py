@@ -335,6 +335,7 @@ def eventselector(showAllEntries):
     app.logger.debug(eventselector.__name__)
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
+    from datatypes import RavenUser
     app.logger.debug("We're logged in and ready to rumble")
     app.logger.info("Creating user from json")
 
@@ -345,7 +346,8 @@ def eventselector(showAllEntries):
     # flask.session['isCRA'] = user.isCRA
     # flask.session['isCollegeBill'] = user.isCollegeBill
     # user = RavenUser(flask.session['userID'], flask.session['isAdmin'], row[2], row[3], row[4], row[5])
-    user = flask.session['user']
+    user = RavenUser(flask.session['userID'], flask.session['isAdmin'], flask.session['isMCRMember'],
+                     flask.session['isAssociateMember'], flask.session['isCRA'], flask.session['isCollegeBill'])
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
 
