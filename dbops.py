@@ -233,7 +233,7 @@ def getBookings(eventID, userID=None, isAdminBooking=None):
 
 def numPeopleInQueueForEvent(eventID):
     cur = getMySQLCursor()
-    cur.execute('SELECT id FROM {0} WHERE eventid = %s'.format(mcrevents_queue_details), (eventID))
+    cur.execute('SELECT id FROM {0} WHERE eventid = {1}'.format(mcrevents_queue_details, eventID))
     return len(list(cur.fetchall()))
 
 
