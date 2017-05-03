@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin.php" afterPath="$PROJECT_DIR$/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datatypes.py" afterPath="$PROJECT_DIR$/datatypes.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,68 +29,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin.php">
+      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="577" column="45" lean-forward="false" selection-start-line="577" selection-start-column="45" selection-end-line="577" selection-end-column="45" />
-              <folding>
-                <marker date="1493825419000" expanded="true" signature="6508:6514" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="6595:6601" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="6681:6687" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="6775:6781" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="7587:7598" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="14032:14129" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="15539:15624" ph="SELECT cost_... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="16223:16340" ph="SELECT booke... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="16583:16589" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="17155:17271" ph="SELECT booke... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="18220:18340" ph="SELECT name ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="19388:19485" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="20934:21019" ph="SELECT cost_... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="22044:22153" ph="SELECT SUM(t... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="22881:23014" ph="SELECT id AS... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="24031:24151" ph="SELECT name ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="25647:25780" ph="SELECT id AS... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="26764:26884" ph="SELECT name ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="28776:28822" ph="SELECT name,... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="31480:31487" ph="£" />
-                <marker date="1493825419000" expanded="true" signature="31728:31735" ph="£" />
-                <marker date="1493825419000" expanded="true" signature="33131:33136" ph="&amp;" />
-                <marker date="1493825419000" expanded="true" signature="34249:34254" ph="&amp;" />
-                <marker date="1493825419000" expanded="true" signature="44739:44745" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="44830:44836" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="47334:47340" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="47428:47434" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="47852:47936" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="49714:49785" ph="SELECT name,... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="50007:50062" ph="DELETE FROM " />
-                <marker date="1493825419000" expanded="true" signature="50962:51035" ph="SELECT DISTI... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="51869:51945" ph="DELETE FROM " />
-                <marker date="1493825419000" expanded="true" signature="52126:52210" ph="DELETE FROM " />
-                <marker date="1493825419000" expanded="true" signature="52383:52454" ph="SELECT DISTI... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="53284:53358" ph="DELETE FROM " />
-                <marker date="1493825419000" expanded="true" signature="53546:53628" ph="DELETE FROM " />
-                <marker date="1493825419000" expanded="true" signature="54981:54987" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="57166:57172" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="59257:59263" ph=" " />
-                <marker date="1493825419000" expanded="true" signature="63835:63872" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="65384:65468" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493825419000" expanded="true" signature="74738:74744" ph="..." />
-                <marker date="1493825419000" expanded="true" signature="74838:74844" ph="..." />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
+      <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="25" column="131" lean-forward="false" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="objectcreation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objectcreation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,9 +111,9 @@
         <option value="$PROJECT_DIR$/mealbooker/extensions.py" />
         <option value="$PROJECT_DIR$/dbops.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
-        <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/datatypes.py" />
       </list>
     </option>
   </component>
@@ -187,7 +150,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,11 +159,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MCRevents" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,6 +221,25 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -274,6 +256,9 @@
       <envs />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.mealbooker" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -286,14 +271,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
-      <workItem from="1493824082238" duration="1278000" />
-    </task>
-    <task id="LOCAL-00010" summary="add debug spots">
-      <created>1493768725199</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1493768725199</updated>
+      <workItem from="1493824082238" duration="1428000" />
     </task>
     <task id="LOCAL-00011" summary="add debug spots">
       <created>1493768817285</created>
@@ -631,35 +609,42 @@
       <option name="project" value="LOCAL" />
       <updated>1493825337629</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fix send guestlist">
+      <created>1493825428983</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1493825428983</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1278000" />
+    <option name="totallyTimeSpent" value="1428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1687966" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17039403" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18849558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18849558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mealbooker/apps/ERASEME.txt" />
     <entry file="file://$PROJECT_DIR$/mealbooker/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/mealbooker/mealbooker.ini" />
     <entry file="file://$PROJECT_DIR$/mealbooker/manage.py" />
@@ -852,14 +836,6 @@
     <entry file="file://$PROJECT_DIR$/mealbooker/commands.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker/database.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker/extensions.py" />
-    <entry file="file://$PROJECT_DIR$/datatypes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
@@ -876,6 +852,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="566" column="38" lean-forward="false" selection-start-line="566" selection-start-column="38" selection-end-line="566" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objectcreation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -884,66 +884,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
+    <entry file="file://$PROJECT_DIR$/datatypes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        <state relative-caret-position="375">
+          <caret line="25" column="131" lean-forward="false" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="577" column="45" lean-forward="false" selection-start-line="577" selection-start-column="45" selection-end-line="577" selection-end-column="45" />
-          <folding>
-            <marker date="1493825419000" expanded="true" signature="6508:6514" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="6595:6601" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="6681:6687" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="6775:6781" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="7587:7598" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="14032:14129" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="15539:15624" ph="SELECT cost_... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="16223:16340" ph="SELECT booke... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="16583:16589" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="17155:17271" ph="SELECT booke... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="18220:18340" ph="SELECT name ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="19388:19485" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="20934:21019" ph="SELECT cost_... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="22044:22153" ph="SELECT SUM(t... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="22881:23014" ph="SELECT id AS... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="24031:24151" ph="SELECT name ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="25647:25780" ph="SELECT id AS... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="26764:26884" ph="SELECT name ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="28776:28822" ph="SELECT name,... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="31480:31487" ph="£" />
-            <marker date="1493825419000" expanded="true" signature="31728:31735" ph="£" />
-            <marker date="1493825419000" expanded="true" signature="33131:33136" ph="&amp;" />
-            <marker date="1493825419000" expanded="true" signature="34249:34254" ph="&amp;" />
-            <marker date="1493825419000" expanded="true" signature="44739:44745" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="44830:44836" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="47334:47340" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="47428:47434" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="47852:47936" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="49714:49785" ph="SELECT name,... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="50007:50062" ph="DELETE FROM " />
-            <marker date="1493825419000" expanded="true" signature="50962:51035" ph="SELECT DISTI... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="51869:51945" ph="DELETE FROM " />
-            <marker date="1493825419000" expanded="true" signature="52126:52210" ph="DELETE FROM " />
-            <marker date="1493825419000" expanded="true" signature="52383:52454" ph="SELECT DISTI... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="53284:53358" ph="DELETE FROM " />
-            <marker date="1493825419000" expanded="true" signature="53546:53628" ph="DELETE FROM " />
-            <marker date="1493825419000" expanded="true" signature="54981:54987" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="57166:57172" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="59257:59263" ph=" " />
-            <marker date="1493825419000" expanded="true" signature="63835:63872" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="65384:65468" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493825419000" expanded="true" signature="74738:74744" ph="..." />
-            <marker date="1493825419000" expanded="true" signature="74838:74844" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
