@@ -636,13 +636,13 @@ def ravenlogin():
         app.logger.warning('No Raven crsid found!')
         flask.flash('No Raven crsid found!', 'error')
         flask.session['logged_in'] = False
-        return flask.redirect(goodbye)
+        return flask.redirect(flask.url_for('goodbye'))
 
     if crsid not in ravenUserNames():
         app.logger.warning('User Not registered')
         flask.flash('User ' + crsid + ' not registered for booking', 'error')
         flask.session['logged_in'] = False
-        return flask.redirect(goodbye)
+        return flask.redirect(flask.url_for('goodbye'))
     app.logger.debug('user in allowed usernames')
     app.logger.debug('Getting name')
     flask.session['user'] = ravenUsers(crsid)[0]
@@ -651,8 +651,8 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
-    app.logger.debug(flask.url_for(eventselector))
-    return flask.redirect(flask.url_for(eventselector))
+    app.logger.debug(flask.url_for('eventselector'))
+    return flask.redirect(flask.url_for('eventselector'))
 
 
 @app.route('/logout')

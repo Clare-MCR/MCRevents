@@ -34,8 +34,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="653" column="49" lean-forward="false" selection-start-line="653" selection-start-column="49" selection-end-line="653" selection-end-column="49" />
+            <state relative-caret-position="253">
+              <caret line="653" column="50" lean-forward="true" selection-start-line="653" selection-start-column="50" selection-end-line="653" selection-end-column="50" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -721,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493795471603</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="better login">
+      <created>1493795649504</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1493795649504</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +774,8 @@
     <MESSAGE value="typo" />
     <MESSAGE value="app logger" />
     <MESSAGE value="all 1 file" />
-    <option name="LAST_COMMIT_MESSAGE" value="all 1 file" />
+    <MESSAGE value="better login" />
+    <option name="LAST_COMMIT_MESSAGE" value="better login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -891,8 +899,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="653" column="49" lean-forward="false" selection-start-line="653" selection-start-column="49" selection-end-line="653" selection-end-column="49" />
+        <state relative-caret-position="253">
+          <caret line="653" column="50" lean-forward="true" selection-start-line="653" selection-start-column="50" selection-end-line="653" selection-end-column="50" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
