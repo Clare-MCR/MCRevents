@@ -11,6 +11,7 @@ from wsgiref.handlers import CGIHandler
 import flask
 from flask.json import JSONEncoder
 
+from datatypes import User
 from dbops import ravenUserNames, ravenUsers
 
 FORMAT = '%(asctime)-15s %(message)s'
@@ -26,16 +27,22 @@ app.logger.debug('Logger Initialised')
 app.logger.info(sys.version)
 
 
-# class CustomJSONEncoder(JSONEncoder):
-#     def default(self, obj):
-#         if isinstance(obj, Passport):
-#             # Implement code to convert Passport object to a dict
-#             return passport_dict
-#         else:
-#             JSONEncoder.default(self, obj)
-#
-# # Now tell Flask to use the custom class
-# app.json_encoder = CustomJSONEncoder
+class CustomJSONEncoder(JSONEncoder):
+    def default(self, obj):
+        app.logger.debug('running custom jonencoder')
+        if isinstance(obj, User):
+            # Implement code to convert Passport object to a dict
+            user_dict = {"name": self.displayName(), "userID": self.userID, "isAdmin": self.isAdmin,
+                         "isMCRMember": self.isMCRMember,
+                         "isAssociateMember": self.isAssociateMember, "isCRA": self.isCRA,
+                         "isCollegeBill": self.isCollegeBill}
+            return user_dict
+        else:
+            JSONEncoder.default(self, obj)
+
+
+# Now tell Flask to use the custom class
+app.json_encoder = CustomJSONEncoder
 
 
 def format_exception(e):
@@ -704,8 +711,8 @@ def ravenlogin():
     user = ravenUsers(crsid)[0]
     app.logger.debug(user)
 
-    flask.session['user'] = user\
-    #     .displayName()
+    flask.session['user'] = user \
+        #     .displayName()
     # flask.session['userID'] = user.userID
     # flask.session['isAdmin'] = user.isAdmin
     # flask.session['isMCRMember'] = user.isMCRMember
