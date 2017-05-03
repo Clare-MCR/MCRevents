@@ -2,17 +2,17 @@
 # -*- coding: utf-8 -*-
 # Flask configuration
 import logging
+import os
 import sys
 import traceback
-import os
 from functools import wraps
-from dbops import ravenUserNames, ravenUsers
-
 from wsgiref.handlers import CGIHandler
 
 import flask
-FORMAT = '%(asctime)-15s %(message)s'
 
+from dbops import ravenUserNames, ravenUsers
+
+FORMAT = '%(asctime)-15s %(message)s'
 
 DEBUG = True
 SECRET_KEY = 'development moooo key'
@@ -22,6 +22,7 @@ app.config.from_object(__name__)
 logging.getLogger(app.logger_name)
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 app.logger.debug('Logger Initialised')
+
 
 def format_exception(e):
     info = ''.join(traceback.format_tb(sys.exc_info()[2]))
@@ -35,7 +36,7 @@ def display_errors(func):
             return func(*args, **kwargs)
         except Exception as e:
             if DEBUG:
-                app.logger.error('{} {}'.format(type(e).__name__,format_exception(e)))
+                app.logger.error('{} {}'.format(type(e).__name__, format_exception(e)))
                 return flask.render_template('errorinfo.html', errorName=type(e).__name__,
                                              traceback=format_exception(e))
             else:
@@ -49,12 +50,13 @@ def require_login(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
-       if not flask.session.get('logged_in'):
+        if not flask.session.get('logged_in'):
             app.logger.debug("We're not logged in")
             app.logger.info('going to {}'.format(flask.url_for('login')))
             return flask.redirect(flask.url_for('login'))
-       app.logger.debug("We're Back")
-       return func(*args, **kwargs)
+        app.logger.debug("We're Back")
+        return func(*args, **kwargs)
+
     return dec
 
 
@@ -583,12 +585,12 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
-    #app.logger.debug("this is where the problems happen")
-    #return flask.redirect(flask.url_for('ravenlogin'))
+    # app.logger.debug("this is where the problems happen")
+    # return flask.redirect(flask.url_for('ravenlogin'))
     # TODO remove me!
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
-    return flask.redirect(flask.url_for('ravenlogin'))#flask.render_template('login.html')
+    return flask.redirect(flask.url_for('ravenlogin'))  # flask.render_template('login.html')
 
 
 @app.route('/alternatelogin', methods=['POST'])
@@ -620,17 +622,18 @@ def ravenloginredirect():
     app.logger.debug(url)
     return flask.redirect(url)
 
+
 @app.route('/ravenlogin')
 @display_errors
 def ravenlogin():
-    #errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
-    #homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
+    from flask import request, session, flash, redirect, url_for
+    # errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
+    # homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
 
     crsid = None
     app.logger.debug(os.environ)
     if 'REMOTE_USER' in os.environ:
         crsid = str(os.environ['REMOTE_USER'])
-
 
     if crsid is None:
         app.logger.warning('No Raven crsid found!')
@@ -651,6 +654,7 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
+    app.logger.debug(flask.session)
     app.logger.debug(flask.url_for('eventselector'))
     return flask.redirect(flask.url_for('eventselector'))
 
@@ -683,5 +687,5 @@ if __name__ == '__main__':
     ##         use_reloader=use_debugger, host='0.0.0.0')
     app.logger.debug("Starting App")
 
-    #app.run()
+    # app.run()
     CGIHandler().run(app)

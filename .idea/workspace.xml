@@ -34,8 +34,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="653" column="50" lean-forward="true" selection-start-line="653" selection-start-column="50" selection-end-line="653" selection-end-column="50" />
+            <state relative-caret-position="222">
+              <caret line="656" column="34" lean-forward="false" selection-start-line="656" selection-start-column="34" selection-end-line="656" selection-end-column="34" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -728,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493795649504</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="better login">
+      <created>1493796158835</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1493796158835</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -899,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="653" column="50" lean-forward="true" selection-start-line="653" selection-start-column="50" selection-end-line="653" selection-end-column="50" />
+        <state relative-caret-position="222">
+          <caret line="656" column="34" lean-forward="false" selection-start-line="656" selection-start-column="34" selection-end-line="656" selection-end-column="34" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
