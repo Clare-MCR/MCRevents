@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="353" column="62" lean-forward="true" selection-start-line="353" selection-start-column="62" selection-end-line="353" selection-end-column="62" />
+            <state relative-caret-position="439">
+              <caret line="371" column="78" lean-forward="false" selection-start-line="371" selection-start-column="78" selection-end-line="371" selection-end-column="78" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -450,13 +450,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00030" summary="debug">
-      <created>1493798730030</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1493798730030</updated>
-    </task>
     <task id="LOCAL-00031" summary="debug">
       <created>1493800914857</created>
       <option name="number" value="00031" />
@@ -793,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493829925633</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="fix key error">
+      <created>1493829974633</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1493829974633</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -831,7 +831,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="print python version" />
     <MESSAGE value="style" />
     <MESSAGE value="turn off debug" />
     <MESSAGE value="raven dict restructure" />
@@ -856,7 +855,8 @@
     <MESSAGE value="debug session" />
     <MESSAGE value="fix dict calling" />
     <MESSAGE value="pring key" />
-    <option name="LAST_COMMIT_MESSAGE" value="pring key" />
+    <MESSAGE value="fix key error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix key error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="353" column="62" lean-forward="true" selection-start-line="353" selection-start-column="62" selection-end-line="353" selection-end-column="62" />
+        <state relative-caret-position="439">
+          <caret line="371" column="78" lean-forward="false" selection-start-line="371" selection-start-column="78" selection-end-line="371" selection-end-column="78" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>

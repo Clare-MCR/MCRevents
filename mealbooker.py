@@ -353,6 +353,7 @@ def eventselector(showAllEntries):
     user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
                      thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
+    app.logger.info("User loaded from session")
     currentEvents = events
 
     cutoffDate = datetime.now() - timedelta(days=1)
@@ -365,10 +366,10 @@ def eventselector(showAllEntries):
         eventsToUse = currentEvents
 
     for event in eventsToUse:
-        event.hasUserBooked = isUserBookedInEvent(event.eventID, userID=flask.session['user'].userID)
-        event.hasUserBookedAdmin = isUserBookedInEvent(event.eventID, userID=flask.session['user'].userID,
+        event.hasUserBooked = isUserBookedInEvent(event.eventID, userID=user.userID)
+        event.hasUserBookedAdmin = isUserBookedInEvent(event.eventID, userID=user.userID,
                                                        isAdminBooking=True)
-        event.isUserInQueue = isUserInQueueForEvent(event.eventID, userID=flask.session['user'].userID)
+        event.isUserInQueue = isUserInQueueForEvent(event.eventID, userID=user.userID)
         event.numQueued = numPeopleInQueueForEvent(event.eventID)
         event.showQueue = (event.numQueued > 0)
     return flask.render_template('eventselector.html', showAllEntries=showAllEntries,
