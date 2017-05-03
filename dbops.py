@@ -5,7 +5,7 @@ import ldap
 FORMAT = '%(asctime)s %(levelname)s\t: %(message)s'
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 
-DEBUG = True
+DEBUG = False
 if DEBUG:
     from datetime import datetime
 

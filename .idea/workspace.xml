@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbops.py" afterPath="$PROJECT_DIR$/dbops.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="852">
-              <caret line="688" column="45" lean-forward="true" selection-start-line="688" selection-start-column="45" selection-end-line="688" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -53,66 +54,66 @@
       <file leaf-file-name="dbops.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="11" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1493805719000" expanded="true" signature="1507:1579" ph="SELECT crsid... access" />
-                <marker date="1493805719000" expanded="true" signature="1829:1957" ph="SELECT crsid... access" />
-                <marker date="1493805719000" expanded="true" signature="2004:2150" ph="SELECT crsid... access" />
-                <marker date="1493805719000" expanded="true" signature="3616:3836" ph="SELECT id, n... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="3929:4163" ph="SELECT id, n... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="4592:4616" ph="SELECT name,... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="5460:5732" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="6396:6425" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="6485:6519" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="6576:6610" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="6675:6709" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="6764:6798" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="7008:7076" ph="SELECT id FR... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="7534:7587" ph="SELECT id FR... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="8124:8185" ph="SELECT id, b... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="8288:8364" ph="SELECT id, b... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="8481:8573" ph="SELECT id, b... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="8836:8917" ph="SELECT type,... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="9389:9426" ph="SELECT id FR... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="9995:10072" ph="SELECT id, b... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="10166:10259" ph="SELECT id, b... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="10511:10592" ph="SELECT type,... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="11562:11606" ph="SELECT curre... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="11933:12014" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="12620:12755" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="12941:12989" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="13482:13563" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="14040:14175" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="14645:14695" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="14910:14971" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="15302:15352" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="15565:15626" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="16078:16115" ph="SELECT ticke... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="16209:16253" ph="SELECT curre... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="16353:16382" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="16450:16498" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="16594:16635" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="17133:17170" ph="SELECT ticke... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="17263:17292" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="17357:17398" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="18224:18261" ph="SELECT ticke... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="18355:18413" ph="SELECT total... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="18796:18920" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="19065:19113" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="19209:19250" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="19647:19720" ph="SELECT ticke... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="19857:19901" ph="SELECT curre... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="20001:20066" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="20168:20233" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="20343:20391" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="20975:21033" ph="SELECT total... missing_value" />
-                <marker date="1493805719000" expanded="true" signature="23655:23705" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="23768:23818" ph="DELETE FROM " />
-                <marker date="1493805719000" expanded="true" signature="23976:24057" ph="INSERT INTO missing_value... " />
-                <marker date="1493805719000" expanded="true" signature="24430:24478" ph="UPDATE missi... " />
-                <marker date="1493805719000" expanded="true" signature="24739:24870" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="1508:1580" ph="SELECT crsid... access" />
+                <marker date="1493809420000" expanded="true" signature="1830:1958" ph="SELECT crsid... access" />
+                <marker date="1493809420000" expanded="true" signature="2005:2151" ph="SELECT crsid... access" />
+                <marker date="1493809420000" expanded="true" signature="3617:3837" ph="SELECT id, n... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="3930:4164" ph="SELECT id, n... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="4593:4617" ph="SELECT name,... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="5461:5733" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="6397:6426" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="6486:6520" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="6577:6611" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="6676:6710" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="6765:6799" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="7009:7077" ph="SELECT id FR... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="7535:7588" ph="SELECT id FR... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="8125:8186" ph="SELECT id, b... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="8289:8365" ph="SELECT id, b... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="8482:8574" ph="SELECT id, b... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="8837:8918" ph="SELECT type,... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="9390:9427" ph="SELECT id FR... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="9996:10073" ph="SELECT id, b... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="10167:10260" ph="SELECT id, b... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="10512:10593" ph="SELECT type,... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="11563:11607" ph="SELECT curre... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="11934:12015" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="12621:12756" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="12942:12990" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="13483:13564" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="14041:14176" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="14646:14696" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="14911:14972" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="15303:15353" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="15566:15627" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="16079:16116" ph="SELECT ticke... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="16210:16254" ph="SELECT curre... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="16354:16383" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="16451:16499" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="16595:16636" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="17134:17171" ph="SELECT ticke... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="17264:17293" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="17358:17399" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="18225:18262" ph="SELECT ticke... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="18356:18414" ph="SELECT total... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="18797:18921" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="19066:19114" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="19210:19251" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="19648:19721" ph="SELECT ticke... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="19858:19902" ph="SELECT curre... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="20002:20067" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="20169:20234" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="20344:20392" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="20976:21034" ph="SELECT total... missing_value" />
+                <marker date="1493809420000" expanded="true" signature="23656:23706" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="23769:23819" ph="DELETE FROM " />
+                <marker date="1493809420000" expanded="true" signature="23977:24058" ph="INSERT INTO missing_value... " />
+                <marker date="1493809420000" expanded="true" signature="24431:24479" ph="UPDATE missi... " />
+                <marker date="1493809420000" expanded="true" signature="24740:24871" ph="INSERT INTO missing_value... " />
               </folding>
             </state>
           </provider>
@@ -169,8 +170,8 @@
         <option value="$PROJECT_DIR$/mealbooker/apps/login/views.py" />
         <option value="$PROJECT_DIR$/mealbooker/database.py" />
         <option value="$PROJECT_DIR$/mealbooker/extensions.py" />
-        <option value="$PROJECT_DIR$/dbops.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
+        <option value="$PROJECT_DIR$/dbops.py" />
       </list>
     </option>
   </component>
@@ -841,7 +842,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493808941927</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="style">
+      <created>1493809233839</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1493809233839</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -910,7 +918,8 @@
     <MESSAGE value="add debug to every function" />
     <MESSAGE value="force render" />
     <MESSAGE value="print python version" />
-    <option name="LAST_COMMIT_MESSAGE" value="print python version" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1021,62 +1030,62 @@
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="72" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493805719000" expanded="true" signature="1507:1579" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="1829:1957" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="2004:2150" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="3616:3836" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="3929:4163" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="4592:4616" ph="SELECT name,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="5460:5732" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="6396:6425" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6485:6519" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6576:6610" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6675:6709" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6764:6798" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="7008:7076" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="7534:7587" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8124:8185" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8288:8364" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8481:8573" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8836:8917" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9389:9426" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9995:10072" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10166:10259" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10511:10592" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11562:11606" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11933:12014" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12620:12755" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12941:12989" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="13482:13563" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14040:14175" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14645:14695" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="14910:14971" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15302:15352" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15565:15626" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16078:16115" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16209:16253" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16353:16382" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="16450:16498" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16594:16635" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="17133:17170" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="17263:17292" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="17357:17398" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="18224:18261" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18355:18413" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18796:18920" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="19065:19113" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19209:19250" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19647:19720" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="19857:19901" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="20001:20066" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20168:20233" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20343:20391" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="20975:21033" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="23655:23705" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23768:23818" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23976:24057" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="24430:24478" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="24739:24870" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="1508:1580" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="1830:1958" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="2005:2151" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="3617:3837" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="3930:4164" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="4593:4617" ph="SELECT name,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="5461:5733" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="6397:6426" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6486:6520" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6577:6611" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6676:6710" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6765:6799" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="7009:7077" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="7535:7588" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8125:8186" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8289:8365" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8482:8574" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8837:8918" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9390:9427" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9996:10073" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10167:10260" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10512:10593" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11563:11607" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11934:12015" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12621:12756" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12942:12990" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="13483:13564" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14041:14176" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14646:14696" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="14911:14972" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15303:15353" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15566:15627" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16079:16116" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16210:16254" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16354:16383" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="16451:16499" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16595:16636" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="17134:17171" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="17264:17293" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="17358:17399" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="18225:18262" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18356:18414" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18797:18921" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="19066:19114" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19210:19251" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19648:19721" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="19858:19902" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="20002:20067" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20169:20234" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20344:20392" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="20976:21034" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="23656:23706" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23769:23819" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23977:24058" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="24431:24479" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="24740:24871" ph="INSERT INTO missing_value... " />
           </folding>
         </state>
       </provider>
@@ -1144,62 +1153,62 @@
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493805719000" expanded="true" signature="1507:1579" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="1829:1957" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="2004:2150" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="3616:3836" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="3929:4163" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="4592:4616" ph="SELECT name,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="5460:5732" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="6396:6425" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6485:6519" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6576:6610" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6675:6709" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6764:6798" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="7008:7076" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="7534:7587" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8124:8185" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8288:8364" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8481:8573" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8836:8917" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9389:9426" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9995:10072" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10166:10259" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10511:10592" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11562:11606" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11933:12014" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12620:12755" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12941:12989" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="13482:13563" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14040:14175" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14645:14695" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="14910:14971" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15302:15352" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15565:15626" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16078:16115" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16209:16253" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16353:16382" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="16450:16498" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16594:16635" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="17133:17170" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="17263:17292" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="17357:17398" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="18224:18261" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18355:18413" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18796:18920" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="19065:19113" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19209:19250" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19647:19720" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="19857:19901" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="20001:20066" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20168:20233" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20343:20391" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="20975:21033" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="23655:23705" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23768:23818" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23976:24057" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="24430:24478" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="24739:24870" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="1508:1580" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="1830:1958" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="2005:2151" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="3617:3837" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="3930:4164" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="4593:4617" ph="SELECT name,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="5461:5733" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="6397:6426" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6486:6520" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6577:6611" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6676:6710" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6765:6799" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="7009:7077" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="7535:7588" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8125:8186" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8289:8365" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8482:8574" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8837:8918" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9390:9427" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9996:10073" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10167:10260" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10512:10593" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11563:11607" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11934:12015" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12621:12756" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12942:12990" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="13483:13564" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14041:14176" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14646:14696" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="14911:14972" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15303:15353" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15566:15627" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16079:16116" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16210:16254" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16354:16383" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="16451:16499" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16595:16636" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="17134:17171" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="17264:17293" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="17358:17399" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="18225:18262" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18356:18414" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18797:18921" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="19066:19114" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19210:19251" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19648:19721" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="19858:19902" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="20002:20067" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20169:20234" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20344:20392" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="20976:21034" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="23656:23706" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23769:23819" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23977:24058" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="24431:24479" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="24740:24871" ph="INSERT INTO missing_value... " />
           </folding>
         </state>
       </provider>
@@ -1422,74 +1431,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="11" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493805719000" expanded="true" signature="1507:1579" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="1829:1957" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="2004:2150" ph="SELECT crsid... access" />
-            <marker date="1493805719000" expanded="true" signature="3616:3836" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="3929:4163" ph="SELECT id, n... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="4592:4616" ph="SELECT name,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="5460:5732" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="6396:6425" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6485:6519" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6576:6610" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6675:6709" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="6764:6798" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="7008:7076" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="7534:7587" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8124:8185" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8288:8364" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8481:8573" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="8836:8917" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9389:9426" ph="SELECT id FR... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="9995:10072" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10166:10259" ph="SELECT id, b... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="10511:10592" ph="SELECT type,... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11562:11606" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="11933:12014" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12620:12755" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="12941:12989" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="13482:13563" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14040:14175" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="14645:14695" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="14910:14971" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15302:15352" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="15565:15626" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16078:16115" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16209:16253" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="16353:16382" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="16450:16498" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="16594:16635" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="17133:17170" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="17263:17292" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="17357:17398" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="18224:18261" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18355:18413" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="18796:18920" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="19065:19113" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19209:19250" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="19647:19720" ph="SELECT ticke... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="19857:19901" ph="SELECT curre... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="20001:20066" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20168:20233" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="20343:20391" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="20975:21033" ph="SELECT total... missing_value" />
-            <marker date="1493805719000" expanded="true" signature="23655:23705" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23768:23818" ph="DELETE FROM " />
-            <marker date="1493805719000" expanded="true" signature="23976:24057" ph="INSERT INTO missing_value... " />
-            <marker date="1493805719000" expanded="true" signature="24430:24478" ph="UPDATE missi... " />
-            <marker date="1493805719000" expanded="true" signature="24739:24870" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="1508:1580" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="1830:1958" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="2005:2151" ph="SELECT crsid... access" />
+            <marker date="1493809420000" expanded="true" signature="3617:3837" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="3930:4164" ph="SELECT id, n... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="4593:4617" ph="SELECT name,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="5461:5733" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="6397:6426" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6486:6520" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6577:6611" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6676:6710" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="6765:6799" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="7009:7077" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="7535:7588" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8125:8186" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8289:8365" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8482:8574" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="8837:8918" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9390:9427" ph="SELECT id FR... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="9996:10073" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10167:10260" ph="SELECT id, b... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="10512:10593" ph="SELECT type,... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11563:11607" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="11934:12015" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12621:12756" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="12942:12990" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="13483:13564" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14041:14176" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="14646:14696" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="14911:14972" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15303:15353" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="15566:15627" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16079:16116" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16210:16254" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="16354:16383" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="16451:16499" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="16595:16636" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="17134:17171" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="17264:17293" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="17358:17399" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="18225:18262" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18356:18414" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="18797:18921" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="19066:19114" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19210:19251" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="19648:19721" ph="SELECT ticke... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="19858:19902" ph="SELECT curre... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="20002:20067" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20169:20234" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="20344:20392" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="20976:21034" ph="SELECT total... missing_value" />
+            <marker date="1493809420000" expanded="true" signature="23656:23706" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23769:23819" ph="DELETE FROM " />
+            <marker date="1493809420000" expanded="true" signature="23977:24058" ph="INSERT INTO missing_value... " />
+            <marker date="1493809420000" expanded="true" signature="24431:24479" ph="UPDATE missi... " />
+            <marker date="1493809420000" expanded="true" signature="24740:24871" ph="INSERT INTO missing_value... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="688" column="45" lean-forward="true" selection-start-line="688" selection-start-column="45" selection-end-line="688" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>

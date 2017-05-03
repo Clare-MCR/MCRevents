@@ -14,7 +14,7 @@ from dbops import ravenUserNames, ravenUsers
 
 FORMAT = '%(asctime)-15s %(message)s'
 
-DEBUG = True
+DEBUG = False
 SECRET_KEY = 'development moooo key'
 
 app = flask.Flask(__name__)
