@@ -682,12 +682,10 @@ def ravenlogin():
     user = ravenUsers(crsid)[0]
     app.logger.debug(user)
 
-    flask.session['user'] = user.displayName()
-    flask.session['isAdmin'] = user.isAdmin
-    flask.session['isMCRMember'] = user.isMCRMember
-    flask.session['isAssociateMember'] = user.isAssociateMember
-    flask.session['isCRA'] = user.isCRA
-    flask.session['isCollegeBill'] = user.isCollegeBill
+    dict = {isAdmin:user.isAdmin,isMCRMember:user.isMCRMember,isAssociateMember:user.isAssociateMember,isCRA:user.isCRA,isCollegeBill:user.isCollegeBill}
+    flask.session['user'] = {user.displayName():dict}
+
+
 
     flask.session['logged_in'] = True
     app.logger.debug('You are logged in')
