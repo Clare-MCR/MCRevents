@@ -618,6 +618,8 @@ def ravenloginredirect():
 @app.route('/ravenlogin')
 @display_errors
 def ravenlogin():
+    from flask import redirect, url_for
+
     # errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
     # homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
 
@@ -645,8 +647,9 @@ def ravenlogin():
     app.logger.debug('You are logged in')
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
-    app.logger.debug(flask.url_for('eventselector'))
-    return flask.redirect(flask.url_for('eventselector'))
+    url = flask.url_for('eventselector')
+    app.logger.debug(url)
+    return redirect(url)
 
 
 @app.route('/logout')

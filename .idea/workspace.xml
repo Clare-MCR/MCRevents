@@ -2,15 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/servererror.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MCRevents.iml" afterPath="$PROJECT_DIR$/.idea/MCRevents.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/rg12.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/allocator.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/ClassLoader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/autoload_classmap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/autoload_namespaces.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/autoload_psr4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/autoload_real.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/composer/installed.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/Db.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/Log.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/easyCRUD/Person.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/easyCRUD/easyCRUD.class.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/easyCRUD/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class/settings.ini.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/example/TestController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/example/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/RestException.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/RestFormat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/RestServer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/urlMap.cache" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage/formalController.php" afterPath="$PROJECT_DIR$/usage/formalController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/RestServer.php" afterPath="$PROJECT_DIR$/usage/vendor/jacwright/restserver/source/Jacwright/RestServer/RestServer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +61,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="709" column="25" lean-forward="true" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
+            <state relative-caret-position="201">
+              <caret line="649" column="8" lean-forward="false" selection-start-line="649" selection-start-column="8" selection-end-line="649" selection-end-column="8" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -759,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493796794586</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="tidy">
+      <created>1493797892008</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1493797892008</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,7 +838,8 @@
     <MESSAGE value="all 1 file" />
     <MESSAGE value="better login" />
     <MESSAGE value="print session" />
-    <option name="LAST_COMMIT_MESSAGE" value="print session" />
+    <MESSAGE value="tidy" />
+    <option name="LAST_COMMIT_MESSAGE" value="tidy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -939,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="709" column="25" lean-forward="true" selection-start-line="709" selection-start-column="25" selection-end-line="709" selection-end-column="25" />
+        <state relative-caret-position="201">
+          <caret line="649" column="8" lean-forward="false" selection-start-line="649" selection-start-column="8" selection-end-line="649" selection-end-column="8" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
