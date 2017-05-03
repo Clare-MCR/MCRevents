@@ -388,7 +388,7 @@ def updateBookingDetails(booking):
                                                                            booking.primaryDetails.other,
                                                                            booking.primaryDetails.detailsID))
     for guestDetails in booking.guestDetails:
-        cur.execute('UPDATE {} SET name = "{}", diet = "{}", other = {} WHERE id = {}'.format(mcrevents_booking_details,
+        cur.execute('UPDATE {} SET name = "{}", diet = "{}", other = "{}" WHERE id = {}'.format(mcrevents_booking_details,
                                                                                           guestDetails.name,
                                                                                           guestDetails.diet,
                                                                                           guestDetails.other,
