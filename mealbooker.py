@@ -11,7 +11,6 @@ from wsgiref.handlers import CGIHandler
 import flask
 from flask.json import JSONEncoder
 
-from datatypes import User
 from dbops import ravenUserNames, ravenUsers
 
 FORMAT = '%(asctime)-15s %(message)s'
@@ -29,7 +28,8 @@ app.logger.info(sys.version)
 
 class CustomJSONEncoder(JSONEncoder):
     def default(self, obj):
-        app.logger.debug('running custom jonencoder')
+        from datatypes import User
+        app.logger.debug("running custom jsonencoder")
         if isinstance(obj, User):
             # Implement code to convert Passport object to a dict
             user_dict = {"name": self.displayName(), "userID": self.userID, "isAdmin": self.isAdmin,
