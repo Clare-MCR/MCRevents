@@ -729,7 +729,7 @@ def ravenlogin():
 
     flask.session['logged_in'] = True
     app.logger.debug('You are logged in')
-    flask.flash('You were logged in, {}'.format(flask.session['user']))
+    flask.flash('You were logged in, {}'.format(user.displayName()))
     app.logger.debug(flask.session)
 
     url = url_for('eventselector')
