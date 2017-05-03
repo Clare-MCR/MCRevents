@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/indieteq/indieteq-php-my-sql-pdo-database-class" />
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.3 (~/.pyenv/versions/2.7.3/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="PHARS">

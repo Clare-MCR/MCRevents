@@ -22,7 +22,7 @@ app.config.from_object(__name__)
 logging.getLogger(app.logger_name)
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 app.logger.debug('Logger Initialised')
-
+app.logger.info(sys.version)
 
 def format_exception(e):
     info = ''.join(traceback.format_tb(sys.exc_info()[2]))
@@ -680,7 +680,7 @@ def ravenlogin():
         return redirect(flask.url_for('goodbye'))
     app.logger.debug('user in allowed usernames')
     app.logger.debug('Getting name')
-    flask.session['user'] = ravenUsers(crsid)#[0]
+    flask.session['user'] = ravenUsers(crsid)[0]
 
     flask.session['logged_in'] = True
     app.logger.debug('You are logged in')
@@ -690,7 +690,7 @@ def ravenlogin():
     url = url_for('eventselector')
     flask.render_template('servererror.html')
     app.logger.debug(url)
-    return flask.render_template('servererror.html')#redirect(url)
+    return redirect(url)
 
 
 @app.route('/logout')
