@@ -687,6 +687,7 @@ def ravenlogin():
     app.logger.debug(flask.session)
     flask.flash('You were logged in, ' + flask.session['user'].displayName())
     url = url_for('eventselector')
+    flask.render_template('servererror.html')
     app.logger.debug(url)
     return flask.render_template('servererror.html')#redirect(url)
 
