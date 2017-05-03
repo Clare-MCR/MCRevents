@@ -1,6 +1,5 @@
 from mealbooker import app
 import json
-import json_tricks
 
 class User(object):
     def __init__(self, userID, isAdmin, isMCRMember, isAssociateMember, isCRA, isCollegeBill):

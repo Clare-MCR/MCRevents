@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datatypes.py" afterPath="$PROJECT_DIR$/datatypes.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +32,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="56" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/dbops.py" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/admin.php" />
-        <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
+        <option value="$PROJECT_DIR$/datatypes.py" />
       </list>
     </option>
   </component>
@@ -381,13 +381,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00020" summary="alternate login">
-      <created>1493771175145</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1493771175145</updated>
     </task>
     <task id="LOCAL-00021" summary="typo">
       <created>1493771234135</created>
@@ -725,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493828238081</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="better error message">
+      <created>1493828351135</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1493828351135</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -763,7 +763,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="simple redirect" />
     <MESSAGE value="debug" />
     <MESSAGE value="commit some changes" />
     <MESSAGE value="name change" />
@@ -788,7 +787,8 @@
     <MESSAGE value="add json_tricks" />
     <MESSAGE value="custom json encoder" />
     <MESSAGE value="fix datatypes import" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix datatypes import" />
+    <MESSAGE value="better error message" />
+    <option name="LAST_COMMIT_MESSAGE" value="better error message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1002,22 +1002,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datatypes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="64" column="87" lean-forward="false" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datatypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
