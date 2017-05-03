@@ -32,6 +32,7 @@ def format_exception(e):
 def display_errors(func):
     @wraps(func)
     def dec(*args, **kwargs):
+        app.logger.debug(display_errors.__name__)
         try:
             return func(*args, **kwargs)
         except Exception as e:
@@ -50,8 +51,7 @@ def require_login(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
-        app.logger.debug(require_login.__name__)
-        app.logger.debug("at require login")
+        app.logger.debug(func.__name__)
         if not flask.session.get('logged_in'):
             app.logger.debug("We're not logged in")
             app.logger.info('going to {}'.format(flask.url_for('login')))
@@ -66,6 +66,7 @@ def require_admin(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
+        app.logger.debug(require_admin.__name__)
         if not flask.session.get('logged_in'):
             return flask.redirect(flask.url_for('login'))
         if not flask.session['user'].isAdmin:
@@ -80,6 +81,7 @@ def require_admin_for_admin_booking(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
+        app.logger.debug(require_admin_for_admin_booking.__name__)
         if 'isAdminBooking' in kwargs:
             is_admin_booking = kwargs['isAdminBooking']
         else:
