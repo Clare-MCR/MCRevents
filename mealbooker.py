@@ -680,12 +680,13 @@ def ravenlogin():
         return redirect(flask.url_for('goodbye'))
     app.logger.debug('user in allowed usernames')
     app.logger.debug('Getting name')
-    flask.session['user'] = ravenUsers(crsid)[0]
+    flask.session['user'] = ravenUsers(crsid)#[0]
 
     flask.session['logged_in'] = True
     app.logger.debug('You are logged in')
+    flask.flash('You were logged in, {}'.format(flask.session['user']))
     app.logger.debug(flask.session)
-    flask.flash('You were logged in, ' + flask.session['user'].displayName())
+
     url = url_for('eventselector')
     flask.render_template('servererror.html')
     app.logger.debug(url)
