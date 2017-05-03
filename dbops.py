@@ -348,7 +348,10 @@ def makeBookingIfSpace(event, thisuser, isAdminBooking, numTickets):
     return True
 
 
-def joinQueue(eventID, user, isAdminBooking, numTickets):
+def joinQueue(eventID, thisuser, isAdminBooking, numTickets):
+    from datatypes import RavenUser
+    user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
+                     thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     cur, db = getMySQLCursorAndDb()
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_queue, mcrevents_queue_details,
                       mcrevents_eventslist])
@@ -464,7 +467,10 @@ def updateQueue(eventID):
     _notifyUserEventPairs(shouldNotifyList)
 
 
-def bookAnotherGuestIfSpace(eventID, bookingID, user, isAdminBooking=False):
+def bookAnotherGuestIfSpace(eventID, bookingID, thisuser, isAdminBooking=False):
+    from datatypes import RavenUser
+    user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
+                     thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     cur, db = getMySQLCursorAndDb()
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_eventslist])
 
