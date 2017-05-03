@@ -1,7 +1,8 @@
 import MySQLdb
 import logging
+import ldap
 
-FORMAT = '%(asctime)-15s %(message)s'
+FORMAT = '%(asctime)s %(levelname)s\t: %(message)s'
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 
 DEBUG = True
@@ -81,7 +82,6 @@ def getUser(crsid):
 
 
 def displayNameForCRSID(crsid):
-    import ldap
     l = ldap.open('ldap.lookup.cam.ac.uk')
     res = l.search_s('uid={0},ou=people,o=University of Cambridge,dc=cam,dc=ac,dc=uk'.format(str(crsid)),
                      ldap.SCOPE_SUBTREE)
