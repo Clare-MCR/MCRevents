@@ -580,8 +580,8 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
-    logging.debug("this is where the problems happen")
-    return flask.redirect(flask.url_for('ravenloginredirect'))
+    #logging.debug("this is where the problems happen")
+    #return flask.redirect(flask.url_for('ravenloginredirect'))
     # TODO remove me!
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
