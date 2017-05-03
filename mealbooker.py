@@ -21,7 +21,7 @@ SECRET_KEY = 'development moooo key'
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
 logging.getLogger(app.logger_name)
-logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
+logging.basicConfig(filename='logs/mealbooker.log', level=logging.WARNING, format=FORMAT)
 app.logger.debug('Logger Initialised')
 app.logger.info(sys.version)
 

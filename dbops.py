@@ -4,7 +4,7 @@ import MySQLdb
 import ldap
 
 FORMAT = '%(asctime)s %(levelname)s\t: %(message)s'
-logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
+logging.basicConfig(filename='logs/mealbooker.log', level=logging.WARNING, format=FORMAT)
 
 DEBUG = False
 if DEBUG:
