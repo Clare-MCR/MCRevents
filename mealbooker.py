@@ -679,7 +679,7 @@ def ravenlogin():
         return redirect(flask.url_for('goodbye'))
     app.logger.debug('user in allowed usernames')
     app.logger.debug('Getting name')
-    user = ravenUsers(crsid)[0]
+    user = ravenUsers(crsid)
     app.logger.debug(user)
 
     flask.session['user'] = user
