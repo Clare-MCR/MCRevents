@@ -336,7 +336,7 @@ def makeBookingIfSpace(event, thisuser, isAdminBooking, numTickets):
                 name = user.displayName()
         cur.execute('INSERT INTO {} (bookingid, eventid, booker, admin, type, name,\
         diet, other) \
-        VALUES ({}, {}, {}, {}, {}, {}, {}, {})'.format(mcrevents_booking_details,
+        VALUES ({}, {}, {!s}, {}, {}, {!s}, {!s}, {!s})'.format(mcrevents_booking_details,
                                                         bookingID, event.eventID, user.userID, isAdminBooking,
                                                         ticketType, name,
                                                         'None', ''))
