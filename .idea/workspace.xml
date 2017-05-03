@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10951">
-              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            <state relative-caret-position="448">
+              <caret line="64" column="87" lean-forward="false" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -382,13 +382,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00019" summary="alternate login">
-      <created>1493770580616</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1493770580616</updated>
-    </task>
     <task id="LOCAL-00020" summary="alternate login">
       <created>1493771175145</created>
       <option name="number" value="00020" />
@@ -725,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493828057637</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fix datatypes import">
+      <created>1493828238080</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1493828238081</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -744,7 +744,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18849558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -763,7 +763,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tidy" />
     <MESSAGE value="simple redirect" />
     <MESSAGE value="debug" />
     <MESSAGE value="commit some changes" />
@@ -788,7 +787,8 @@
     <MESSAGE value="convert to dict structure to string" />
     <MESSAGE value="add json_tricks" />
     <MESSAGE value="custom json encoder" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom json encoder" />
+    <MESSAGE value="fix datatypes import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix datatypes import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10951">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        <state relative-caret-position="448">
+          <caret line="64" column="87" lean-forward="false" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>

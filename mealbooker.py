@@ -62,7 +62,7 @@ def display_errors(func):
                 return flask.render_template('errorinfo.html', errorName=type(e).__name__,
                                              traceback=format_exception(e))
             else:
-                app.logger.error('error here')
+                app.logger.error('{} {}'.format(type(e).__name__, format_exception(e)))
                 return flask.render_template('errorinfo.html')
 
     return dec
