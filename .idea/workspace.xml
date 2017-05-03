@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbops.py" afterPath="$PROJECT_DIR$/dbops.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/templates/layout.html" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
+            <state relative-caret-position="424">
               <caret line="372" column="50" lean-forward="false" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="50" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
@@ -44,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbops.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbops.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbops.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
@@ -111,6 +111,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="eventselector.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -157,6 +177,7 @@
       <find>from functools import wraps</find>
       <find>eventse</find>
       <find>makeBookingIfSpace</find>
+      <find>numPeopleInQueueForEvent</find>
       <find>creat</find>
     </findStrings>
     <replaceStrings>
@@ -190,6 +211,7 @@
         <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
         <option value="$PROJECT_DIR$/dbops.py" />
+        <option value="$PROJECT_DIR$/templates/layout.html" />
       </list>
     </option>
   </component>
@@ -235,6 +257,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,13 +486,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00032" summary="commit some changes">
-      <created>1493805558071</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1493805558073</updated>
     </task>
     <task id="LOCAL-00033" summary="commit some changes">
       <created>1493805594599</created>
@@ -794,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493830106523</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="fix sql">
+      <created>1493830279475</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1493830279475</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -832,7 +868,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="style" />
     <MESSAGE value="turn off debug" />
     <MESSAGE value="raven dict restructure" />
     <MESSAGE value="change structure of object" />
@@ -857,7 +892,8 @@
     <MESSAGE value="fix dict calling" />
     <MESSAGE value="pring key" />
     <MESSAGE value="fix key error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix key error" />
+    <MESSAGE value="fix sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -873,8 +909,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mealbooker/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/mealbooker/mealbooker.ini" />
     <entry file="file://$PROJECT_DIR$/mealbooker/manage.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker/config.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
@@ -1187,16 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mealbooker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="372" column="50" lean-forward="false" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="50" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1259,6 +1283,32 @@
             <marker date="1493830268000" expanded="true" signature="24430:24478" ph="UPDATE missi... " />
             <marker date="1493830268000" expanded="true" signature="24739:24870" ph="INSERT INTO missing_value... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mealbooker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="372" column="50" lean-forward="false" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="50" />
+          <folding>
+            <element signature="e#68#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
