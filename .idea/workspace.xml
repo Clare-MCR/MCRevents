@@ -42,8 +42,8 @@
       <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -272,13 +272,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00014" summary="add debug spots">
-      <created>1493769347470</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1493769347470</updated>
     </task>
     <task id="LOCAL-00015" summary="redirect info">
       <created>1493769462218</created>
@@ -616,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493826385894</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="convert to dict structure">
+      <created>1493826684188</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1493826684188</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -654,7 +654,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="app logger" />
     <MESSAGE value="all 1 file" />
     <MESSAGE value="better login" />
     <MESSAGE value="print session" />
@@ -679,7 +678,8 @@
     <MESSAGE value="restore warning level" />
     <MESSAGE value="fix send guestlist" />
     <MESSAGE value="fix json format" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix json format" />
+    <MESSAGE value="convert to dict structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert to dict structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datatypes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding />
         </state>
       </provider>

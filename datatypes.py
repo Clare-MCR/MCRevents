@@ -25,10 +25,9 @@ class User(object):
         return False
 
     def __repr__(self):
-        fulldict = {"name": self.userID, "isAdmin": self.isAdmin, "isMCRMember": self.isMCRMember,
+        jsonstring = {"name":self.displayName(),"userID": self.userID, "isAdmin": self.isAdmin, "isMCRMember": self.isMCRMember,
                     "isAssociateMember": self.isAssociateMember, "isCRA": self.isCRA,
                     "isCollegeBill": self.isCollegeBill}
-        jsonstring = {self.displayName(): fulldict}
 
         # jsonstring = '[{{ "{0}":{{"name":"{1}","isAdmin": {2}, "isMCRMember": {3}, "isAssociateMember": {4}, "isCRA": {5}, "isCollegeBill": {6}}} }}]'.format(
         #     self.displayName(), self.userID, self.isAdmin, self.isMCRMember, self.isAssociateMember, self.isCRA, self.isCollegeBill)
