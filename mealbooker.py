@@ -602,7 +602,7 @@ def alternatelogin():
     else:
         session['logged_in'] = True
         from datatypes import AlternateUser
-        session['user'] = AlternateUser('cow', False, True, True, True)
+        session['user'] = AlternateUser('cow', 1, 1, 0, 0, 0)
         flash('You were logged in')
     return redirect(url_for('eventselector'))
 
@@ -614,6 +614,7 @@ def ravenloginredirect():
     logging.debug(url)
     url = url.replace('redirect', '')
     url = url.replace('mealbooker.py', 'ravenlogin.py')
+    logging.debug(url)
     return flask.redirect(url)
 
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datatypes.py" afterPath="$PROJECT_DIR$/datatypes.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mealbooker.py" afterPath="$PROJECT_DIR$/mealbooker.py" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="">
@@ -34,11 +35,21 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="583" column="5" lean-forward="false" selection-start-line="583" selection-start-column="5" selection-end-line="583" selection-end-column="5" />
+            <state relative-caret-position="275">
+              <caret line="604" column="60" lean-forward="false" selection-start-line="604" selection-start-column="60" selection-end-line="604" selection-end-column="60" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datatypes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +172,7 @@
       <list>
         <option value="$PROJECT_DIR$/dbops.py" />
         <option value="$PROJECT_DIR$/ravenlogin.py" />
+        <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
       </list>
     </option>
@@ -663,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493770300268</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="alternate login">
+      <created>1493770580616</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1493770580616</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -705,7 +724,8 @@
     <MESSAGE value="add debug spots" />
     <MESSAGE value="redirect info" />
     <MESSAGE value="print flask session" />
-    <option name="LAST_COMMIT_MESSAGE" value="print flask session" />
+    <MESSAGE value="alternate login" />
+    <option name="LAST_COMMIT_MESSAGE" value="alternate login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -730,11 +750,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/errorinfo.html">
+    <entry file="file://$PROJECT_DIR$/ravenlogin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="705">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,13 +825,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ravenlogin.py">
+    <entry file="file://$PROJECT_DIR$/templates/errorinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -821,10 +841,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/datatypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="583" column="5" lean-forward="false" selection-start-line="583" selection-start-column="5" selection-end-line="583" selection-end-column="5" />
+        <state relative-caret-position="275">
+          <caret line="604" column="60" lean-forward="false" selection-start-line="604" selection-start-column="60" selection-end-line="604" selection-end-column="60" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
