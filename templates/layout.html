@@ -7,7 +7,7 @@
   <h1>Clare MCR Event Booking</h1>
   <div class=metanav>
   {% if session.logged_in %}
-    Hello, {{ user.displayName() }}
+    Hello, {{ session.user.name }}
     <a href="{{ url_for('eventselector') }}">Event Selector</a>
     <a href="{{ url_for('logout') }}">Log out</a>
     {% if session.user.isAdmin -%}

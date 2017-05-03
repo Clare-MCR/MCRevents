@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="372" column="50" lean-forward="false" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="50" />
+            <state relative-caret-position="5589">
+              <caret line="374" column="85" lean-forward="true" selection-start-line="374" selection-start-column="85" selection-end-line="374" selection-end-column="85" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -114,8 +114,8 @@
       <file leaf-file-name="eventselector.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="644">
+              <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -125,7 +125,7 @@
         <entry file="file://$PROJECT_DIR$/templates/layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -487,13 +487,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00033" summary="commit some changes">
-      <created>1493805594599</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1493805594599</updated>
-    </task>
     <task id="LOCAL-00034" summary="name change">
       <created>1493805792807</created>
       <option name="number" value="00034" />
@@ -830,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493830279475</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="fix layout">
+      <created>1493830404899</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1493830404899</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -868,7 +868,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="turn off debug" />
     <MESSAGE value="raven dict restructure" />
     <MESSAGE value="change structure of object" />
     <MESSAGE value="remove custom json encoder" />
@@ -893,7 +892,8 @@
     <MESSAGE value="pring key" />
     <MESSAGE value="fix key error" />
     <MESSAGE value="fix sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sql" />
+    <MESSAGE value="fix layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1288,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="372" column="50" lean-forward="false" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="50" />
+        <state relative-caret-position="5589">
+          <caret line="374" column="85" lean-forward="true" selection-start-line="374" selection-start-column="85" selection-end-line="374" selection-end-column="85" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
@@ -1298,8 +1298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="644">
+          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1307,7 +1307,7 @@
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>
