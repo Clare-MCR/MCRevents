@@ -4,7 +4,10 @@
 import logging
 import sys
 import traceback
+import os
 from functools import wraps
+from dbops import ravenUserNames, ravenUsers
+
 from wsgiref.handlers import CGIHandler
 
 import flask
@@ -32,11 +35,11 @@ def display_errors(func):
             return func(*args, **kwargs)
         except Exception as e:
             if DEBUG:
-                logging.error('{} {}'.format(type(e).__name__,format_exception(e)))
+                app.logger.error('{} {}'.format(type(e).__name__,format_exception(e)))
                 return flask.render_template('errorinfo.html', errorName=type(e).__name__,
                                              traceback=format_exception(e))
             else:
-                logging.error('error here')
+                app.logger.error('error here')
                 return flask.render_template('errorinfo.html')
 
     return dec
@@ -47,10 +50,10 @@ def require_login(func):
     @display_errors
     def dec(*args, **kwargs):
        if not flask.session.get('logged_in'):
-            logging.debug("We're not logged in")
-            logging.info('going to {}'.format(flask.url_for('login')))
+            app.logger.debug("We're not logged in")
+            app.logger.info('going to {}'.format(flask.url_for('login')))
             return flask.redirect(flask.url_for('login'))
-       logging.debug("We're Back")
+       app.logger.debug("We're Back")
        return func(*args, **kwargs)
     return dec
 
@@ -301,7 +304,7 @@ def confirmActionHandler():
 def eventselector(showAllEntries):
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
-    logging.debug("We're logged in and ready to rumble")
+    app.logger.debug("We're logged in and ready to rumble")
     user = flask.session['user']
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
@@ -580,8 +583,8 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
-    logging.debug("this is where the problems happen")
-    return flask.redirect(flask.url_for('ravenloginredirect'))
+    app.logger.debug("this is where the problems happen")
+    return flask.redirect(flask.url_for('ravenlogin'))
     # TODO remove me!
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
@@ -611,11 +614,45 @@ def alternatelogin():
 @display_errors
 def ravenloginredirect():
     url = flask.url_for('ravenloginredirect')
-    logging.debug(url)
+    app.logger.debug(url)
     url = url.replace('redirect', '')
     url = url.replace('mealbooker.py', 'ravenlogin.py')
-    logging.debug(url)
+    app.logger.debug(url)
     return flask.redirect(url)
+
+@app.route('/ravenlogin')
+@display_errors
+def ravenlogin():
+    #errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
+    #homeurl = flask.url_for('eventselector').replace('ravenlogin.py', 'mealbooker.py')
+
+    crsid = None
+    app.logger.debug(os.environ)
+    if 'REMOTE_USER' in os.environ:
+        crsid = str(os.environ['REMOTE_USER'])
+
+
+    if crsid is None:
+        app.logger.warning('No Raven crsid found!')
+        flask.flash('No Raven crsid found!', 'error')
+        flask.session['logged_in'] = False
+        return flask.redirect(goodbye)
+
+    if crsid not in ravenUserNames():
+        app.logger.warning('User Not registered')
+        flask.flash('User ' + crsid + ' not registered for booking', 'error')
+        flask.session['logged_in'] = False
+        return flask.redirect(goodbye)
+    app.logger.debug('user in allowed usernames')
+    app.logger.debug('Getting name')
+    flask.session['user'] = ravenUsers(crsid)[0]
+
+    flask.session['logged_in'] = True
+    app.logger.debug('You are logged in')
+    app.logger.debug(flask.session)
+    flask.flash('You were logged in, ' + flask.session['user'].displayName())
+    app.logger.debug(eventselector)
+    return flask.redirect(eventselector)
 
 
 @app.route('/logout')
@@ -644,7 +681,7 @@ if __name__ == '__main__':
     ##   pass
     ## app.run(use_debugger=use_debugger, debug=app.debug,
     ##         use_reloader=use_debugger, host='0.0.0.0')
-    logging.debug("Starting App")
+    app.logger.debug("Starting App")
 
     #app.run()
     CGIHandler().run(app)

@@ -8,8 +8,8 @@ from dbops import ravenUserNames, ravenUsers
 from mealbooker import app, display_errors
 
 
-
-@app.route('/ravenlogin')
+simple_page = flask.Blueprint('ravenlogin', __name__, template_folder='templates')
+@simple_page.route('/ravenlogin')
 @display_errors
 def ravenlogin():
     errorurl = flask.url_for('goodbye').replace('ravenlogin.py', 'mealbooker.py')
