@@ -404,20 +404,10 @@ function show_guestlist( $eventid ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
 	}
 
-	$dbh->query( "SELECT COUNT(*) FROM " . $my_pre . "booking_details WHERE eventid=:eventid" );
-	$dbh->bind( ":eventid", $eventid );
-
-	$result = $dbh->single();
-
-	$logger->debug(print_r($result,true));
-
-	$num_guests = $result[0];
-
 	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset();
-	$logger->debug(print_r($result,true));
 
 	echo "<h1>Official Guestlist</h1>\n";
 	echo "<p>This is the official guestlist for the following event:</p>\n";
@@ -426,14 +416,15 @@ function show_guestlist( $eventid ) {
 	echo "<hr/>";
 	echo "<table border=\"0\" class=\"event_table guest_list\">";
 	echo "<tr><th>#</th><th>Name</th><th>Ticket ID</th><th>Booker</th><th>Diet</th><th>Other Requirements</th></tr>";
-	for ( $j = 0; $j < $num_guests; $j ++ ) {
+	$j=0;
+	foreach ($result as $key => $value) {
 		echo "<tr>";
 		echo "<td>" . ( $j + 1 ) . "</td>";
-		echo "<td>" . $result[ $j ]['name'] . "</td>";
-		echo "<td>" . $result[ $j ]['id'] . "</td>";
-		echo "<td>" . $result[ $j ]['booker'] . "</td>";
-		echo "<td>" . $result[ $j ]['diet'] . "</td>";
-		echo "<td>" . $result[ $j ]['other'] . "</td></tr>";
+		echo "<td>" . $value['name'] . "</td>";
+		echo "<td>" . $value['id'] . "</td>";
+		echo "<td>" . $value['booker'] . "</td>";
+		echo "<td>" . $value['diet'] . "</td>";
+		echo "<td>" . $value['other'] . "</td></tr>";
 	}
 	echo "</table> ";
 

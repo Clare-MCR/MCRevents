@@ -32,56 +32,55 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="854">
-              <caret line="407" column="39" lean-forward="true" selection-start-line="407" selection-start-column="39" selection-end-line="407" selection-end-column="39" />
+            <state relative-caret-position="537">
+              <caret line="405" column="0" lean-forward="true" selection-start-line="405" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
               <folding>
-                <marker date="1493824658000" expanded="true" signature="6508:6514" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="6595:6601" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="6681:6687" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="6775:6781" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="7587:7598" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="14032:14106" ph="SELECT COUNT... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="14261:14358" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="15841:15926" ph="SELECT cost_... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="16525:16642" ph="SELECT booke... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="16885:16891" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="17457:17573" ph="SELECT booke... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="18522:18642" ph="SELECT name ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="19690:19764" ph="SELECT COUNT... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="21525:21610" ph="SELECT cost_... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="22635:22744" ph="SELECT SUM(t... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="23472:23605" ph="SELECT id AS... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="24622:24742" ph="SELECT name ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="26238:26371" ph="SELECT id AS... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="27355:27475" ph="SELECT name ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="29367:29413" ph="SELECT name,... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="32071:32078" ph="£" />
-                <marker date="1493824658000" expanded="true" signature="32319:32326" ph="£" />
-                <marker date="1493824658000" expanded="true" signature="33722:33727" ph="&amp;" />
-                <marker date="1493824658000" expanded="true" signature="34840:34845" ph="&amp;" />
-                <marker date="1493824658000" expanded="true" signature="45330:45336" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="45421:45427" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="47925:47931" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="48019:48025" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="48443:48527" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="50305:50376" ph="SELECT name,... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="50598:50653" ph="DELETE FROM " />
-                <marker date="1493824658000" expanded="true" signature="51553:51626" ph="SELECT DISTI... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="52460:52536" ph="DELETE FROM " />
-                <marker date="1493824658000" expanded="true" signature="52717:52801" ph="DELETE FROM " />
-                <marker date="1493824658000" expanded="true" signature="52974:53045" ph="SELECT DISTI... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="53875:53949" ph="DELETE FROM " />
-                <marker date="1493824658000" expanded="true" signature="54137:54219" ph="DELETE FROM " />
-                <marker date="1493824658000" expanded="true" signature="55572:55578" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="57757:57763" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="59848:59854" ph=" " />
-                <marker date="1493824658000" expanded="true" signature="64426:64463" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="65975:66059" ph="SELECT * FRO... ${$my_pre}" />
-                <marker date="1493824658000" expanded="true" signature="75329:75335" ph="..." />
-                <marker date="1493824658000" expanded="true" signature="75429:75435" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="6508:6514" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="6595:6601" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="6681:6687" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="6775:6781" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="7587:7598" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="14032:14129" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="15540:15625" ph="SELECT cost_... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="16224:16341" ph="SELECT booke... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="16584:16590" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="17156:17272" ph="SELECT booke... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="18221:18341" ph="SELECT name ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="19389:19463" ph="SELECT COUNT... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="21224:21309" ph="SELECT cost_... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="22334:22443" ph="SELECT SUM(t... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="23171:23304" ph="SELECT id AS... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="24321:24441" ph="SELECT name ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="25937:26070" ph="SELECT id AS... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="27054:27174" ph="SELECT name ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="29066:29112" ph="SELECT name,... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="31770:31777" ph="£" />
+                <marker date="1493825000000" expanded="true" signature="32018:32025" ph="£" />
+                <marker date="1493825000000" expanded="true" signature="33421:33426" ph="&amp;" />
+                <marker date="1493825000000" expanded="true" signature="34539:34544" ph="&amp;" />
+                <marker date="1493825000000" expanded="true" signature="45029:45035" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="45120:45126" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="47624:47630" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="47718:47724" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="48142:48226" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="50004:50075" ph="SELECT name,... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="50297:50352" ph="DELETE FROM " />
+                <marker date="1493825000000" expanded="true" signature="51252:51325" ph="SELECT DISTI... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="52159:52235" ph="DELETE FROM " />
+                <marker date="1493825000000" expanded="true" signature="52416:52500" ph="DELETE FROM " />
+                <marker date="1493825000000" expanded="true" signature="52673:52744" ph="SELECT DISTI... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="53574:53648" ph="DELETE FROM " />
+                <marker date="1493825000000" expanded="true" signature="53836:53918" ph="DELETE FROM " />
+                <marker date="1493825000000" expanded="true" signature="55271:55277" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="57456:57462" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="59547:59553" ph=" " />
+                <marker date="1493825000000" expanded="true" signature="64125:64162" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="65674:65758" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1493825000000" expanded="true" signature="75028:75034" ph="..." />
+                <marker date="1493825000000" expanded="true" signature="75128:75134" ph="..." />
               </folding>
             </state>
           </provider>
@@ -287,14 +286,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
-      <workItem from="1493824082238" duration="524000" />
-    </task>
-    <task id="LOCAL-00005" summary="cgi">
-      <created>1493766167442</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1493766167442</updated>
+      <workItem from="1493824082238" duration="875000" />
     </task>
     <task id="LOCAL-00006" summary="exception">
       <created>1493766876963</created>
@@ -632,11 +624,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493824528725</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="DO Some Debugging">
+      <created>1493824669650</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1493824669650</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="524000" />
+    <option name="totallyTimeSpent" value="875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -895,56 +894,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="854">
-          <caret line="407" column="39" lean-forward="true" selection-start-line="407" selection-start-column="39" selection-end-line="407" selection-end-column="39" />
+        <state relative-caret-position="537">
+          <caret line="405" column="0" lean-forward="true" selection-start-line="405" selection-start-column="0" selection-end-line="405" selection-end-column="0" />
           <folding>
-            <marker date="1493824658000" expanded="true" signature="6508:6514" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="6595:6601" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="6681:6687" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="6775:6781" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="7587:7598" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="14032:14106" ph="SELECT COUNT... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="14261:14358" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="15841:15926" ph="SELECT cost_... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="16525:16642" ph="SELECT booke... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="16885:16891" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="17457:17573" ph="SELECT booke... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="18522:18642" ph="SELECT name ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="19690:19764" ph="SELECT COUNT... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="21525:21610" ph="SELECT cost_... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="22635:22744" ph="SELECT SUM(t... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="23472:23605" ph="SELECT id AS... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="24622:24742" ph="SELECT name ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="26238:26371" ph="SELECT id AS... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="27355:27475" ph="SELECT name ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="29367:29413" ph="SELECT name,... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="32071:32078" ph="£" />
-            <marker date="1493824658000" expanded="true" signature="32319:32326" ph="£" />
-            <marker date="1493824658000" expanded="true" signature="33722:33727" ph="&amp;" />
-            <marker date="1493824658000" expanded="true" signature="34840:34845" ph="&amp;" />
-            <marker date="1493824658000" expanded="true" signature="45330:45336" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="45421:45427" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="47925:47931" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="48019:48025" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="48443:48527" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="50305:50376" ph="SELECT name,... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="50598:50653" ph="DELETE FROM " />
-            <marker date="1493824658000" expanded="true" signature="51553:51626" ph="SELECT DISTI... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="52460:52536" ph="DELETE FROM " />
-            <marker date="1493824658000" expanded="true" signature="52717:52801" ph="DELETE FROM " />
-            <marker date="1493824658000" expanded="true" signature="52974:53045" ph="SELECT DISTI... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="53875:53949" ph="DELETE FROM " />
-            <marker date="1493824658000" expanded="true" signature="54137:54219" ph="DELETE FROM " />
-            <marker date="1493824658000" expanded="true" signature="55572:55578" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="57757:57763" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="59848:59854" ph=" " />
-            <marker date="1493824658000" expanded="true" signature="64426:64463" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="65975:66059" ph="SELECT * FRO... ${$my_pre}" />
-            <marker date="1493824658000" expanded="true" signature="75329:75335" ph="..." />
-            <marker date="1493824658000" expanded="true" signature="75429:75435" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="6508:6514" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="6595:6601" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="6681:6687" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="6775:6781" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="7083:7180" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="7587:7598" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="8455:8561" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="11526:11646" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="14032:14129" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="15540:15625" ph="SELECT cost_... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="16224:16341" ph="SELECT booke... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="16584:16590" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="17156:17272" ph="SELECT booke... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="18221:18341" ph="SELECT name ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="19389:19463" ph="SELECT COUNT... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="21224:21309" ph="SELECT cost_... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="22334:22443" ph="SELECT SUM(t... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="23171:23304" ph="SELECT id AS... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="24321:24441" ph="SELECT name ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="25937:26070" ph="SELECT id AS... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="27054:27174" ph="SELECT name ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="29066:29112" ph="SELECT name,... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="31770:31777" ph="£" />
+            <marker date="1493825000000" expanded="true" signature="32018:32025" ph="£" />
+            <marker date="1493825000000" expanded="true" signature="33421:33426" ph="&amp;" />
+            <marker date="1493825000000" expanded="true" signature="34539:34544" ph="&amp;" />
+            <marker date="1493825000000" expanded="true" signature="45029:45035" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="45120:45126" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="47624:47630" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="47718:47724" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="48142:48226" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="50004:50075" ph="SELECT name,... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="50297:50352" ph="DELETE FROM " />
+            <marker date="1493825000000" expanded="true" signature="51252:51325" ph="SELECT DISTI... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="52159:52235" ph="DELETE FROM " />
+            <marker date="1493825000000" expanded="true" signature="52416:52500" ph="DELETE FROM " />
+            <marker date="1493825000000" expanded="true" signature="52673:52744" ph="SELECT DISTI... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="53574:53648" ph="DELETE FROM " />
+            <marker date="1493825000000" expanded="true" signature="53836:53918" ph="DELETE FROM " />
+            <marker date="1493825000000" expanded="true" signature="55271:55277" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="57456:57462" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="59547:59553" ph=" " />
+            <marker date="1493825000000" expanded="true" signature="64125:64162" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="65674:65758" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493825000000" expanded="true" signature="75028:75034" ph="..." />
+            <marker date="1493825000000" expanded="true" signature="75128:75134" ph="..." />
           </folding>
         </state>
       </provider>
