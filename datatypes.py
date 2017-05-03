@@ -1,6 +1,6 @@
 from mealbooker import app
 import json
-
+import json_tricks
 
 class User(object):
     def __init__(self, userID, isAdmin, isMCRMember, isAssociateMember, isCRA, isCollegeBill):
@@ -24,6 +24,22 @@ class User(object):
         if event.openToCRAs and self.isCRA:
             return True
         return False
+
+    def __json_encode__(self):
+            # should return primitive, serializable types like dict, list, int, string, float...
+            app.logger.debug("yes, we are calling the new function")
+            return {"name":self.displayName(),"userID": self.userID, "isAdmin": self.isAdmin, "isMCRMember": self.isMCRMember,
+                    "isAssociateMember": self.isAssociateMember, "isCRA": self.isCRA,
+                    "isCollegeBill": self.isCollegeBill}
+
+    def __json_decode__(self, **attrs):
+        # should initialize all properties; note that __init__ is not called implicitly
+        self.userID = attrs['userID']
+        self.isAdmin = attrs['isAdmin']
+        self.isMCRMember = attrs['isMCRMember']
+        self.isAssociateMember = attrs['isAssociateMember']
+        self.isCRA = attrs['isCRA']
+        self.isCollegeBill = attrs['isCollegeBill']
 
     def __repr__(self):
 

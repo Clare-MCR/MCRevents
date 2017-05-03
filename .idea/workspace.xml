@@ -42,8 +42,8 @@
       <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+            <state relative-caret-position="719">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -274,13 +274,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00016" summary="redirect info">
-      <created>1493769912572</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1493769912572</updated>
     </task>
     <task id="LOCAL-00017" summary="redirect info">
       <created>1493770140905</created>
@@ -618,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493826822272</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="convert to dict structure to string">
+      <created>1493826965149</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1493826965151</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -656,7 +656,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="all 1 file" />
     <MESSAGE value="better login" />
     <MESSAGE value="print session" />
     <MESSAGE value="tidy" />
@@ -681,7 +680,8 @@
     <MESSAGE value="fix send guestlist" />
     <MESSAGE value="fix json format" />
     <MESSAGE value="convert to dict structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert to dict structure" />
+    <MESSAGE value="convert to dict structure to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert to dict structure to string" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -890,8 +890,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datatypes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="57" lean-forward="false" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        <state relative-caret-position="719">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
