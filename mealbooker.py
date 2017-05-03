@@ -32,10 +32,10 @@ class CustomJSONEncoder(JSONEncoder):
         app.logger.debug("running custom jsonencoder")
         if isinstance(obj, User):
             # Implement code to convert Passport object to a dict
-            user_dict = {"name": User.displayName(), "userID": User.userID, "isAdmin": User.isAdmin,
-                         "isMCRMember": User.isMCRMember,
-                         "isAssociateMember": User.isAssociateMember, "isCRA": User.isCRA,
-                         "isCollegeBill": User.isCollegeBill}
+            user_dict = {"name": obj.displayName(), "userID": obj.userID, "isAdmin": obj.isAdmin,
+                         "isMCRMember": obj.isMCRMember,
+                         "isAssociateMember": obj.isAssociateMember, "isCRA": obj.isCRA,
+                         "isCollegeBill": obj.isCollegeBill}
             return user_dict
         else:
             JSONEncoder.default(self, obj)

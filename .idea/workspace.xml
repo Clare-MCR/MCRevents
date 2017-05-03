@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="345">
+              <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -382,13 +382,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00022" summary="typo">
-      <created>1493771347003</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1493771347003</updated>
-    </task>
     <task id="LOCAL-00023" summary="app logger">
       <created>1493794111027</created>
       <option name="number" value="00023" />
@@ -725,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493828411726</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="use user not self">
+      <created>1493828495383</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1493828495383</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -763,7 +763,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit some changes" />
     <MESSAGE value="name change" />
     <MESSAGE value="add debugs" />
     <MESSAGE value="add debug to every function" />
@@ -788,7 +787,8 @@
     <MESSAGE value="fix datatypes import" />
     <MESSAGE value="better error message" />
     <MESSAGE value="remove json_tricks" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove json_tricks" />
+    <MESSAGE value="use user not self" />
+    <option name="LAST_COMMIT_MESSAGE" value="use user not self" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,8 +1014,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="345">
+          <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
