@@ -2,6 +2,7 @@ import logging
 
 import MySQLdb
 import ldap
+from datatypes import RavenUser
 
 FORMAT = '%(asctime)s %(levelname)s\t: %(message)s'
 logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
@@ -301,8 +302,10 @@ def _getQueueEntriesWorker(cur, eventID, userID=None):
 #   isRoom = ((event.totalTickets - current_guests) >= numTickets)
 #   return isRoom
 
-def makeBookingIfSpace(event, user, isAdminBooking, numTickets):
+def makeBookingIfSpace(event, thisuser, isAdminBooking, numTickets):
     cur, db = getMySQLCursorAndDb()
+    user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
+                     thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_eventslist])
     cur.execute('SELECT current_guests FROM {0} WHERE id = {1}'.format(mcrevents_eventslist, event.eventID))
 
