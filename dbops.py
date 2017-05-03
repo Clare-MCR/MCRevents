@@ -336,10 +336,9 @@ def makeBookingIfSpace(event, thisuser, isAdminBooking, numTickets):
                 name = user.displayName()
         cur.execute('INSERT INTO {} (bookingid, eventid, booker, admin, type, name,\
         diet, other) \
-        VALUES ({}, {}, {!s}, {}, {}, {!s}, {!s}, {!s})'.format(mcrevents_booking_details,
+        VALUES ({}, {}, "{}", {}, {}, "{}", "{}", "{}")'.format(mcrevents_booking_details,
                                                         bookingID, event.eventID, user.userID, isAdminBooking,
-                                                        ticketType, name,
-                                                        'None', ''))
+                                                        ticketType, name,'None', ''))
     cur.execute('UPDATE {} SET current_guests = {} WHERE id = {}'.format(mcrevents_eventslist,
                                                                          current_guests + numTickets, event.eventID))
     db.commit()
@@ -355,7 +354,7 @@ def joinQueue(eventID, user, isAdminBooking, numTickets):
                       mcrevents_eventslist])
 
     cur.execute('INSERT INTO {} (eventid, booker, admin, tickets) \
-      VALUES ({}, {}, {}, {})'.format(mcrevents_queue,
+      VALUES ({}, "{}", {}, {})'.format(mcrevents_queue,
                                       eventID, user.userID, isAdminBooking, numTickets))
     queueID = db.insert_id()
     # Create blank rows in details table
