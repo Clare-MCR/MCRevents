@@ -418,8 +418,9 @@ function show_guestlist( $eventid ) {
 	echo "<tr><th>#</th><th>Name</th><th>Ticket ID</th><th>Booker</th><th>Diet</th><th>Other Requirements</th></tr>";
 	$j=0;
 	foreach ($result as $key => $value) {
+	    $j++;
 		echo "<tr>";
-		echo "<td>" . ( $j + 1 ) . "</td>";
+		echo "<td>" . ( $j ) . "</td>";
 		echo "<td>" . $value['name'] . "</td>";
 		echo "<td>" . $value['id'] . "</td>";
 		echo "<td>" . $value['booker'] . "</td>";
