@@ -32,6 +32,7 @@ def display_errors(func):
             return func(*args, **kwargs)
         except Exception as e:
             if DEBUG:
+                logging.error('{} {}'.format(type(e).__name__,format_exception(e)))
                 return flask.render_template('errorinfo.html', errorName=type(e).__name__,
                                              traceback=format_exception(e))
             else:
