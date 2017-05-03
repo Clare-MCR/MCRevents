@@ -23,7 +23,7 @@ class User(object):
         return False
 
     def __repr__(self):
-        jsonstring = '[{{0}:{"name":{1},"isAdmin": {2}, "isMCRMember": {3}, "isAssociateMember": {4}, "isCRA": {5}, "isCollegeBill": {6}}}]'.format(
+        jsonstring = '[{{ {0}:{{"name":{1},"isAdmin": {2}, "isMCRMember": {3}, "isAssociateMember": {4}, "isCRA": {5}, "isCollegeBill": {6}}} }}]'.format(
             self.displayName(), self.userID, self.isAdmin, self.isMCRMember, self.isAssociateMember, self.isCRA, self.isCollegeBill)
         app.logger.debug(jsonstring)
         return jsonstring

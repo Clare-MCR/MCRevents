@@ -42,8 +42,8 @@
       <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/datatypes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="131" lean-forward="false" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
+            <state relative-caret-position="450">
+              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -272,13 +272,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00011" summary="add debug spots">
-      <created>1493768817285</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1493768817285</updated>
     </task>
     <task id="LOCAL-00012" summary="add debug spots">
       <created>1493768986174</created>
@@ -616,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493825428983</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fix json format">
+      <created>1493826117325</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1493826117330</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -654,7 +654,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="typo" />
     <MESSAGE value="app logger" />
     <MESSAGE value="all 1 file" />
     <MESSAGE value="better login" />
@@ -679,7 +678,8 @@
     <MESSAGE value="fix count" />
     <MESSAGE value="restore warning level" />
     <MESSAGE value="fix send guestlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix send guestlist" />
+    <MESSAGE value="fix json format" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix json format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/datatypes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="131" lean-forward="false" selection-start-line="25" selection-start-column="131" selection-end-line="25" selection-end-column="131" />
+        <state relative-caret-position="450">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding />
         </state>
       </provider>
