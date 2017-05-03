@@ -559,19 +559,10 @@ function send_guestlist( $eventid ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
 	}
 
-	$dbh->query( "SELECT COUNT(*) FROM " . $my_pre . "booking_details WHERE eventid=:eventid" );
+	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
 	$dbh->bind( ":eventid", $eventid );
 
-	$result = $dbh->single();
-
-	$num_attendees = $result[0];
-
-//	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
-//	$dbh->bind( ":eventid", $eventid );
-//
-//	$result = $dbh->resultset(  );
-//
-//	$num_attendees = count( $result );
+	$result = $dbh->resultset(  );
 
 	$to      = $_SERVER['REMOTE_USER'] . '@cam.ac.uk';
 	$subject = "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"";
