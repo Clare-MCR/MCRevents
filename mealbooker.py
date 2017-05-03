@@ -348,7 +348,8 @@ def eventselector(showAllEntries):
     # user = RavenUser(flask.session['userID'], flask.session['isAdmin'], row[2], row[3], row[4], row[5])
     thisuser = flask.session['user']
     app.logger.debug(thisuser)
-
+    for key, value in thisuser.iteritems():
+        app.logger.debug('{}{}'.formatter(key, value))
     user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
                      thisuser['isAssociateMember'], thisuser['.isCRA'], thisuser['isCollegeBill'])
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]

@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="361" column="28" lean-forward="true" selection-start-line="361" selection-start-column="28" selection-end-line="361" selection-end-column="28" />
+            <state relative-caret-position="290">
+              <caret line="349" column="30" lean-forward="true" selection-start-line="349" selection-start-column="30" selection-end-line="349" selection-end-column="30" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -450,13 +450,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00027" summary="print session">
-      <created>1493796794585</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1493796794586</updated>
-    </task>
     <task id="LOCAL-00028" summary="tidy">
       <created>1493797892008</created>
       <option name="number" value="00028" />
@@ -793,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493829575804</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="fix dict calling">
+      <created>1493829695365</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1493829695365</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -831,7 +831,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add debug to every function" />
     <MESSAGE value="force render" />
     <MESSAGE value="print python version" />
     <MESSAGE value="style" />
@@ -856,7 +855,8 @@
     <MESSAGE value="use user not self" />
     <MESSAGE value="fix load raven User object" />
     <MESSAGE value="debug session" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug session" />
+    <MESSAGE value="fix dict calling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dict calling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="361" column="28" lean-forward="true" selection-start-line="361" selection-start-column="28" selection-end-line="361" selection-end-column="28" />
+        <state relative-caret-position="290">
+          <caret line="349" column="30" lean-forward="true" selection-start-line="349" selection-start-column="30" selection-end-line="349" selection-end-column="30" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
