@@ -50,6 +50,7 @@ def require_login(func):
     @wraps(func)
     @display_errors
     def dec(*args, **kwargs):
+        app.logger.debug("at require login")
         if not flask.session.get('logged_in'):
             app.logger.debug("We're not logged in")
             app.logger.info('going to {}'.format(flask.url_for('login')))
