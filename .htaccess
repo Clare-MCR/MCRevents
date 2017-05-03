@@ -11,6 +11,6 @@ IndexIgnore *
 RewriteEngine on
 
 RewriteBase /
-RewriteCond %{REQUEST_URI} !(/$|\.)
+RewriteCond %{REQUEST_URI} !(/$|\.|^$)
 RewriteRule (.*) %{REQUEST_URI}/ [R=301,L]
 </IfModule>
