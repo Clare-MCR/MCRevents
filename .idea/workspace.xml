@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+            <state relative-caret-position="455">
+              <caret line="109" column="50" lean-forward="false" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="50" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -190,10 +190,13 @@
       <find>format</find>
       <find>%s</find>
       <find>logg</find>
+      <find>flask.session['user']</find>
+      <find>flask.session['user'].userID</find>
     </findStrings>
     <replaceStrings>
       <replace>app.logger</replace>
       <replace>{}</replace>
+      <replace>flask.session['user']['userID']</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -498,13 +501,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00037" summary="add debug to every function">
-      <created>1493806750249</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1493806750249</updated>
     </task>
     <task id="LOCAL-00038" summary="add debug to every function">
       <created>1493806991989</created>
@@ -842,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493832355442</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="make user from session">
+      <created>1493832492782</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1493832492786</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -880,7 +883,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove custom json encoder" />
     <MESSAGE value="print json string" />
     <MESSAGE value="DO Some Debugging" />
     <MESSAGE value="simpler loop" />
@@ -905,7 +907,8 @@
     <MESSAGE value="fix layout" />
     <MESSAGE value="fix flash name" />
     <MESSAGE value="rework dbops.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="rework dbops.py" />
+    <MESSAGE value="make user from session" />
+    <option name="LAST_COMMIT_MESSAGE" value="make user from session" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1337,8 +1340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+        <state relative-caret-position="455">
+          <caret line="109" column="50" lean-forward="false" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="50" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>

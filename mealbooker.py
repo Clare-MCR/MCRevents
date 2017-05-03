@@ -90,7 +90,7 @@ def require_admin(func):
         app.logger.debug(require_admin.__name__)
         if not flask.session.get('logged_in'):
             return flask.redirect(flask.url_for('login'))
-        if not flask.session['user'].isAdmin:
+        if not flask.session['user']['isAdmin']:
             flask.flash('Administrator privileges required for that action!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -107,7 +107,7 @@ def require_admin_for_admin_booking(func):
             is_admin_booking = kwargs['isAdminBooking']
         else:
             is_admin_booking = False
-        isAdmin = flask.session['user'].isAdmin
+        isAdmin = flask.session['user']['isAdmin']
         if is_admin_booking and not isAdmin:
             flask.flash('Administrator privileges required to make admin booking!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
@@ -184,7 +184,8 @@ def requireNoBooking(func):
             isAdminBooking = False
         eventID = kwargs['eventID']
         from dbops import isUserBookedInEvent
-        if isUserBookedInEvent(eventID, userID=flask.session['user'].userID, isAdminBooking=isAdminBooking):
+        thisuser = flask.session['user']
+        if isUserBookedInEvent(eventID, userID=thisuser['userID'], isAdminBooking=isAdminBooking):
             flask.flash('You\'ve already booked this event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -203,7 +204,7 @@ def requireBooking(func):
             isAdminBooking = False
         eventID = kwargs['eventID']
         from dbops import isUserBookedInEvent
-        if not isUserBookedInEvent(eventID, userID=flask.session['user'].userID, isAdminBooking=isAdminBooking):
+        if not isUserBookedInEvent(eventID, userID=flask.session['user']['userID'], isAdminBooking=isAdminBooking):
             flask.flash('You haven\'t already booked this event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -222,7 +223,7 @@ def requireGuestSpacesLeftForUser(func):
             isAdminBooking = False
         eventID = kwargs['eventID']
         from dbops import areFreeGuestSpacesForUser
-        if not areFreeGuestSpacesForUser(eventID, userID=flask.session['user'].userID, isAdminBooking=isAdminBooking):
+        if not areFreeGuestSpacesForUser(eventID, userID=flask.session['user']['userID'], isAdminBooking=isAdminBooking):
             flask.flash('You have no free guest slots for this event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -253,7 +254,7 @@ def requireNotInQueue(func):
         app.logger.debug(requireNotInQueue.__name__)
         eventID = kwargs['eventID']
         from dbops import isUserInQueueForEvent
-        if isUserInQueueForEvent(eventID, userID=flask.session['user'].userID):
+        if isUserInQueueForEvent(eventID, userID=flask.session['user']['userID']):
             flask.flash('You\'re already in the queue for this event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -268,7 +269,7 @@ def requireInQueue(func):
         app.logger.debug(requireInQueue.__name__)
         eventID = kwargs['eventID']
         from dbops import isUserInQueueForEvent
-        if not isUserInQueueForEvent(eventID, userID=flask.session['user'].userID):
+        if not isUserInQueueForEvent(eventID, userID=flask.session['user']['userID']):
             flask.flash('You haven\'t joined the queue for this event!', 'error')
             return flask.redirect(flask.url_for('eventselector'))
         return func(*args, **kwargs)
@@ -474,7 +475,7 @@ def modifyQueue(eventID):
     app.logger.debug(modifyQueue.__name__)
     from dbops import getEvent, getQueueEntry
     event = getEvent(eventID)
-    booking = getQueueEntry(eventID, flask.session['user'].userID)
+    booking = getQueueEntry(eventID, flask.session['user']['userID'])
     return flask.render_template('modifyQueue.html', event=event, booking=booking)
 
 
@@ -486,7 +487,7 @@ def modifyQueue(eventID):
 def modifyQueueHandler(eventID):
     app.logger.debug(modifyQueueHandler.__name__)
     from dbops import getQueueEntry, updateQueueDetails
-    booking = getQueueEntry(eventID, flask.session['user'].userID)
+    booking = getQueueEntry(eventID, flask.session['user']['userID'])
     from objectcreation import updateBookingFromForm
     booking = updateBookingFromForm(booking, flask.request.form)
     updateQueueDetails(booking)
@@ -514,7 +515,7 @@ def removeGuestFromQueueHandler(eventID, bookingID, detailsID):
 def leaveQueueForEventHandler(eventID):
     app.logger.debug(leaveQueueForEventHandler.__name__)
     from dbops import leaveQueue
-    leaveQueue(eventID, flask.session['user'].userID)
+    leaveQueue(eventID, flask.session['user']['userID'])
     flask.flash('Left queue')
     return flask.redirect(flask.url_for('eventselector'))
 
@@ -530,7 +531,7 @@ def modifyBooking(eventID, isAdminBooking):
     event = getEvent(eventID)
     numQueued = numPeopleInQueueForEvent(event.eventID)
     event.blockExtraGuests = (numQueued > 0)
-    booking = getBooking(eventID, flask.session['user'].userID, isAdminBooking)
+    booking = getBooking(eventID, flask.session['user']['userID'], isAdminBooking)
     return flask.render_template('modifyBooking.html', event=event, booking=booking, isAdminBooking=isAdminBooking)
 
 
@@ -543,7 +544,7 @@ def modifyBooking(eventID, isAdminBooking):
 def modifyBookingHandler(eventID, isAdminBooking):
     app.logger.debug(modifyBookingHandler.__name__)
     from dbops import getBooking, updateBookingDetails
-    booking = getBooking(eventID, flask.session['user'].userID, isAdminBooking)
+    booking = getBooking(eventID, flask.session['user']['userID'], isAdminBooking)
     from objectcreation import updateBookingFromForm
     booking = updateBookingFromForm(booking, flask.request.form)
     updateBookingDetails(booking)
