@@ -602,7 +602,7 @@ def alternatelogin():
     else:
         session['logged_in'] = True
         from datatypes import AlternateUser
-        session['user'] = AlternateUser('cow', 1, 1, 0, 0, 0)
+        session['user'] = AlternateUser('cow', 1, 1, 0, 0, 0)[0]
         flash('You were logged in')
     return redirect(url_for('eventselector'))
 
