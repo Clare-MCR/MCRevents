@@ -504,7 +504,10 @@ def bookAnotherGuestIfSpace(eventID, bookingID, thisuser, isAdminBooking=False):
     return True
 
 
-def deleteBookings(eventID, user, isAdminBooking=False):
+def deleteBookings(eventID, thisuser, isAdminBooking=False):
+    from datatypes import RavenUser
+    user = RavenUser(thisuser['userID'], thisuser['isAdmin'], thisuser['isMCRMember'],
+                     thisuser['isAssociateMember'], thisuser['isCRA'], thisuser['isCollegeBill'])
     cur, db = getMySQLCursorAndDb()
     _lockTables(cur, [mcrevents_booking, mcrevents_booking_details, mcrevents_queue, mcrevents_queue_details,
                       mcrevents_eventslist])
