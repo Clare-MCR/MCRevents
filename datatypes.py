@@ -1,4 +1,5 @@
 from mealbooker import app
+import json
 
 
 class User(object):
@@ -25,9 +26,10 @@ class User(object):
         return False
 
     def __repr__(self):
-        jsonstring = {"name":self.displayName(),"userID": self.userID, "isAdmin": self.isAdmin, "isMCRMember": self.isMCRMember,
+
+        jsonstring = json.dumps({"name":self.displayName(),"userID": self.userID, "isAdmin": self.isAdmin, "isMCRMember": self.isMCRMember,
                     "isAssociateMember": self.isAssociateMember, "isCRA": self.isCRA,
-                    "isCollegeBill": self.isCollegeBill}
+                    "isCollegeBill": self.isCollegeBill})
 
         # jsonstring = '[{{ "{0}":{{"name":"{1}","isAdmin": {2}, "isMCRMember": {3}, "isAssociateMember": {4}, "isCRA": {5}, "isCollegeBill": {6}}} }}]'.format(
         #     self.displayName(), self.userID, self.isAdmin, self.isMCRMember, self.isAssociateMember, self.isCRA, self.isCollegeBill)
