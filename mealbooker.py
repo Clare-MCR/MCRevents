@@ -346,6 +346,7 @@ def eventselector(showAllEntries):
     # flask.session['isCRA'] = user.isCRA
     # flask.session['isCollegeBill'] = user.isCollegeBill
     # user = RavenUser(flask.session['userID'], flask.session['isAdmin'], row[2], row[3], row[4], row[5])
+    app.logger.debug(flask.session)
     user = RavenUser(flask.session['userID'], flask.session['isAdmin'], flask.session['isMCRMember'],
                      flask.session['isAssociateMember'], flask.session['isCRA'], flask.session['isCollegeBill'])
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]

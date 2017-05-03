@@ -35,8 +35,8 @@
       <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mealbooker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="407" column="50" lean-forward="false" selection-start-line="407" selection-start-column="32" selection-end-line="407" selection-end-column="50" />
+            <state relative-caret-position="275">
+              <caret line="348" column="20" lean-forward="false" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -450,13 +450,6 @@
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
     </task>
-    <task id="LOCAL-00024" summary="all 1 file">
-      <created>1493795471603</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1493795471603</updated>
-    </task>
     <task id="LOCAL-00025" summary="better login">
       <created>1493795649504</created>
       <option name="number" value="00025" />
@@ -793,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493828571012</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="fix load raven User object">
+      <created>1493829275326</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1493829275327</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -831,7 +831,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="name change" />
     <MESSAGE value="add debugs" />
     <MESSAGE value="add debug to every function" />
     <MESSAGE value="force render" />
@@ -856,7 +855,8 @@
     <MESSAGE value="better error message" />
     <MESSAGE value="remove json_tricks" />
     <MESSAGE value="use user not self" />
-    <option name="LAST_COMMIT_MESSAGE" value="use user not self" />
+    <MESSAGE value="fix load raven User object" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix load raven User object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="407" column="50" lean-forward="false" selection-start-line="407" selection-start-column="32" selection-end-line="407" selection-end-column="50" />
+        <state relative-caret-position="275">
+          <caret line="348" column="20" lean-forward="false" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
