@@ -301,7 +301,7 @@ def confirmActionHandler():
 def eventselector(showAllEntries):
     from dbops import getEvents, isUserBookedInEvent, isUserInQueueForEvent, numPeopleInQueueForEvent
     from datetime import datetime, timedelta
-    logging.degug("We're logged in and ready to rumble")
+    logging.debug("We're logged in and ready to rumble")
     user = flask.session['user']
     events = [x for x in getEvents() if user.isEligibleForEvent(x)]
     currentEvents = events
