@@ -8,9 +8,7 @@ from functools import wraps
 from wsgiref.handlers import CGIHandler
 
 import flask
-
 FORMAT = '%(asctime)-15s %(message)s'
-logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
 
 
 DEBUG = True
@@ -18,7 +16,9 @@ SECRET_KEY = 'development moooo key'
 
 app = flask.Flask(__name__)
 app.config.from_object(__name__)
-
+logging.getLogger(app.logger_name)
+logging.basicConfig(filename='logs/mealbooker.log', level=logging.DEBUG, format=FORMAT)
+app.logger.debug('Logger Initialised')
 
 def format_exception(e):
     info = ''.join(traceback.format_tb(sys.exc_info()[2]))
@@ -580,8 +580,8 @@ def updateHandler(eventID):
 @display_errors
 def login():
     # TODO remove me!
-    #logging.debug("this is where the problems happen")
-    #return flask.redirect(flask.url_for('ravenloginredirect'))
+    logging.debug("this is where the problems happen")
+    return flask.redirect(flask.url_for('ravenloginredirect'))
     # TODO remove me!
     if flask.session.get('logged_in'):
         return flask.redirect(flask.url_for('eventselector'))
