@@ -409,7 +409,7 @@ function show_guestlist( $eventid ) {
 
 	$result = $dbh->single();
 
-	$logger->debug($result);
+	$logger->debug(print_r($result,true));
 
 	$num_guests = $result[0];
 
@@ -417,7 +417,7 @@ function show_guestlist( $eventid ) {
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset();
-	$logger->debug($result);
+	$logger->debug(print_r($result,true));
 
 	echo "<h1>Official Guestlist</h1>\n";
 	echo "<p>This is the official guestlist for the following event:</p>\n";
