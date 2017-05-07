@@ -1225,8 +1225,9 @@ function create_event() {
     $logger->info("Setting guest types");
 
 	# Take the data from guest_type array
-
-	foreach ( $_POST['guest_type'] as $guesttype => $value ) {
+    $guesttypes = $_POST['guest_type'];
+    $logger->debug($guesttypes);
+	foreach ( $guesttypes as $guesttype => $value ) {
 	    $logger->debug($guesttype, $value);
 		$event->setValue( $guesttype, $value );
 	}
