@@ -1995,7 +1995,7 @@ function CommiteditEvent( $eventid ) {
 	}
 	# Commit the changed event to the database
     $logger->debug("Committing event");
-	$logger->debug(print_r($event,false));
+	$logger->debug(print_r($event,true));
 	$event->commit();
 	$command = escapeshellcmd( "./updatequeue.py $eventid" );
 	$output  = shell_exec( $command );
