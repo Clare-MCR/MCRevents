@@ -1220,7 +1220,7 @@ function create_event() {
 	$event->setValue( 'open_date', $open_date );
 	$event->setValue( 'close_date', $close_date );
 	$event->setValue( 'sent', 'N' );
-    $event->setValue('mcr_member', $_POST['guest_type']['mcr_member']);
+    $logger->info("Setting guest types");
 
 	# Take the data from guest_type array
 
