@@ -203,33 +203,33 @@ class event extends genericitem {
 		# Creates a new event using the provided variables
 
 		$this->db->query( "INSERT INTO $this->eventslist (name,total_guests,current_guests,max_guests,mcr_member,associate_member,cra,non_clare_associate_member,cost_normal,cost_second,guest_type,event_date,open_date,close_date,sent) VALUES (:name,:total_guests,:current_guests,:max_guests,:mcr_member,:associate_member,:cra,0,:cost_normal,:cost_second,NULL,:event_date,:open_date,:close_date,:sent)" );
-		$this->db->bind( ':name', $this->getValue( 'name' ) );
-		$this->db->bind( ':total_guests', $this->getValue( 'total_guests' ) );
-		$this->db->bind( ':current_guests', $this->getValue( 'current_guests' ) );
-		$this->db->bind( ':max_guests', $this->getValue( 'max_guests' ) );
-		$this->db->bind( ':cost_normal', $this->getValue( 'cost_normal' ) );
-		$this->db->bind( ':cost_second', $this->getValue( 'cost_second' ) );
-		$this->db->bind( ':event_date', $this->getValue( 'event_date' ) );
-		$this->db->bind( ':open_date', $this->getValue( 'open_date' ) );
-		$this->db->bind( ':close_date', $this->getValue( 'close_date' ) );
-		$this->db->bind( ':sent', $this->getValue( 'sent' ) );
+		$this->db->bind( ':name', $this->name);
+		$this->db->bind( ':total_guests', $this->total_guests);
+		$this->db->bind( ':current_guests', $this->current_guests);
+		$this->db->bind( ':max_guests', $this->max_guests );
+		$this->db->bind( ':cost_normal', $this->cost_normal );
+		$this->db->bind( ':cost_second', $this->cost_second );
+		$this->db->bind( ':event_date', $this->event_date );
+		$this->db->bind( ':open_date', $this->open_date );
+		$this->db->bind( ':close_date', $this->close_date);
+		$this->db->bind( ':sent', $this->sent );
 
 		# Bind the access types
 
-		if ( $this->getValue( 'mcr_member' ) == 1 ) {
-			$this->db->bind( ':mcr_member', $this->getValue( 'mcr_member' ) );
+		if ( $this->mcr_member == 1 ) {
+			$this->db->bind( ':mcr_member', 1 );
 		} else {
 			$this->db->bind( ':mcr_member', 0 );
 		}
 
-		if ( $this->getValue( 'associate_member' ) == 1 ) {
-			$this->db->bind( ':associate_member', $this->getValue( 'associate_member' ) );
+		if ( $this->associate_member == 1 ) {
+			$this->db->bind( ':associate_member', 1 );
 		} else {
 			$this->db->bind( ':associate_member', 0 );
 		}
 
-		if ( $this->getValue( 'cra' ) == 1 ) {
-			$this->db->bind( ':cra', $this->getValue( 'cra' ) );
+		if ( $this->cra == 1 ) {
+			$this->db->bind( ':cra', 1 );
 		} else {
 			$this->db->bind( ':cra', 0 );
 		}

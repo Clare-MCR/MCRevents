@@ -1021,6 +1021,7 @@ function newEventForm() {
 }
 
 function create_event() {
+    global $logger;
 	$close_date = 0;
 	# Validate the numerical inputs
 	validate_is_number( $_POST['total_guests'], "Total Guests is not a number." );
@@ -1219,10 +1220,12 @@ function create_event() {
 	$event->setValue( 'open_date', $open_date );
 	$event->setValue( 'close_date', $close_date );
 	$event->setValue( 'sent', 'N' );
+    $event->setValue('mcr_member', $_POST['guest_type']['mcr_member']);
 
 	# Take the data from guest_type array
 
 	foreach ( $_POST['guest_type'] as $guesttype => $value ) {
+	    $logger->debug($guesttype, $value);
 		$event->setValue( $guesttype, $value );
 	}
 
