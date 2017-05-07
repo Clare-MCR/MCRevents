@@ -278,7 +278,9 @@ class event extends genericitem {
 		} else {
 			$this->db->bind( ':cra', 0 );
 		}
-
+        $this->logger->debug($this->mcr_member);
+        $this->logger->debug($this->associate_member);
+        $this->logger->debug($this->cra);
 		$this->db->execute();
 
 

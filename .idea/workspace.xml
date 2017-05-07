@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/5011780e-7503-487c-a5da-d3d80bac571c.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5011780e-7503-487c-a5da-d3d80bac571c.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin.php" afterPath="$PROJECT_DIR$/admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/event.php" afterPath="$PROJECT_DIR$/classes/event.php" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
@@ -22,13 +22,54 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="claremcr@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="claremcr@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="claremcr@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mcrevents_eventslist" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -53,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="1998" column="35" lean-forward="false" selection-start-line="1998" selection-start-column="35" selection-end-line="1998" selection-end-column="35" />
+            <state relative-caret-position="425">
+              <caret line="1996" column="39" lean-forward="false" selection-start-line="1996" selection-start-column="39" selection-end-line="1996" selection-end-column="39" />
               <folding>
                 <marker date="1494198725964" expanded="true" signature="6508:6514" ph=" " />
                 <marker date="1494198725964" expanded="true" signature="6595:6601" ph=" " />
@@ -114,7 +155,7 @@
         <entry file="file://$PROJECT_DIR$/classes/user.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="47" column="33" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
+              <caret line="47" column="33" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
               <folding>
                 <marker date="1494196644680" expanded="true" signature="1989:2028" ph="SELECT * FRO... access" />
                 <marker date="1494196644680" expanded="true" signature="3152:3198" ph="SELECT COUNT... access" />
@@ -136,25 +177,25 @@
         <entry file="file://$PROJECT_DIR$/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+              <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="event.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="186">
+              <caret line="140" column="21" lean-forward="false" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
               <folding>
-                <marker date="1494198725993" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-                <marker date="1494198725993" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-                <marker date="1494198725993" expanded="true" signature="3081:3088" ph="£" />
-                <marker date="1494198725993" expanded="true" signature="3149:3156" ph="£" />
-                <marker date="1494198725993" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
-                <marker date="1494198725993" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
-                <marker date="1494198725993" expanded="true" signature="8080:8504" ph="UPDATE ${$th... " />
+                <marker date="1494199140821" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+                <marker date="1494199140821" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+                <marker date="1494199140821" expanded="true" signature="3081:3088" ph="£" />
+                <marker date="1494199140821" expanded="true" signature="3149:3156" ph="£" />
+                <marker date="1494199140821" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
+                <marker date="1494199140821" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
+                <marker date="1494199140821" expanded="true" signature="8080:8504" ph="UPDATE ${$th... " />
               </folding>
             </state>
           </provider>
@@ -239,8 +280,8 @@
       <find>make</find>
       <find>getEventFromID</find>
       <find>commit_edit_event</find>
-      <find>$logger</find>
       <find>logger</find>
+      <find>$logger</find>
     </findStrings>
     <replaceStrings>
       <replace>app.logger</replace>
@@ -363,7 +404,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Database" />
     <property name="FullScreen" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -470,14 +511,7 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-      <workItem from="1494196666136" duration="2058000" />
-    </task>
-    <task id="LOCAL-00058" summary="fix send guestlist">
-      <created>1493825337628</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1493825337629</updated>
+      <workItem from="1494196666136" duration="2473000" />
     </task>
     <task id="LOCAL-00059" summary="fix send guestlist">
       <created>1493825428983</created>
@@ -815,21 +849,28 @@
       <option name="project" value="LOCAL" />
       <updated>1494198568865</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="more debug">
+      <created>1494198737149</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1494198737150</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3486000" />
+    <option name="totallyTimeSpent" value="3901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25833333" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26439232" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32945737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34587997" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -854,7 +895,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="better error message" />
     <MESSAGE value="remove json_tricks" />
     <MESSAGE value="use user not self" />
     <MESSAGE value="fix load raven User object" />
@@ -879,11 +919,12 @@
     <MESSAGE value="add d4ebug" />
     <MESSAGE value="send to admin.php" />
     <MESSAGE value="send to admin.php&#10;debug event" />
-    <option name="LAST_COMMIT_MESSAGE" value="send to admin.php&#10;debug event" />
+    <MESSAGE value="more debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="more debug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1089,7 +1130,7 @@
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1097,7 +1138,7 @@
     <entry file="file://$PROJECT_DIR$/classes/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="47" column="33" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
+          <caret line="47" column="33" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="47" selection-end-column="33" />
           <folding>
             <marker date="1494196644680" expanded="true" signature="1989:2028" ph="SELECT * FRO... access" />
             <marker date="1494196644680" expanded="true" signature="3152:3198" ph="SELECT COUNT... access" />
@@ -1114,26 +1155,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <marker date="1494198725993" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-            <marker date="1494198725993" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-            <marker date="1494198725993" expanded="true" signature="3081:3088" ph="£" />
-            <marker date="1494198725993" expanded="true" signature="3149:3156" ph="£" />
-            <marker date="1494198725993" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
-            <marker date="1494198725993" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
-            <marker date="1494198725993" expanded="true" signature="8080:8504" ph="UPDATE ${$th... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="1998" column="35" lean-forward="false" selection-start-line="1998" selection-start-column="35" selection-end-line="1998" selection-end-column="35" />
+        <state relative-caret-position="425">
+          <caret line="1996" column="39" lean-forward="false" selection-start-line="1996" selection-start-column="39" selection-end-line="1996" selection-end-column="39" />
           <folding>
             <marker date="1494198725964" expanded="true" signature="6508:6514" ph=" " />
             <marker date="1494198725964" expanded="true" signature="6595:6601" ph=" " />
@@ -1181,6 +1206,22 @@
             <marker date="1494198725964" expanded="true" signature="65364:65448" ph="SELECT * FRO... ${$my_pre}" />
             <marker date="1494198725964" expanded="true" signature="74866:74872" ph="..." />
             <marker date="1494198725964" expanded="true" signature="74966:74972" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="140" column="21" lean-forward="false" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
+          <folding>
+            <marker date="1494199140821" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+            <marker date="1494199140821" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+            <marker date="1494199140821" expanded="true" signature="3081:3088" ph="£" />
+            <marker date="1494199140821" expanded="true" signature="3149:3156" ph="£" />
+            <marker date="1494199140821" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
+            <marker date="1494199140821" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
+            <marker date="1494199140821" expanded="true" signature="8080:8504" ph="UPDATE ${$th... " />
           </folding>
         </state>
       </provider>
