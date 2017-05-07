@@ -241,13 +241,13 @@ class event extends genericitem {
 	function commit() {
 		# Commits the event to the database
         $this->logger->debug("Event->Commit");
-		$this->db->query( "UPDATE $this->$this->eventslist SET name=:name,
+		$this->db->query( "UPDATE $this->eventslist SET name=:name,
  					total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
  					mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
  					cost_normal=:cost_normal, cost_second=:cost_second, guest_type=NULL,
  					event_date=:event_date, open_date=:open_date,
  					close_date=:close_date, sent=:sent WHERE id=:id " );
-
+        $this->logger->debug("Binding Variables");
 		# Bind the access types
 		$this->db->bind( ':id', $this->id );
 		$this->db->bind( ':name', $this->name );
@@ -260,19 +260,19 @@ class event extends genericitem {
 		$this->db->bind( ':open_date', $this->open_date );
 		$this->db->bind( ':close_date', $this->close_date );
 		$this->db->bind( ':sent', $this->sent );
-
+        $this->logger->debug("Setting MCR bookable");
 		if ( $this->mcr_member == 1 ) {
 			$this->db->bind( ':mcr_member', $this->mcr_member );
 		} else {
 			$this->db->bind( ':mcr_member', 0 );
 		}
-
+        $this->logger->debug("Setting associate_member bookable");
 		if ( $this->associate_member == 1 ) {
 			$this->db->bind( ':associate_member', $this->associate_member );
 		} else {
 			$this->db->bind( ':associate_member', 0 );
 		}
-
+        $this->logger->debug("Setting CRA bookable");
 		if ( $this->cra == 1 ) {
 			$this->db->bind( ':cra', $this->cra );
 		} else {

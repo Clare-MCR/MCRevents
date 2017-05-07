@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/event.php" afterPath="$PROJECT_DIR$/classes/event.php" />
     </list>
@@ -186,16 +185,16 @@
       <file leaf-file-name="event.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="242" column="37" lean-forward="false" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
+            <state relative-caret-position="441">
+              <caret line="263" column="39" lean-forward="true" selection-start-line="263" selection-start-column="39" selection-end-line="263" selection-end-column="39" />
               <folding>
-                <marker date="1494199254786" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-                <marker date="1494199254786" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-                <marker date="1494199254786" expanded="true" signature="3081:3088" ph="£" />
-                <marker date="1494199254786" expanded="true" signature="3149:3156" ph="£" />
-                <marker date="1494199254786" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
-                <marker date="1494199254786" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
-                <marker date="1494199254786" expanded="true" signature="8126:8550" ph="UPDATE ${$th... " />
+                <marker date="1494199379984" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+                <marker date="1494199379984" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+                <marker date="1494199379984" expanded="true" signature="3081:3088" ph="£" />
+                <marker date="1494199379984" expanded="true" signature="3149:3156" ph="£" />
+                <marker date="1494199379984" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
+                <marker date="1494199379984" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
+                <marker date="1494199379984" expanded="true" signature="8126:8543" ph="UPDATE ${$th... " />
               </folding>
             </state>
           </provider>
@@ -511,14 +510,7 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-      <workItem from="1494196666136" duration="2587000" />
-    </task>
-    <task id="LOCAL-00060" summary="fix json format">
-      <created>1493826117325</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1493826117330</updated>
+      <workItem from="1494196666136" duration="2712000" />
     </task>
     <task id="LOCAL-00061" summary="fix json format">
       <created>1493826287508</created>
@@ -856,11 +848,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494199147980</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="more debug">
+      <created>1494199260875</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1494199260875</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4015000" />
+    <option name="totallyTimeSpent" value="4140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -924,7 +923,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1212,16 +1211,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="242" column="37" lean-forward="false" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
+        <state relative-caret-position="441">
+          <caret line="263" column="39" lean-forward="true" selection-start-line="263" selection-start-column="39" selection-end-line="263" selection-end-column="39" />
           <folding>
-            <marker date="1494199254786" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-            <marker date="1494199254786" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
-            <marker date="1494199254786" expanded="true" signature="3081:3088" ph="£" />
-            <marker date="1494199254786" expanded="true" signature="3149:3156" ph="£" />
-            <marker date="1494199254786" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
-            <marker date="1494199254786" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
-            <marker date="1494199254786" expanded="true" signature="8126:8550" ph="UPDATE ${$th... " />
+            <marker date="1494199379984" expanded="true" signature="1585:1634" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+            <marker date="1494199379984" expanded="true" signature="1899:1948" ph="SELECT * FRO... ${$this-&gt;eventslist}" />
+            <marker date="1494199379984" expanded="true" signature="3081:3088" ph="£" />
+            <marker date="1494199379984" expanded="true" signature="3149:3156" ph="£" />
+            <marker date="1494199379984" expanded="true" signature="6017:6082" ph="SELECT COUNT... ${$this-&gt;bookingdetails}" />
+            <marker date="1494199379984" expanded="true" signature="6367:6739" ph="INSERT INTO ${$this-&gt;eventslist}... " />
+            <marker date="1494199379984" expanded="true" signature="8126:8543" ph="UPDATE ${$th... " />
           </folding>
         </state>
       </provider>
