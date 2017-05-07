@@ -1926,12 +1926,10 @@ function editEvent( $eventid ) {
             <dd>&pound; <input type="text" id="standard_price" name="standard_price" size="5"
                                value="<?php echo $def_main_price; ?>" required pattern="\d+\.\d\d"
                                title="Enter price in pounds and pence, e.g. 7.50"></dd>
-            ";
             <dt><label for="second_price">Price for first guest ticket</label></dt>
             <dd>&pound; <input type="text" id="second_price" name="second_price" size="5"
                                value="<?php echo $def_guest_price; ?>" required pattern="\d+\.\d\d"
                                title="Enter price in pounds and pence, e.g. 7.50"></dd>
-            ";
         </dl>
 
         <h3>Guest Type</h3>
