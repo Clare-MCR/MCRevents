@@ -269,8 +269,7 @@ class event extends genericitem {
 		} else {
 			$this->db->bind( ':associate_member', 0 );
 		}
-        global $logger;
-        $logger->debug($this->cra);
+
 		if ( $this->cra == 1 ) {
 			$this->db->bind( ':cra', $this->cra );
 		} else {
