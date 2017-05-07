@@ -1230,7 +1230,7 @@ function create_event() {
 	    $logger->debug($guesttype, $value);
 		$event->setValue( $guesttype, $value );
 	}
-
+    $logger->debug("values set");
 	# And commit its creation to the database
 	$event->create();
 
