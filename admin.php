@@ -1223,14 +1223,10 @@ function create_event() {
 	$event->setValue( 'close_date', $close_date );
 	$event->setValue( 'sent', 'N' );
     $logger->info("Setting guest types");
+    $event->setValue('mcr_member',$_POST['guest_type']['mcr_member']);
+    $event->setValue('associate_member',$_POST['guest_type']['associate']);
+    $event->setValue('cra',$_POST['guest_type']['cra']);
 
-	# Take the data from guest_type array
-    $guesttypes = $_POST['guest_type'];
-    $logger->debug("Guest Types",$guesttypes);
-	foreach ( $guesttypes as $guesttype => $value ) {
-	    $logger->debug($guesttype, $value);
-		$event->setValue( $guesttype, $value );
-	}
     $logger->debug("values set");
 	# And commit its creation to the database
 	$event->create();
