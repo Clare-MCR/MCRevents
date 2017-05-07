@@ -40,9 +40,12 @@ class event extends genericitem {
 	protected $bookings;
 	protected $queue;
 	protected $queuedetails;
+    protected $logger;
 
 	function __construct() {
 		parent::__construct();
+        global $logger;
+        $this->logger = &$logger;
 		$this->eventslist     = $this->my_pre . 'eventslist';
 		$this->bookingdetails = $this->my_pre . 'booking_details';
 		$this->bookings       = $this->my_pre . 'booking';
