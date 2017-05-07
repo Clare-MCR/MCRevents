@@ -1961,8 +1961,9 @@ function editEvent( $eventid ) {
 
 function CommiteditEvent( $eventid ) {
 	# Edits an existing event.
-
+    global $logger;
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
+        $logger->error("Delete Selection is not a number, please correct");
 		trigger_error( "Delete Selection is not a number, please correct", E_USER_ERROR );
 	}
 
@@ -1993,6 +1994,7 @@ function CommiteditEvent( $eventid ) {
 		$event->setValue( $guesttype, $value );
 	}
 	# Commit the changed event to the database
+    $logger->debug("Committing event");
 	$event->commit();
 	$command = escapeshellcmd( "./updatequeue.py $eventid" );
 	$output  = shell_exec( $command );
