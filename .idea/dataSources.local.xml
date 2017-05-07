@@ -2,7 +2,22 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="claremcr@localhost" uuid="5011780e-7503-487c-a5da-d3d80bac571c">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="MySQL" version="5.7.18-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>claremcr</user-name>
+      <user-password>dfe8dfc5dfc2dfe9dfc2dfcfdfc3dfc4</user-password>
+      <resolve-scope>claremcr:</resolve-scope>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>shell.srcf.net</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>rjg70</user>
+        <use-password>true</use-password>
+      </ssh-properties>
     </data-source>
   </component>
 </project>

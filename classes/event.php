@@ -240,7 +240,7 @@ class event extends genericitem {
 
 	function commit() {
 		# Commits the event to the database
-
+        $this->logger->debug("Event->Commit");
 		$this->db->query( "UPDATE $this->$this->eventslist SET name=:name,
  					total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
  					mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
