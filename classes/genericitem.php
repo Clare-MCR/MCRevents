@@ -33,8 +33,8 @@ class genericitem {
 	 * @return string $val
 	 */
 	function getValue( $val ) {
-		global $logger;
-		$logger->debug($val,get_object_vars ( $this ));
+		//global $logger;
+		//$logger->debug($val,get_object_vars ( $this ));
 		return $this->$val;
 	}
 
