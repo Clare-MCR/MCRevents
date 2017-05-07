@@ -1023,6 +1023,8 @@ function newEventForm() {
 function create_event() {
     global $logger;
 	$close_date = 0;
+
+	$logger->debug("checking POST",$_POST);
 	# Validate the numerical inputs
 	validate_is_number( $_POST['total_guests'], "Total Guests is not a number." );
 
