@@ -398,7 +398,6 @@ function show_guestlist( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
-    global $logger;
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );

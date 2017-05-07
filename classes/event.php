@@ -63,7 +63,7 @@ class event extends genericitem {
 		$this->db->bind( ":eventid", $id );
 
 		# Set the fetch mode to pull the variables into this instance
-		$results = $this->db->resultset();
+		$results = $this->db->single();
 		foreach($results as $key => $value){
 			$this->{$key} = $value;
 		}
