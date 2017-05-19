@@ -563,6 +563,7 @@ function send_guestlist( $eventid ) {
 	$email->setFrom( 'mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary' );
 	$email->addAddress( $_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ) );     // Add a recipient
 	$email->isHTML( false );                                  // Set email format to plain text
+	$email->CharSet = 'UTF-8';
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -573,7 +574,7 @@ function send_guestlist( $eventid ) {
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset();
-	$date   = date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) );
+	$date   = date( 'd-m-Y', strtotime( get_event_date( $eventid ) ) );
 
 	$logger->debug("writing email body");
 	$body = "This is the official guestlist for the following event:\n\n ";
@@ -623,6 +624,7 @@ function send_billing( $eventid ) {
 	$email->setFrom( 'mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary' );
 	$email->addAddress( $_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ) );     // Add a recipient
 	$email->isHTML( false );                                  // Set email format to plain text
+	$email->CharSet = 'UTF-8';
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -638,7 +640,7 @@ function send_billing( $eventid ) {
 	$second_price = 0;
 	$cost_normal  = $result['cost_normal'];
 	$cost_second  = $result['cost_second'];
-	$date         = date( 'd/m/Y', strtotime( $result['event_date'] ) );
+	$date         = date( 'd-m-Y', strtotime( $result['event_date'] ) );
 	# Prepare the email variables
 	$body = "This is the official billing lists for the following event:\n\n ";
 	$body = $body . "Name: " . get_event_name( $eventid ) . "\n";
