@@ -597,7 +597,7 @@ function send_guestlist( $eventid ) {
 	$logger->debug("Writing body");
 	$email->Body= $body ;
 	$logger->debug("Attaching csv");
-	$email->addStringAttachment( $csv, $date . "-GuestList.csv", 'UTF-8', 'text/csv' );
+	$email->addStringAttachment( $csv, $date . "-GuestList.csv", 'base64', 'text/csv' );
 	$logger->debug("sending email");
 	if ( ! $email->send() ) {
 		echo 'Message could not be sent.';
@@ -783,8 +783,8 @@ function send_billing( $eventid ) {
 	$email->Subject= "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"" ;
 	$email->Body= $body ;
 
-	$email->addStringAttachment( $csv1, $date . "-BilingList.csv", 'UTF-8', 'text/csv' );
-	$email->addStringAttachment( $csv2, $date . "-NonCollegeBilingList.csv", 'UTF-8', 'text/csv' );
+	$email->addStringAttachment( $csv1, $date . "-BilingList.csv", 'base64', 'text/csv' );
+	$email->addStringAttachment( $csv2, $date . "-NonCollegeBilingList.csv", 'base64', 'text/csv' );
 
 	if ( ! $email->send() ) {
 		echo 'Message could not be sent.';
