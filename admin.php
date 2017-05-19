@@ -590,8 +590,11 @@ function send_guestlist( $eventid ) {
 		$csv = $csv . $value['other'] . "\r\n";
 	}
 	$logger->debug("Writing email");
-	$email->Subject( "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"" );
-	$email->Body( $body );
+	$logger->debug("Writing subject");
+
+	$email->Subject= "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"" ;
+	$logger->debug("Writing body");
+	$email->Body= $body ;
 	$logger->debug("Attaching csv");
 	$email->addStringAttachment( $csv, $date . "-GuestList.csv", 'base64', 'text/csv' );
 	$logger->debug("sending email");
@@ -775,8 +778,8 @@ function send_billing( $eventid ) {
 	}
 
 
-	$email->Subject( "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"" );
-	$email->Body( $body );
+	$email->Subject= "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"" ;
+	$email->Body= $body ;
 
 	$email->addStringAttachment( $csv1, $date . "-BilingList.csv", 'base64', 'text/csv' );
 	$email->addStringAttachment( $csv2, $date . "-NonCollegeBilingList.csv", 'base64', 'text/csv' );
