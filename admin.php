@@ -554,6 +554,8 @@ function send_guestlist( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
+	$email = new classes\email();
+	$email->setValue('to',$_SERVER['REMOTE_USER'] . '@cam.ac.uk');
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -563,22 +565,24 @@ function send_guestlist( $eventid ) {
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset(  );
+    $date=date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) );
 
-	$to      = $_SERVER['REMOTE_USER'] . '@cam.ac.uk';
-	$subject = "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"";
+	$email->setValue('subject',"MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"");
 	$body    = "This is the official guestlist for the following event:\n\n ";
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
-	$body    = $body . "Date: " . date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) ) . "\r\n------------------------------\r\n\n";
-	$body    = $body . "TicketID, Name, Booker, Diet, Other\r\n";
+	$body    = $body . "Date: " . $date . "\r\n------------------------------\r\n\n";
+	$email->setValue('body',$body);
+	$csv    = "TicketID, Name, Booker, Diet, Other\r\n";
     foreach ($result as $value){
-		$body = $body . $value['id'] . ",";
-		$body = $body . $value['name'] . ",";
-		$body = $body . $value['booker'] . ",";
-		$body = $body . $value['diet'] . ",";
-		$body = $body . $value['other'] . "\r\n";
+	    $csv = $csv . $value['id'] . ",";
+	    $csv = $csv . $value['name'] . ",";
+	    $csv = $csv . $value['booker'] . ",";
+	    $csv = $csv . $value['diet'] . ",";
+	    $csv = $csv . $value['other'] . "\r\n";
 	}
-
-	mail( $to, $subject, $body, ( "Content-type: text/plain; charset=ISO-8859-1; format=flowed\r\nContent-Transfer-Encoding: quoted-printable" ) );
+    $email->setValue('csv',$csv);
+	$email->setValue('csvName',$date."-GuestList.csv");
+    $email->send();
 
 	echo "A comma-separated list has been sent to your address for your records.";
 	echo "<hr/>";
@@ -591,6 +595,8 @@ function send_billing( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
+    $email = new classes\email();
+    $email->setValue('to',$_SERVER['REMOTE_USER'] . '@cam.ac.uk');
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -608,9 +614,7 @@ function send_billing( $eventid ) {
 	$cost_second  = $result['cost_second'];
 	$date         = date( 'd/m/Y', strtotime( $result['event_date'] ) );
 	# Prepare the email variables
-
-	$to      = $_SERVER['REMOTE_USER'] . '@cam.ac.uk';
-	$subject = "MCR Event Booker - Billing List for Event \"" . get_event_name( $eventid ) . "\"";
+	$email->setValue('subject',"MCR Event Booker - Billing List for Event \"" . get_event_name( $eventid ) . "\"");
 	$body    = "This is the official billing list for the following event:\n\n ";
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body    = $body . "Date: " . $date . "\n";
@@ -620,13 +624,15 @@ function send_billing( $eventid ) {
 	$body    = $body . "Please pass this on to the bursary.\r\n";
 	$body    = $body . "-----------------------------------\r\n\n";
 
+	$email->setValue('body',$body);
+
 	# Collect the number of tickets for admin bookings
 
 	$dbh->query( "SELECT SUM(tickets) AS tot_tickets FROM " . $my_pre . "booking WHERE eventid=:id AND admin=1 GROUP BY eventid" );
 	$dbh->bind( ":id", $eventid );
 	$result = $dbh->resultset();
 
-	$body = $body . "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
 
 	foreach ( $result as $booking ) {
 		# If we have any admin bookings, do the following:
@@ -639,7 +645,7 @@ function send_billing( $eventid ) {
 
 		# And write out to the email
 
-		$body = $body . "MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
+		$csv = $csv . "MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
 	}
 
 	# Collect number of tickets for normal bookings
@@ -688,19 +694,19 @@ function send_billing( $eventid ) {
 			}
 			$text = $booking['booker'] . " - " . $name . ",";
 		}
-		$body = $body . $text;//$booking['booker'] . " - " . $name . ",";
-		$body = $body . $booking['tot_tickets'] . ",";
-		$body = $body . $full_price . ",";
-		$body = $body . $second_price . ",";
-		$body = $body . $money . "\r\n";
+		$csv = $csv . $text;//$booking['booker'] . " - " . $name . ",";
+		$csv = $csv . $booking['tot_tickets'] . ",";
+		$csv = $csv . $full_price . ",";
+		$csv = $csv . $second_price . ",";
+		$csv = $csv . $money . "\r\n";
 	}
-
-	mail( $to, $subject, $body, ( "Content-type: text/plain; charset=ISO-8859-1; format=flowed\r\nContent-Transfer-Encoding: quoted-printable" ) );
+	$email->setValue('csv',$csv);
+	$email->setValue('csvName',$date."-BilingList.csv");
+    $email->send();
 
 	# Prepare the email variables again
+	$email->setValue('subject',"MCR Event Booker - Non-College Bill List for Event \"" . get_event_name( $eventid ) . "\"");
 
-	$to      = $_SERVER['REMOTE_USER'] . '@cam.ac.uk';
-	$subject = "MCR Event Booker - Non-College Bill List for Event \"" . get_event_name( $eventid ) . "\"";
 	$body    = "This is the official non-College bill list for the following event:\n\n ";
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body    = $body . "Date: " . $date . "\n";
@@ -710,12 +716,14 @@ function send_billing( $eventid ) {
 	$body    = $body . "These people have been emailed automatically with Bank Transfer details.\r\n";
 	$body    = $body . "---------------------------------------------\r\n\n";
 
+	$email->setValue('body',$body);
 	# Collect number of tickets for normal bookings
 
 	$dbh->query( "SELECT id AS bookingid, booker, SUM(tickets) AS tot_tickets FROM " . $my_pre . "booking WHERE eventid=:id AND admin=0 GROUP BY booker" );
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
+	$csv = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
 
 	foreach ( $result as $booking ) {
 
@@ -755,14 +763,15 @@ function send_billing( $eventid ) {
 			$name     = $result_n['name'];
 		}
 
-		$body = $body . $booking['booker'] . " - " . $name . ",";
-		$body = $body . $booking['tot_tickets'] . ",";
-		$body = $body . $full_price . ",";
-		$body = $body . $second_price . ",";
-		$body = $body . $money . "\r\n";
+		$csv = $csv . $booking['booker'] . " - " . $name . ",";
+		$csv = $csv . $booking['tot_tickets'] . ",";
+		$csv = $csv . $full_price . ",";
+		$csv = $csv . $second_price . ",";
+		$csv = $csv . $money . "\r\n";
 	}
-
-	mail( $to, $subject, $body, ( "Content-type: text/plain; charset=ISO-8859-1; format=flowed\r\nContent-Transfer-Encoding: quoted-printable" ) );
+	$email->setValue('csv',$csv);
+	$email->setValue('csvName',$date."-NonCollegeBilingList.csv");
+	$email->send();
 
 	echo "Two comma-separated lists have been sent to your address, please forward a copy of the first to the bursary.";
 	echo "<hr/>";
