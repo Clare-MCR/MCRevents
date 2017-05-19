@@ -22,13 +22,13 @@ use DateTime;
 use PHPMailer;
 
 
-error_reporting(E_ALL);
+error_reporting( E_ALL );
 session_unset();
 
 #include( 'class_lib.php' );
 require_once( "config.php" );
 global $logger;
-$logger->info("Admin.PHP called");
+$logger->info( "Admin.PHP called" );
 # First do some User checks.
 
 # Are we logged in with Raven?
@@ -37,23 +37,23 @@ if ( ! isset( $_SERVER['REMOTE_USER'] ) ) {
 }
 # Initiate the new user object
 
-$logger->info("creating user");
+$logger->info( "creating user" );
 $user = new classes\user();
-$logger->info("user created continuing");
+$logger->info( "user created continuing" );
 
 # Get user info given the Raven crsid, if they don't exist, exit with error.
 if ( $user->getFromCRSID( $_SERVER['REMOTE_USER'] ) == false ) {
-    $logger->error("Error creating user");
+	$logger->error( "Error creating user" );
 	trigger_error( "User does not exist on this system. Please contact the administrators.", E_USER_ERROR );
 }
 
 # Check the user is not disabled
-$logger->debug("Checking User Permissions");
+$logger->debug( "Checking User Permissions" );
 if ( $user->has_perm( 'enabled' ) != true ) {
-    $logger->error("User Doesn't Have Permissions");
+	$logger->error( "User Doesn't Have Permissions" );
 	trigger_error( "User disabled, please contact administrators", E_USER_ERROR );
 }
-$logger->info("User has permissions");
+$logger->info( "User has permissions" );
 
 # Check that the user has view permissions.
 if ( ! $user->has_perm( 'e_view' ) ) {
@@ -67,7 +67,7 @@ if ( $user->has_perm( 'e_adm' ) != true ) {
 	}
 }
 
-$logger->info("User Has permissions");
+$logger->info( "User Has permissions" );
 # User has view permissions, check that Allocator isn't running.
 if ( is_locked() == 'Y' ) {
 	trigger_error( "System Locked for Allocator Run, please try back later.", E_USER_ERROR );
@@ -86,9 +86,9 @@ if ( is_locked() == 'Y' ) {
         <link type="text/css" rel="stylesheet" href="ie_old.css">
         <![endif]-->
         <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
         <script src="js/modernizr.min.js"></script>
         <script>Modernizr.load({
                 test: Modernizr.inputtypes.time,
@@ -116,7 +116,7 @@ if ( is_locked() == 'Y' ) {
     </div>
 
 	<?php
-    $logger->info("laying out the welcome mat");
+	$logger->info( "laying out the welcome mat" );
 	if ( $user->has_perm( 'e_adm' ) or $user->has_perm( 's_adm' ) ) {
 		echo "<div id=\"user_welcome\">Welcome Administrator " . $user->getValue( 'name' ) . " <a href='mealbooker.py'>Go to Main</a><a href='admin.php'>Go to Admin</a></div>\n";
 	}
@@ -417,9 +417,9 @@ function show_guestlist( $eventid ) {
 	echo "<hr/>";
 	echo "<table border=\"0\" class=\"event_table guest_list\">";
 	echo "<tr><th>#</th><th>Name</th><th>Ticket ID</th><th>Booker</th><th>Diet</th><th>Other Requirements</th></tr>";
-	$j=0;
-	foreach ($result as $value) {
-	    $j++;
+	$j = 0;
+	foreach ( $result as $value ) {
+		$j ++;
 		echo "<tr>";
 		echo "<td>" . ( $j ) . "</td>";
 		echo "<td>" . $value['name'] . "</td>";
@@ -558,46 +558,50 @@ function send_guestlist( $eventid ) {
 	global $user;
 	global $logger;
 
+	$logger->info("sending guestlist");
 	$email = new PHPMailer;
-	$email->setFrom('mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary');
-	$email->addAddress($_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ));     // Add a recipient
-	$email->isHTML(false);                                  // Set email format to plain text
+	$email->setFrom( 'mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary' );
+	$email->addAddress( $_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ) );     // Add a recipient
+	$email->isHTML( false );                                  // Set email format to plain text
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
 	}
 
+	$logger->debug("getting event info");
 	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
 	$dbh->bind( ":eventid", $eventid );
 
-	$result = $dbh->resultset(  );
-    $date=date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) );
+	$result = $dbh->resultset();
+	$date   = date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) );
 
+	$logger->debug("writing email body");
+	$body = "This is the official guestlist for the following event:\n\n ";
+	$body = $body . "Name: " . get_event_name( $eventid ) . "\n";
+	$body = $body . "Date: " . $date . "\r\n------------------------------\r\n\n";
 
-	$body    = "This is the official guestlist for the following event:\n\n ";
-	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
-	$body    = $body . "Date: " . $date . "\r\n------------------------------\r\n\n";
-
-	$csv    = "TicketID, Name, Booker, Diet, Other\r\n";
-    foreach ($result as $value){
-	    $csv = $csv . $value['id'] . ",";
-	    $csv = $csv . $value['name'] . ",";
-	    $csv = $csv . $value['booker'] . ",";
-	    $csv = $csv . $value['diet'] . ",";
-	    $csv = $csv . $value['other'] . "\r\n";
+	$logger->debug("compiling csv");
+	$csv = "TicketID, Name, Booker, Diet, Other\r\n";
+	foreach ( $result as $value ) {
+		$csv = $csv . $value['id'] . ",";
+		$csv = $csv . $value['name'] . ",";
+		$csv = $csv . $value['booker'] . ",";
+		$csv = $csv . $value['diet'] . ",";
+		$csv = $csv . $value['other'] . "\r\n";
 	}
-
-	$email->Subject("MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"");
-	$email->Body($body);
-
-	$email->addStringAttachment($csv, $date."-GuestList.csv", 'base64', 'text/csv');
-
-	if(!$email->send()) {
+	$logger->debug("Writing email");
+	$email->Subject( "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"" );
+	$email->Body( $body );
+	$logger->debug("Attaching csv");
+	$email->addStringAttachment( $csv, $date . "-GuestList.csv", 'base64', 'text/csv' );
+	$logger->debug("sending email");
+	if ( ! $email->send() ) {
 		echo 'Message could not be sent.';
-		$logger->error('Mailer Error: ' , $email->ErrorInfo);
+		$logger->error( 'Mailer Error: ', $email->ErrorInfo );
 	} else {
 		echo "A comma-separated list has been sent to your address for your records.";
 	}
+	$logger->debug("sending guestlist [Done]");
 
 	echo "<hr/>";
 	echo "<form method=\"post\" action=\"" . $_SERVER['PHP_SELF'] . "\">";
@@ -613,9 +617,9 @@ function send_billing( $eventid ) {
 	global $logger;
 
 	$email = new PHPMailer;
-	$email->setFrom('mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary');
-	$email->addAddress($_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ));     // Add a recipient
-	$email->isHTML(false);                                  // Set email format to plain text
+	$email->setFrom( 'mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary' );
+	$email->addAddress( $_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ) );     // Add a recipient
+	$email->isHTML( false );                                  // Set email format to plain text
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -633,14 +637,14 @@ function send_billing( $eventid ) {
 	$cost_second  = $result['cost_second'];
 	$date         = date( 'd/m/Y', strtotime( $result['event_date'] ) );
 	# Prepare the email variables
-	$body    = "This is the official billing lists for the following event:\n\n ";
-	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
-	$body    = $body . "Date: " . $date . "\n";
-	$body    = $body . "Full price ticket: =A3" . $cost_normal . "\r\n";
-	$body    = $body . "Second ticket: =A3" . $cost_second . "\r\n\n";
-	$body    = $body . "-----------------------------------\r\n";
-	$body    = $body . "Please pass the billing list on to the bursary and the non-College Billing List onto the Treasurer.\r\n";
-	$body    = $body . "-----------------------------------\r\n\n";
+	$body = "This is the official billing lists for the following event:\n\n ";
+	$body = $body . "Name: " . get_event_name( $eventid ) . "\n";
+	$body = $body . "Date: " . $date . "\n";
+	$body = $body . "Full price ticket: =A3" . $cost_normal . "\r\n";
+	$body = $body . "Second ticket: =A3" . $cost_second . "\r\n\n";
+	$body = $body . "-----------------------------------\r\n";
+	$body = $body . "Please pass the billing list on to the bursary and the non-College Billing List onto the Treasurer.\r\n";
+	$body = $body . "-----------------------------------\r\n\n";
 
 	# Collect the number of tickets for admin bookings
 
@@ -723,7 +727,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
-	$csv2 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
 
 	foreach ( $result as $booking ) {
 
@@ -771,15 +775,15 @@ function send_billing( $eventid ) {
 	}
 
 
-	$email->Subject("MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"");
-	$email->Body($body);
+	$email->Subject( "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"" );
+	$email->Body( $body );
 
-	$email->addStringAttachment($csv1, $date."-BilingList.csv", 'base64', 'text/csv');
-	$email->addStringAttachment($csv2, $date."-NonCollegeBilingList.csv", 'base64', 'text/csv');
+	$email->addStringAttachment( $csv1, $date . "-BilingList.csv", 'base64', 'text/csv' );
+	$email->addStringAttachment( $csv2, $date . "-NonCollegeBilingList.csv", 'base64', 'text/csv' );
 
-	if(!$email->send()) {
+	if ( ! $email->send() ) {
 		echo 'Message could not be sent.';
-		$logger->error('Mailer Error: ' , $email->ErrorInfo);
+		$logger->error( 'Mailer Error: ', $email->ErrorInfo );
 	} else {
 		echo "Two comma-separated lists have been sent to your address, please forward a copy of the billingList to the bursary.";
 	}
@@ -1042,10 +1046,10 @@ function newEventForm() {
 }
 
 function create_event() {
-    global $logger;
+	global $logger;
 	$close_date = 0;
 
-	$logger->debug("checking POST",$_POST);
+	$logger->debug( "checking POST", $_POST );
 	# Validate the numerical inputs
 	validate_is_number( $_POST['total_guests'], "Total Guests is not a number." );
 
@@ -1243,12 +1247,12 @@ function create_event() {
 	$event->setValue( 'open_date', $open_date );
 	$event->setValue( 'close_date', $close_date );
 	$event->setValue( 'sent', 'N' );
-    $logger->info("Setting guest types");
-    $event->setValue('mcr_member',$_POST['guest_type']['mcr_member']);
-    $event->setValue('associate_member',$_POST['guest_type']['associate']);
-    $event->setValue('cra',$_POST['guest_type']['cra']);
+	$logger->info( "Setting guest types" );
+	$event->setValue( 'mcr_member', $_POST['guest_type']['mcr_member'] );
+	$event->setValue( 'associate_member', $_POST['guest_type']['associate'] );
+	$event->setValue( 'cra', $_POST['guest_type']['cra'] );
 
-    $logger->debug("values set");
+	$logger->debug( "values set" );
 	# And commit its creation to the database
 	$event->create();
 
@@ -1984,9 +1988,9 @@ function editEvent( $eventid ) {
 
 function CommiteditEvent( $eventid ) {
 	# Edits an existing event.
-    global $logger;
+	global $logger;
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
-        $logger->error("Delete Selection is not a number, please correct");
+		$logger->error( "Delete Selection is not a number, please correct" );
 		trigger_error( "Delete Selection is not a number, please correct", E_USER_ERROR );
 	}
 
@@ -2017,11 +2021,11 @@ function CommiteditEvent( $eventid ) {
 		$event->setValue( $guesttype, $value );
 	}
 	# Commit the changed event to the database
-    $logger->debug("Committing event");
+	$logger->debug( "Committing event" );
 	$event->commit();
-    $logger->debug("event committed");
+	$logger->debug( "event committed" );
 
-    $command = escapeshellcmd( "./updatequeue.py $eventid" );
+	$command = escapeshellcmd( "./updatequeue.py $eventid" );
 	$output  = shell_exec( $command );
 	echo $output;
 	# Let the user know what we've changed.
