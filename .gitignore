@@ -89,3 +89,4 @@ ENV/
 .spyderproject
 
 /vendor/
+.idea/
