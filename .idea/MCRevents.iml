@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/usage/vendor/jacwright/restserver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
     </content>
     <orderEntry type="jdk" jdkName="Python 2.7.3 (~/.pyenv/versions/2.7.3/bin/python)" jdkType="Python SDK" />
@@ -26,11 +27,13 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/katzgrau/klogger" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
         </SOURCES>
       </library>

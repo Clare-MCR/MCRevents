@@ -19,6 +19,8 @@ use function claremcr\clareevents\functions\get_event_date;
 use function claremcr\clareevents\functions\validate_is_number;
 use claremcr\clareevents\classes;
 use DateTime;
+use PHPMailer;
+
 
 error_reporting(E_ALL);
 session_unset();
@@ -554,8 +556,13 @@ function send_guestlist( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
-	$email = new classes\email();
-	$email->setValue('to',$_SERVER['REMOTE_USER'] . '@cam.ac.uk');
+	global $user;
+	global $logger;
+
+	$email = new PHPMailer;
+	$email->setFrom('mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary');
+	$email->addAddress($_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ));     // Add a recipient
+	$email->isHTML(false);                                  // Set email format to plain text
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -567,11 +574,11 @@ function send_guestlist( $eventid ) {
 	$result = $dbh->resultset(  );
     $date=date( 'd/m/Y', strtotime( get_event_date( $eventid ) ) );
 
-	$email->setValue('subject',"MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"");
+
 	$body    = "This is the official guestlist for the following event:\n\n ";
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body    = $body . "Date: " . $date . "\r\n------------------------------\r\n\n";
-	$email->setValue('body',$body);
+
 	$csv    = "TicketID, Name, Booker, Diet, Other\r\n";
     foreach ($result as $value){
 	    $csv = $csv . $value['id'] . ",";
@@ -580,11 +587,19 @@ function send_guestlist( $eventid ) {
 	    $csv = $csv . $value['diet'] . ",";
 	    $csv = $csv . $value['other'] . "\r\n";
 	}
-    $email->setValue('csv',$csv);
-	$email->setValue('csvName',$date."-GuestList.csv");
-    $email->send();
 
-	echo "A comma-separated list has been sent to your address for your records.";
+	$email->Subject("MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"");
+	$email->Body($body);
+
+	$email->addStringAttachment($csv, $date."-GuestList.csv", 'base64', 'text/csv');
+
+	if(!$email->send()) {
+		echo 'Message could not be sent.';
+		$logger->error('Mailer Error: ' , $email->ErrorInfo);
+	} else {
+		echo "A comma-separated list has been sent to your address for your records.";
+	}
+
 	echo "<hr/>";
 	echo "<form method=\"post\" action=\"" . $_SERVER['PHP_SELF'] . "\">";
 	echo "<input type=\"submit\" value=\"Back to Admin\">";
@@ -595,8 +610,13 @@ function send_billing( $eventid ) {
 
 	global $my_pre;
 	global $dbh;
-    $email = new classes\email();
-    $email->setValue('to',$_SERVER['REMOTE_USER'] . '@cam.ac.uk');
+	global $user;
+	global $logger;
+
+	$email = new PHPMailer;
+	$email->setFrom('mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary');
+	$email->addAddress($_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ));     // Add a recipient
+	$email->isHTML(false);                                  // Set email format to plain text
 
 	if ( ! preg_match( "/^[0-9]+$/", $eventid ) ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
@@ -614,17 +634,14 @@ function send_billing( $eventid ) {
 	$cost_second  = $result['cost_second'];
 	$date         = date( 'd/m/Y', strtotime( $result['event_date'] ) );
 	# Prepare the email variables
-	$email->setValue('subject',"MCR Event Booker - Billing List for Event \"" . get_event_name( $eventid ) . "\"");
-	$body    = "This is the official billing list for the following event:\n\n ";
+	$body    = "This is the official billing lists for the following event:\n\n ";
 	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body    = $body . "Date: " . $date . "\n";
 	$body    = $body . "Full price ticket: =A3" . $cost_normal . "\r\n";
 	$body    = $body . "Second ticket: =A3" . $cost_second . "\r\n\n";
 	$body    = $body . "-----------------------------------\r\n";
-	$body    = $body . "Please pass this on to the bursary.\r\n";
+	$body    = $body . "Please pass the billing list on to the bursary and the non-College Billing List onto the Treasurer.\r\n";
 	$body    = $body . "-----------------------------------\r\n\n";
-
-	$email->setValue('body',$body);
 
 	# Collect the number of tickets for admin bookings
 
@@ -632,7 +649,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 	$result = $dbh->resultset();
 
-	$csv = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
 
 	foreach ( $result as $booking ) {
 		# If we have any admin bookings, do the following:
@@ -645,7 +662,7 @@ function send_billing( $eventid ) {
 
 		# And write out to the email
 
-		$csv = $csv . "MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
+		$csv1 = $csv1 . "MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
 	}
 
 	# Collect number of tickets for normal bookings
@@ -694,36 +711,20 @@ function send_billing( $eventid ) {
 			}
 			$text = $booking['booker'] . " - " . $name . ",";
 		}
-		$csv = $csv . $text;//$booking['booker'] . " - " . $name . ",";
-		$csv = $csv . $booking['tot_tickets'] . ",";
-		$csv = $csv . $full_price . ",";
-		$csv = $csv . $second_price . ",";
-		$csv = $csv . $money . "\r\n";
+		$csv1 = $csv1 . $text;//$booking['booker'] . " - " . $name . ",";
+		$csv1 = $csv1 . $booking['tot_tickets'] . ",";
+		$csv1 = $csv1 . $full_price . ",";
+		$csv1 = $csv1 . $second_price . ",";
+		$csv1 = $csv1 . $money . "\r\n";
 	}
-	$email->setValue('csv',$csv);
-	$email->setValue('csvName',$date."-BilingList.csv");
-    $email->send();
 
-	# Prepare the email variables again
-	$email->setValue('subject',"MCR Event Booker - Non-College Bill List for Event \"" . get_event_name( $eventid ) . "\"");
-
-	$body    = "This is the official non-College bill list for the following event:\n\n ";
-	$body    = $body . "Name: " . get_event_name( $eventid ) . "\n";
-	$body    = $body . "Date: " . $date . "\n";
-	$body    = $body . "Full price ticket: =A3" . $cost_normal . "\r\n";
-	$body    = $body . "Second ticket: =A3" . $cost_second . "\r\n\n";
-	$body    = $body . "---------------------------------------------\r\n";
-	$body    = $body . "These people have been emailed automatically with Bank Transfer details.\r\n";
-	$body    = $body . "---------------------------------------------\r\n\n";
-
-	$email->setValue('body',$body);
 	# Collect number of tickets for normal bookings
 
 	$dbh->query( "SELECT id AS bookingid, booker, SUM(tickets) AS tot_tickets FROM " . $my_pre . "booking WHERE eventid=:id AND admin=0 GROUP BY booker" );
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
-	$csv = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv2 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
 
 	foreach ( $result as $booking ) {
 
@@ -763,17 +764,28 @@ function send_billing( $eventid ) {
 			$name     = $result_n['name'];
 		}
 
-		$csv = $csv . $booking['booker'] . " - " . $name . ",";
-		$csv = $csv . $booking['tot_tickets'] . ",";
-		$csv = $csv . $full_price . ",";
-		$csv = $csv . $second_price . ",";
-		$csv = $csv . $money . "\r\n";
+		$csv2 = $csv2 . $booking['booker'] . " - " . $name . ",";
+		$csv2 = $csv2 . $booking['tot_tickets'] . ",";
+		$csv2 = $csv2 . $full_price . ",";
+		$csv2 = $csv2 . $second_price . ",";
+		$csv2 = $csv2 . $money . "\r\n";
 	}
-	$email->setValue('csv',$csv);
-	$email->setValue('csvName',$date."-NonCollegeBilingList.csv");
-	$email->send();
 
-	echo "Two comma-separated lists have been sent to your address, please forward a copy of the first to the bursary.";
+
+	$email->Subject("MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"");
+	$email->Body($body);
+
+	$email->addStringAttachment($csv1, $date."-BilingList.csv", 'base64', 'text/csv');
+	$email->addStringAttachment($csv2, $date."-NonCollegeBilingList.csv", 'base64', 'text/csv');
+
+	if(!$email->send()) {
+		echo 'Message could not be sent.';
+		$logger->error('Mailer Error: ' , $email->ErrorInfo);
+	} else {
+		echo "Two comma-separated lists have been sent to your address, please forward a copy of the billingList to the bursary.";
+	}
+
+	echo "";
 	echo "<hr/>";
 	echo "<form method=\"post\" action=\"" . $_SERVER['PHP_SELF'] . "\">";
 	echo "<input type=\"submit\" value=\"Back to Admin\">";

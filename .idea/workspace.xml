@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+    <list default="true" id="1afa25f5-ae50-4357-9e7e-70f9ebed7adc" name="Default" comment="update emails">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MCRevents.iml" afterPath="$PROJECT_DIR$/.idea/MCRevents.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin.php" afterPath="$PROJECT_DIR$/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/email.php" afterPath="$PROJECT_DIR$/classes/email.php" />
     </list>
     <list id="2dd850a0-e5de-4218-99cf-7747cb782244" name="rubbish" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,9 +19,6 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <pharPath>$USER_HOME$/homebrew/bin/composer</pharPath>
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MCRevents$mealbooker.coverage" NAME="mealbooker Coverage Results" MODIFIED="1493828220837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
@@ -32,145 +31,144 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mealbooker.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mealbooker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#68#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="73" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1493835261000" expanded="true" signature="1486:1558" ph="SELECT crsid... access" />
-                <marker date="1493835261000" expanded="true" signature="1808:1950" ph="SELECT crsid... access" />
-                <marker date="1493835261000" expanded="true" signature="1997:2157" ph="SELECT crsid... access" />
-                <marker date="1493835261000" expanded="true" signature="3494:3742" ph="SELECT id, n... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="3835:4098" ph="SELECT id, n... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="4508:4532" ph="SELECT name,... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="5376:5458" ph="INSERT INTO " />
-                <marker date="1493835261000" expanded="true" signature="5376:5577" ph="INSERT INTO " />
-                <marker date="1493835261000" expanded="true" signature="5376:5671" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="5376:5672" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="6603:6630" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="6691:6723" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="6781:6812" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="6781:6813" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="6879:6911" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="6967:6999" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="7210:7280" ph="SELECT id FR... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="7921:7955" ph="SELECT id FR... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="7921:7972" ph="SELECT id FR... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="7921:7975" ph="SELECT id FR... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="8508:8567" ph="SELECT id, b... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="8743:8818" ph="SELECT id, b... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="8936:9030" ph="SELECT id, b... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="9294:9374" ph="SELECT type,... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="9871:9906" ph="SELECT id FR... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="10476:10554" ph="SELECT id, b... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="10734:10831" ph="SELECT id, b... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="11081:11161" ph="SELECT type,... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="12405:12447" ph="SELECT curre... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="12775:12862" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="13490:13632" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="13882:13927" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="14702:14784" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="15279:15421" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="15956:16007" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="16431:16495" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="17166:17217" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="17639:17703" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="18495:18529" ph="SELECT ticke... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="18623:18664" ph="SELECT curre... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="18764:18790" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="18858:18903" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="19056:19094" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="19592:19626" ph="SELECT ticke... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="19719:19745" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="19810:19848" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="20899:20933" ph="SELECT ticke... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="21027:21082" ph="SELECT total... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="21463:21594" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="21827:21872" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="22025:22063" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="22685:22757" ph="SELECT ticke... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="23074:23115" ph="SELECT curre... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="23215:23279" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="23545:23609" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="23883:23928" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="24569:24624" ph="SELECT total... missing_value" />
-                <marker date="1493835261000" expanded="true" signature="27252:27299" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27252:27300" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27252:27303" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27364:27411" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27364:27412" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27364:27415" ph="DELETE FROM " />
-                <marker date="1493835261000" expanded="true" signature="27571:27653" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="28044:28089" ph="UPDATE missi... " />
-                <marker date="1493835261000" expanded="true" signature="28407:28545" ph="INSERT INTO missing_value... " />
-                <marker date="1493835261000" expanded="true" signature="28544:28545" ph="INSERT INTO missing_value... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eventselector.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datatypes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datatypes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="92" lean-forward="false" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="92" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="objectcreation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objectcreation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="848" column="33" lean-forward="true" selection-start-line="848" selection-start-column="33" selection-end-line="848" selection-end-column="33" />
+              <folding>
+                <element signature="e#317#371#0#PHP" expanded="true" />
+                <marker date="1495215364000" expanded="true" signature="6524:6530" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="6611:6617" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="6697:6703" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="6791:6797" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="7099:7196" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="7603:7614" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="8471:8577" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="11542:11662" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="14048:14145" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="15555:15640" ph="SELECT cost_... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="16239:16356" ph="SELECT booke... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="16599:16605" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="17171:17287" ph="SELECT booke... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="18236:18356" ph="SELECT name ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="19742:19839" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="21686:21771" ph="SELECT cost_... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="22712:22821" ph="SELECT SUM(t... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="23541:23674" ph="SELECT id AS... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="24691:24811" ph="SELECT name ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="25380:25513" ph="SELECT id AS... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="26594:26714" ph="SELECT name ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="28913:28959" ph="SELECT name,... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="31617:31624" ph="£" />
+                <marker date="1495215364000" expanded="true" signature="31865:31872" ph="£" />
+                <marker date="1495215364000" expanded="true" signature="33268:33273" ph="&amp;" />
+                <marker date="1495215364000" expanded="true" signature="34386:34391" ph="&amp;" />
+                <marker date="1495215364000" expanded="true" signature="44876:44882" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="44967:44973" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="47471:47477" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="47565:47571" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="47989:48073" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="49851:49922" ph="SELECT name,... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="50144:50199" ph="DELETE FROM " />
+                <marker date="1495215364000" expanded="true" signature="51099:51172" ph="SELECT DISTI... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="52006:52082" ph="DELETE FROM " />
+                <marker date="1495215364000" expanded="true" signature="52263:52347" ph="DELETE FROM " />
+                <marker date="1495215364000" expanded="true" signature="52520:52591" ph="SELECT DISTI... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="53421:53495" ph="DELETE FROM " />
+                <marker date="1495215364000" expanded="true" signature="53683:53765" ph="DELETE FROM " />
+                <marker date="1495215364000" expanded="true" signature="55118:55124" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="57303:57309" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="59394:59400" ph=" " />
+                <marker date="1495215364000" expanded="true" signature="63972:64009" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="65521:65605" ph="SELECT * FRO... ${$my_pre}" />
+                <marker date="1495215364000" expanded="true" signature="74875:74881" ph="..." />
+                <marker date="1495215364000" expanded="true" signature="74975:74981" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <folding>
+                <element signature="e#36#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genericitem.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/genericitem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PHPMailerAutoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/phpmailer/phpmailer/PHPMailerAutoload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoload_classmap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <marker date="1493744977000" expanded="true" signature="1989:2028" ph="SELECT * FRO... access" />
+                <marker date="1493744977000" expanded="true" signature="3152:3198" ph="SELECT COUNT... access" />
+                <marker date="1493744977000" expanded="true" signature="3520:3676" ph="UPDATE acces... " />
+                <marker date="1493744977000" expanded="true" signature="4218:4311" ph="UPDATE acces... " />
+                <marker date="1493744977000" expanded="true" signature="4936:5062" ph="INSERT INTO access... " />
+                <marker date="1493744977000" expanded="true" signature="6006:6187" ph="INSERT INTO access... " />
+                <marker date="1493744977000" expanded="true" signature="6973:7021" ph="DELETE FROM " />
+                <marker date="1493744977000" expanded="true" signature="7426:7514" ph="SELECT * FRO... ${$this-&gt;bookingdetails}" />
+                <marker date="1493744977000" expanded="true" signature="7843:7922" ph="SELECT * FRO... ${$this-&gt;queue}" />
+                <marker date="1493744977000" expanded="true" signature="8254:8331" ph="SELECT * FRO... ${$this}" />
+                <marker date="1493744977000" expanded="true" signature="8626:8687" ph="SELECT * FRO... ${$this-&gt;queue}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>require_login</find>
       <find>ravenloginredirect</find>
       <find>requireEligibilityForEvent</find>
       <find>raven</find>
@@ -215,6 +212,8 @@
       <find>displayName</find>
       <find>deleteBookings</find>
       <find>make</find>
+      <find>send</find>
+      <find>email</find>
     </findStrings>
     <replaceStrings>
       <replace>app.logger</replace>
@@ -226,7 +225,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="flask-rewrite" />
+        <entry key="$PROJECT_DIR$" value="heavyedits" />
       </map>
     </option>
   </component>
@@ -244,13 +243,15 @@
         <option value="$PROJECT_DIR$/mealbooker/apps/login/views.py" />
         <option value="$PROJECT_DIR$/mealbooker/database.py" />
         <option value="$PROJECT_DIR$/mealbooker/extensions.py" />
-        <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/datatypes.py" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/dbops.py" />
         <option value="$PROJECT_DIR$/mealbooker.py" />
         <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/classes/genericitem.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/classes/email.php" />
+        <option value="$PROJECT_DIR$/admin.php" />
       </list>
     </option>
   </component>
@@ -265,11 +266,12 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/katzgrau/klogger" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -295,8 +297,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MCRevents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP Runtime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.SyntheticLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -306,11 +312,75 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MCRevents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpmailer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpmailer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="composer" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MCRevents" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -336,7 +406,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mealbooker">
+  <component name="RunManager">
     <configuration default="false" name="mealbooker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -356,24 +426,8 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MCRevents" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
@@ -392,64 +446,22 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MCRevents" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MCRevents" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="MCRevents" />
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -468,50 +480,19 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
       <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MCRevents" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MCRevents" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.mealbooker" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.mealbooker" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -525,27 +506,7 @@
       <option name="presentableId" value="Default" />
       <updated>1493764174441</updated>
       <workItem from="1493824082238" duration="1428000" />
-    </task>
-    <task id="LOCAL-00051" summary="remove custom json encoder">
-      <created>1493823407939</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1493823407942</updated>
-    </task>
-    <task id="LOCAL-00052" summary="print json string">
-      <created>1493823716973</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1493823716974</updated>
-    </task>
-    <task id="LOCAL-00053" summary="DO Some Debugging">
-      <created>1493824528724</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1493824528725</updated>
+      <workItem from="1495201012978" duration="5441000" />
     </task>
     <task id="LOCAL-00054" summary="DO Some Debugging">
       <created>1493824669650</created>
@@ -869,35 +830,56 @@
       <option name="project" value="LOCAL" />
       <updated>1493839090063</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="update htaccess">
+      <created>1493839626659</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1493839626659</updated>
+    </task>
+    <task id="LOCAL-00101" summary="update emails">
+      <created>1495206759948</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1495206759948</updated>
+    </task>
+    <task id="LOCAL-00102" summary="update emails">
+      <created>1495207211549</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1495207211549</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1428000" />
+    <option name="totallyTimeSpent" value="6869000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17199148" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18849558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61917806" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18849558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -907,7 +889,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="convert to dict structure" />
     <MESSAGE value="convert to dict structure to string" />
     <MESSAGE value="add json_tricks" />
     <MESSAGE value="custom json encoder" />
@@ -932,114 +913,16 @@
     <MESSAGE value="fix sql strings" />
     <MESSAGE value="lower warning level" />
     <MESSAGE value="update htaccess" />
-    <option name="LAST_COMMIT_MESSAGE" value="update htaccess" />
+    <MESSAGE value="update emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="update emails" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mealbooker/config.py" />
-    <entry file="file://$PROJECT_DIR$/mealbooker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="590" column="0" lean-forward="true" selection-start-line="590" selection-start-column="0" selection-end-line="590" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mealbooker/apps/login.py" />
-    <entry file="file://$PROJECT_DIR$/mealbooker/apps/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/mealbooker/apps/login/dbops.py" />
-    <entry file="file://$PROJECT_DIR$/mealbooker/apps/login/views.py" />
-    <entry file="file://$PROJECT_DIR$/dbops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="72" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493835261000" expanded="true" signature="1486:1558" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1808:1950" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1997:2157" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="3494:3742" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="3835:4098" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="4508:4532" ph="SELECT name,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="5376:5458" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5577" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5671" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="5376:5672" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="6603:6630" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6691:6723" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6812" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6813" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6879:6911" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6967:6999" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="7210:7280" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7955" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7972" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7975" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8508:8567" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8743:8818" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8936:9030" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9294:9374" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9871:9906" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10476:10554" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10734:10831" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="11081:11161" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12405:12447" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12775:12862" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13490:13632" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13882:13927" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="14702:14784" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15279:15421" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15956:16007" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="16431:16495" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17166:17217" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17639:17703" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="18495:18529" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18623:18664" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18764:18790" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="18858:18903" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19056:19094" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19592:19626" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="19719:19745" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="19810:19848" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="20899:20933" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21027:21082" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21463:21594" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="21827:21872" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22025:22063" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22685:22757" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23074:23115" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23215:23279" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23545:23609" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23883:23928" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="24569:24624" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="27252:27299" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27300" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27303" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27411" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27412" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27415" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27571:27653" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28044:28089" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="28407:28545" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28544:28545" ph="INSERT INTO missing_value... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mealbooker/main.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker/apps/views.py" />
     <entry file="file://$PROJECT_DIR$/mealbooker/commands.py" />
@@ -1049,9 +932,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,76 +947,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-779">
           <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493835261000" expanded="true" signature="1486:1558" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1808:1950" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1997:2157" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="3494:3742" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="3835:4098" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="4508:4532" ph="SELECT name,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="5376:5458" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5577" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5671" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="5376:5672" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="6603:6630" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6691:6723" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6812" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6813" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6879:6911" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6967:6999" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="7210:7280" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7955" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7972" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7975" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8508:8567" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8743:8818" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8936:9030" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9294:9374" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9871:9906" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10476:10554" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10734:10831" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="11081:11161" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12405:12447" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12775:12862" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13490:13632" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13882:13927" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="14702:14784" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15279:15421" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15956:16007" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="16431:16495" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17166:17217" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17639:17703" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="18495:18529" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18623:18664" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18764:18790" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="18858:18903" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19056:19094" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19592:19626" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="19719:19745" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="19810:19848" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="20899:20933" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21027:21082" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21463:21594" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="21827:21872" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22025:22063" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22685:22757" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23074:23115" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23215:23279" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23545:23609" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23883:23928" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="24569:24624" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="27252:27299" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27300" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27303" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27411" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27412" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27415" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27571:27653" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28044:28089" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="28407:28545" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28544:28545" ph="INSERT INTO missing_value... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,9 +976,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,7 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,9 +991,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,9 +999,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#68#82#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,30 +1050,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mealbooker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="566" column="38" lean-forward="false" selection-start-line="566" selection-start-column="38" selection-end-line="566" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objectcreation.py">
+    <entry file="file://$PROJECT_DIR$/dbops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/eventselector.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        <state relative-caret-position="690">
+          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1284,113 +1096,160 @@
     <entry file="file://$PROJECT_DIR$/datatypes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="92" lean-forward="false" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="92" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbops.py">
+    <entry file="file://$PROJECT_DIR$/objectcreation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="73" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="73" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/class_lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1493835261000" expanded="true" signature="1486:1558" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1808:1950" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="1997:2157" ph="SELECT crsid... access" />
-            <marker date="1493835261000" expanded="true" signature="3494:3742" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="3835:4098" ph="SELECT id, n... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="4508:4532" ph="SELECT name,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="5376:5458" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5577" ph="INSERT INTO " />
-            <marker date="1493835261000" expanded="true" signature="5376:5671" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="5376:5672" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="6603:6630" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6691:6723" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6812" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6781:6813" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6879:6911" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="6967:6999" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="7210:7280" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7955" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7972" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="7921:7975" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8508:8567" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8743:8818" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="8936:9030" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9294:9374" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="9871:9906" ph="SELECT id FR... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10476:10554" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="10734:10831" ph="SELECT id, b... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="11081:11161" ph="SELECT type,... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12405:12447" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="12775:12862" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13490:13632" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="13882:13927" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="14702:14784" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15279:15421" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="15956:16007" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="16431:16495" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17166:17217" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="17639:17703" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="18495:18529" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18623:18664" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="18764:18790" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="18858:18903" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19056:19094" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="19592:19626" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="19719:19745" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="19810:19848" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="20899:20933" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21027:21082" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="21463:21594" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="21827:21872" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22025:22063" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="22685:22757" ph="SELECT ticke... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23074:23115" ph="SELECT curre... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="23215:23279" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23545:23609" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="23883:23928" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="24569:24624" ph="SELECT total... missing_value" />
-            <marker date="1493835261000" expanded="true" signature="27252:27299" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27300" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27252:27303" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27411" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27412" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27364:27415" ph="DELETE FROM " />
-            <marker date="1493835261000" expanded="true" signature="27571:27653" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28044:28089" ph="UPDATE missi... " />
-            <marker date="1493835261000" expanded="true" signature="28407:28545" ph="INSERT INTO missing_value... " />
-            <marker date="1493835261000" expanded="true" signature="28544:28545" ph="INSERT INTO missing_value... " />
+            <marker date="1493731878000" expanded="true" signature="1299:1376" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493731878000" expanded="true" signature="1666:1735" ph="SELECT * FRO... ${$this-&gt;my_pre}" />
+            <marker date="1493731878000" expanded="true" signature="2019:2100" ph="DELETE FROM " />
+            <marker date="1493731878000" expanded="true" signature="4115:4179" ph="SELECT COUNT... ${$my_pre}" />
+            <marker date="1493731878000" expanded="true" signature="4395:4452" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1493731878000" expanded="true" signature="4697:4783" ph="SELECT id FR... ${$this-&gt;my_pre}" />
+            <marker date="1493731878000" expanded="true" signature="5825:5886" ph="DELETE FROM " />
+            <marker date="1493731878000" expanded="true" signature="7552:7556" ph="&gt;" />
+            <marker date="1493731878000" expanded="true" signature="7556:7560" ph="&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mealbooker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="e#68#82#0" expanded="true" />
+            <element signature="e#36#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/emailStuff.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpmailer/phpmailer/PHPMailerAutoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <marker date="1493744977000" expanded="true" signature="1989:2028" ph="SELECT * FRO... access" />
+            <marker date="1493744977000" expanded="true" signature="3152:3198" ph="SELECT COUNT... access" />
+            <marker date="1493744977000" expanded="true" signature="3520:3676" ph="UPDATE acces... " />
+            <marker date="1493744977000" expanded="true" signature="4218:4311" ph="UPDATE acces... " />
+            <marker date="1493744977000" expanded="true" signature="4936:5062" ph="INSERT INTO access... " />
+            <marker date="1493744977000" expanded="true" signature="6006:6187" ph="INSERT INTO access... " />
+            <marker date="1493744977000" expanded="true" signature="6973:7021" ph="DELETE FROM " />
+            <marker date="1493744977000" expanded="true" signature="7426:7514" ph="SELECT * FRO... ${$this-&gt;bookingdetails}" />
+            <marker date="1493744977000" expanded="true" signature="7843:7922" ph="SELECT * FRO... ${$this-&gt;queue}" />
+            <marker date="1493744977000" expanded="true" signature="8254:8331" ph="SELECT * FRO... ${$this}" />
+            <marker date="1493744977000" expanded="true" signature="8626:8687" ph="SELECT * FRO... ${$this-&gt;queue}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/genericitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="848" column="33" lean-forward="true" selection-start-line="848" selection-start-column="33" selection-end-line="848" selection-end-column="33" />
+          <folding>
+            <element signature="e#317#371#0#PHP" expanded="true" />
+            <marker date="1495215364000" expanded="true" signature="6524:6530" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="6611:6617" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="6697:6703" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="6791:6797" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="7099:7196" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="7603:7614" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="8471:8577" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="11542:11662" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="14048:14145" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="15555:15640" ph="SELECT cost_... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="16239:16356" ph="SELECT booke... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="16599:16605" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="17171:17287" ph="SELECT booke... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="18236:18356" ph="SELECT name ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="19742:19839" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="21686:21771" ph="SELECT cost_... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="22712:22821" ph="SELECT SUM(t... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="23541:23674" ph="SELECT id AS... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="24691:24811" ph="SELECT name ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="25380:25513" ph="SELECT id AS... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="26594:26714" ph="SELECT name ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="28913:28959" ph="SELECT name,... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="31617:31624" ph="£" />
+            <marker date="1495215364000" expanded="true" signature="31865:31872" ph="£" />
+            <marker date="1495215364000" expanded="true" signature="33268:33273" ph="&amp;" />
+            <marker date="1495215364000" expanded="true" signature="34386:34391" ph="&amp;" />
+            <marker date="1495215364000" expanded="true" signature="44876:44882" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="44967:44973" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="47471:47477" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="47565:47571" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="47989:48073" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="49851:49922" ph="SELECT name,... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="50144:50199" ph="DELETE FROM " />
+            <marker date="1495215364000" expanded="true" signature="51099:51172" ph="SELECT DISTI... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="52006:52082" ph="DELETE FROM " />
+            <marker date="1495215364000" expanded="true" signature="52263:52347" ph="DELETE FROM " />
+            <marker date="1495215364000" expanded="true" signature="52520:52591" ph="SELECT DISTI... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="53421:53495" ph="DELETE FROM " />
+            <marker date="1495215364000" expanded="true" signature="53683:53765" ph="DELETE FROM " />
+            <marker date="1495215364000" expanded="true" signature="55118:55124" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="57303:57309" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="59394:59400" ph=" " />
+            <marker date="1495215364000" expanded="true" signature="63972:64009" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="65521:65605" ph="SELECT * FRO... ${$my_pre}" />
+            <marker date="1495215364000" expanded="true" signature="74875:74881" ph="..." />
+            <marker date="1495215364000" expanded="true" signature="74975:74981" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
