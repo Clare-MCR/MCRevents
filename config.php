@@ -29,7 +29,7 @@ define("DB_NAME", "claremcr");
 
 
 # Create the logger
-$logger = new Logger(__DIR__.'/logs/',LogLevel::WARNING, array (
+$logger = new Logger(__DIR__.'/logs/',LogLevel::DEBUG, array (
 	'extension' => 'log', // changes the log file extension
 ));
 $logger->info('Logger Created'); // Will be NOT logged

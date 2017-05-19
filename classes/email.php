@@ -61,6 +61,12 @@ $attachment
 			$headers    .= "\r\nContent-Type: text/plain; charset=ISO-8859-1; format=flowed\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n";
 			$output=$this->body;
 		}
+		$this->logger->debug("Sending Email to $this->to");
+		$this->logger->debug("Sending Email from $this->from");
+		$this->logger->debug("Email body: $this->body");
+		$this->logger->debug("Email subject: $this->subject");
+		$this->logger->debug("csv: $this->csv");
+
 		mail( $this->to, $this->subject, $output, $headers );
 	}
 
