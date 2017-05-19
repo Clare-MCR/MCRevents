@@ -587,7 +587,7 @@ function send_guestlist( $eventid ) {
 		$csv = $csv . $value['name'] . ",";
 		$csv = $csv . $value['booker'] . ",";
 		$csv = $csv . $value['diet'] . ",";
-		$csv = $csv . $value['other'] . "\r\n";
+		$csv = $csv . "\"".$value['other'] . "\"\r\n";
 	}
 	$logger->debug("Writing email");
 	$logger->debug("Writing subject");
