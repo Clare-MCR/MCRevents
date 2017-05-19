@@ -657,7 +657,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 	$result = $dbh->resultset();
 
-	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(£)\r\n";
+	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
 
 	foreach ( $result as $booking ) {
 		# If we have any admin bookings, do the following:
@@ -732,7 +732,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
-	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(£)\r\n";
+	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
 
 	foreach ( $result as $booking ) {
 
