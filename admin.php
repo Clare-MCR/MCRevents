@@ -643,8 +643,8 @@ function send_billing( $eventid ) {
 	$body = "This is the official billing lists for the following event:\n\n ";
 	$body = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body = $body . "Date: " . $date . "\n";
-	$body = $body . "Full price ticket: =A3" . $cost_normal . "\r\n";
-	$body = $body . "Second ticket: =A3" . $cost_second . "\r\n\n";
+	$body = $body . "Full price ticket: £" . $cost_normal . "\r\n";
+	$body = $body . "Second ticket: £" . $cost_second . "\r\n\n";
 	$body = $body . "-----------------------------------\r\n";
 	$body = $body . "Please pass the billing list on to the bursary and the non-College Billing List onto the Treasurer.\r\n";
 	$body = $body . "-----------------------------------\r\n\n";
@@ -655,7 +655,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 	$result = $dbh->resultset();
 
-	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(£)\r\n";
 
 	foreach ( $result as $booking ) {
 		# If we have any admin bookings, do the following:
@@ -730,7 +730,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
-	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(=A3)\r\n";
+	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(£)\r\n";
 
 	foreach ( $result as $booking ) {
 
