@@ -8,6 +8,7 @@
 
 namespace claremcr\clareevents\classes;
 
+use PHPMailer;
 
 class email extends genericitem {
 	protected $from;
@@ -17,6 +18,7 @@ class email extends genericitem {
 	protected $csv;
 	protected $csvName;
 	protected $logger;
+	protected $mail;
 
 	function __construct() {
 		parent::__construct();
@@ -30,6 +32,8 @@ class email extends genericitem {
 		$this->body    = "... what ever you want to appear in the body";
 		$this->csv     = "";
 		$this->csvName = "mycsv.csv";
+		$this->mail = new PHPMailer;
+
 	}
 
 	function send() {
