@@ -13,13 +13,13 @@ namespace claremcr\clareevents;
  *
  */
 
-use function claremcr\clareevents\functions\is_locked;
-use function claremcr\clareevents\functions\get_event_name;
-use function claremcr\clareevents\functions\get_event_date;
-use function claremcr\clareevents\functions\validate_is_number;
 use claremcr\clareevents\classes;
 use DateTime;
 use PHPMailer;
+use function claremcr\clareevents\functions\get_event_date;
+use function claremcr\clareevents\functions\get_event_name;
+use function claremcr\clareevents\functions\is_locked;
+use function claremcr\clareevents\functions\validate_is_number;
 
 
 error_reporting( E_ALL );
@@ -558,7 +558,7 @@ function send_guestlist( $eventid ) {
 	global $user;
 	global $logger;
 
-	$logger->info("sending guestlist");
+	$logger->info( "sending guestlist" );
 	$email = new PHPMailer;
 	$email->setFrom( 'mcr-socsec@clare.cam.ac.uk', 'Clare MCR Social Secretary' );
 	$email->addAddress( $_SERVER['REMOTE_USER'] . '@cam.ac.uk', $user->getValue( 'name' ) );     // Add a recipient
@@ -569,43 +569,43 @@ function send_guestlist( $eventid ) {
 		trigger_error( "Event Id is non numerical, please fix.", E_USER_ERROR );
 	}
 
-	$logger->debug("getting event info");
+	$logger->debug( "getting event info" );
 	$dbh->query( "SELECT * FROM " . $my_pre . "booking_details WHERE eventid=:eventid ORDER BY booker,type DESC, id" );
 	$dbh->bind( ":eventid", $eventid );
 
 	$result = $dbh->resultset();
 	$date   = date( 'd-m-Y', strtotime( get_event_date( $eventid ) ) );
 
-	$logger->debug("writing email body");
+	$logger->debug( "writing email body" );
 	$body = "This is the official guestlist for the following event:\n\n ";
 	$body = $body . "Name: " . get_event_name( $eventid ) . "\n";
 	$body = $body . "Date: " . $date . "\r\n------------------------------\r\n\n";
 
-	$logger->debug("compiling csv");
+	$logger->debug( "compiling csv" );
 	$csv = "TicketID, Name, Booker, Diet, Other\r\n";
 	foreach ( $result as $value ) {
 		$csv = $csv . $value['id'] . ",";
 		$csv = $csv . $value['name'] . ",";
 		$csv = $csv . $value['booker'] . ",";
 		$csv = $csv . $value['diet'] . ",";
-		$csv = $csv . "\"".$value['other'] . "\"\r\n";
+		$csv = $csv . "\"" . $value['other'] . "\"\r\n";
 	}
-	$logger->debug("Writing email");
-	$logger->debug("Writing subject");
+	$logger->debug( "Writing email" );
+	$logger->debug( "Writing subject" );
 
-	$email->Subject= "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"" ;
-	$logger->debug("Writing body");
-	$email->Body= $body ;
-	$logger->debug("Attaching csv");
+	$email->Subject = "MCR Event Booker - Guestlist for Event \"" . get_event_name( $eventid ) . "\"";
+	$logger->debug( "Writing body" );
+	$email->Body = $body;
+	$logger->debug( "Attaching csv" );
 	$email->addStringAttachment( $csv, $date . "-GuestList.csv", 'base64', 'text/csv' );
-	$logger->debug("sending email");
+	$logger->debug( "sending email" );
 	if ( ! $email->send() ) {
 		echo 'Message could not be sent.';
 		$logger->error( 'Mailer Error: ', $email->ErrorInfo );
 	} else {
 		echo "A comma-separated list has been sent to your address for your records.";
 	}
-	$logger->debug("sending guestlist [Done]");
+	$logger->debug( "sending guestlist [Done]" );
 
 	echo "<hr/>";
 	echo "<form method=\"post\" action=\"" . $_SERVER['PHP_SELF'] . "\">";
@@ -657,7 +657,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 	$result = $dbh->resultset();
 
-	$csv1 = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
+	$csv1 = "Booker,CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
 
 	foreach ( $result as $booking ) {
 		# If we have any admin bookings, do the following:
@@ -670,7 +670,7 @@ function send_billing( $eventid ) {
 
 		# And write out to the email
 
-		$csv1 = $csv1 . "MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
+		$csv1 = $csv1 . "MCR,MCR COMMITTEE," . $booking['tot_tickets'] . "," . $full_price . "," . $second_price . "," . $money . "\r\n";
 	}
 
 	# Collect number of tickets for normal bookings
@@ -701,7 +701,8 @@ function send_billing( $eventid ) {
 		$booker->getFromCRSID( $booking['booker'] );
 
 		if ( ! ( $booker->getValue( 'college_bill' ) ) ) {
-			$text = "MCR COMMITTEE,";
+			$crsid = "MCR";
+			$name  = "MCR COMMITTEE";
 		} else {
 
 			$name = $booker->getValue( 'name' );
@@ -717,9 +718,10 @@ function send_billing( $eventid ) {
 				$result_n = $dbh->single();
 				$name     = $result_n['name'];
 			}
-			$text = $booking['booker'] . " - " . $name . ",";
+			$crsid = $booking['booker'];
 		}
-		$csv1 = $csv1 . $text;//$booking['booker'] . " - " . $name . ",";
+		$csv1 = $csv1 . $crsid . ",";
+		$csv1 = $csv1 . $name . ",";
 		$csv1 = $csv1 . $booking['tot_tickets'] . ",";
 		$csv1 = $csv1 . $full_price . ",";
 		$csv1 = $csv1 . $second_price . ",";
@@ -732,7 +734,7 @@ function send_billing( $eventid ) {
 	$dbh->bind( ":id", $eventid );
 
 	$result = $dbh->resultset();
-	$csv2   = "Booker CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
+	$csv2   = "Booker,CRSid,Total Tickets,Number Full Price,Number Second Price,Money Owed(\243)\r\n";
 
 	foreach ( $result as $booking ) {
 
@@ -772,7 +774,8 @@ function send_billing( $eventid ) {
 			$name     = $result_n['name'];
 		}
 
-		$csv2 = $csv2 . $booking['booker'] . " - " . $name . ",";
+		$csv2 = $csv2 . $booking['booker'] . ",";
+		$csv2 = $csv2 . $name . ",";
 		$csv2 = $csv2 . $booking['tot_tickets'] . ",";
 		$csv2 = $csv2 . $full_price . ",";
 		$csv2 = $csv2 . $second_price . ",";
@@ -780,8 +783,8 @@ function send_billing( $eventid ) {
 	}
 
 
-	$email->Subject= "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"" ;
-	$email->Body= $body ;
+	$email->Subject = "MCR Event Booker - Billing Lists for Event \"" . get_event_name( $eventid ) . "\"";
+	$email->Body    = $body;
 
 	$email->addStringAttachment( $csv1, $date . "-BilingList.csv", 'base64', 'text/csv' );
 	$email->addStringAttachment( $csv2, $date . "-NonCollegeBilingList.csv", 'base64', 'text/csv' );
