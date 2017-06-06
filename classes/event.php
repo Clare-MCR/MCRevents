@@ -20,7 +20,8 @@ class event extends genericitem {
 
 	# Event associated variables
 	protected $id;
-	protected $name;
+	protected $name = "MCR Formal";
+	protected $category = "Formal";
 	protected $event_date;
 	protected $open_date;
 	protected $close_date;
@@ -30,7 +31,7 @@ class event extends genericitem {
 	protected $cost_normal;
 	protected $cost_second;
 	protected $guest_type;
-	protected $sent;
+	protected $sent = "N";
 
 	protected $mcr_member;
 	protected $cra;
@@ -202,8 +203,9 @@ class event extends genericitem {
 	function create() {
 		# Creates a new event using the provided variables
 
-		$this->db->query( "INSERT INTO $this->eventslist (name,total_guests,current_guests,max_guests,mcr_member,associate_member,cra,non_clare_associate_member,cost_normal,cost_second,guest_type,event_date,open_date,close_date,sent) VALUES (:name,:total_guests,:current_guests,:max_guests,:mcr_member,:associate_member,:cra,0,:cost_normal,:cost_second,NULL,:event_date,:open_date,:close_date,:sent)" );
+		$this->db->query( "INSERT INTO $this->eventslist (name,category,total_guests,current_guests,max_guests,mcr_member,associate_member,cra,non_clare_associate_member,cost_normal,cost_second,guest_type,event_date,open_date,close_date,sent) VALUES (:name,:category,:total_guests,:current_guests,:max_guests,:mcr_member,:associate_member,:cra,0,:cost_normal,:cost_second,NULL,:event_date,:open_date,:close_date,:sent)" );
 		$this->db->bind( ':name', $this->name);
+		$this->db->bind( ':category', $this->category);
 		$this->db->bind( ':total_guests', $this->total_guests);
 		$this->db->bind( ':current_guests', $this->current_guests);
 		$this->db->bind( ':max_guests', $this->max_guests );
@@ -241,7 +243,7 @@ class event extends genericitem {
 	function commit() {
 		# Commits the event to the database
         $this->logger->debug("Event->Commit");
-		$this->db->query( "UPDATE $this->eventslist SET name=:name,
+		$this->db->query( "UPDATE $this->eventslist SET name=:name, categgory=:category,
  					total_guests=:total_guests, current_guests=:current_guests, max_guests=:max_guests,
  					mcr_member=:mcr_member, associate_member=:associate_member, cra=:cra, non_clare_associate_member=0,
  					cost_normal=:cost_normal, cost_second=:cost_second, guest_type=NULL,
@@ -251,6 +253,7 @@ class event extends genericitem {
 		# Bind the access types
 		$this->db->bind( ':id', $this->id );
 		$this->db->bind( ':name', $this->name );
+		$this->db->bind( ':category', $this->category );
 		$this->db->bind( ':total_guests', $this->total_guests );
 		$this->db->bind( ':current_guests', $this->current_guests );
 		$this->db->bind( ':max_guests', $this->max_guests );
