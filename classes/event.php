@@ -284,6 +284,8 @@ class event extends genericitem {
         $this->logger->debug($this->mcr_member);
         $this->logger->debug($this->associate_member);
         $this->logger->debug($this->cra);
+		$this->logger->debug($this->category);
+
 		$this->db->execute();
 
 
