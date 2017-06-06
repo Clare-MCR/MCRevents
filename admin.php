@@ -2091,6 +2091,7 @@ function CommiteditEvent( $eventid ) {
 	# Let the user know what we've changed.
 	echo "<p>Congratulations, you have successfully edited the following event:</p>";
 	echo "<p><b>Event Name: </b>" . $event->getValue( 'name' ) . "</p>";
+	echo "<p><b>Category: </b>" . $event->getValue( 'category' ) . "</p>";
 	echo "<p><b>On the Date: </b>" . $event->getValue( 'event_date' ) . "</p>";
 	echo "<p><b>Total Guests: </b>" . $event->getValue( 'total_guests' ) . "</p>";
 	echo "<p><b>Maximum Guests for each Member: </b>" . $event->getValue( 'max_guests' ) . "</p>";
