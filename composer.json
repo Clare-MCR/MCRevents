@@ -1,0 +1,26 @@
+{
+    "name": "claremcr/clareevents",
+    "type": "project",
+    "authors": [
+        {
+            "name": "RGunning",
+            "email": "rjgunning@gmail.com"
+        }
+    ],
+    "require": {
+        "katzgrau/klogger": "dev-master",
+        "phpmailer/phpmailer": "^5.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "claremcr\\clareevents\\": "./"
+      },
+        "classmap": [
+            "classes/"
+        ],
+      "files": [
+        "functions/functions.php"
+      ]
+
+    }
+}

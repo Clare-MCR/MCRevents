@@ -1,3 +1,5 @@
+vendor/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -23,6 +25,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+*.py~
+*.pyc~
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -84,5 +88,6 @@ ENV/
 # Spyder project settings
 .spyderproject
 
-vendor/*
-.idea/*
+/vendor/
+.idea/
+
