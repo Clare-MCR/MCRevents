@@ -1302,6 +1302,7 @@ function create_event() {
 	# And lets have some output...
 	echo "<p>Congratulations, you have successfully created the following event:</p>";
 	echo "<p><b>Event Name: </b>" . $eventname . "</p>";
+	echo "<p><b>Category: </b>" . $category . "</p>";
 	echo "<p><b>On the Date: </b>" . $event_date . "</p>";
 	echo "<p><b>Total Guests: </b>" . $_POST['total_guests'] . "</p>";
 	echo "<p><b>Maximum Guests for each Member: </b>" . $_POST['max_guests'] . "</p>";
