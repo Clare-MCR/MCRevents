@@ -1960,10 +1960,10 @@ function editEvent( $eventid ) {
 
             <dt><label for="category">Event Category</label></dt>
             <dd><select id="category" name="category">
-			        <?php foreach ( $categories as $category ): ?>
-                        <option value="<?php echo $category; ?>" <?php if ( $category == "Formal" ) {
+			        <?php foreach ( $categories as $thiscategory ): ?>
+                        <option value="<?php echo $thiscategory; ?>" <?php if ( $thiscategory == $category ) {
 					        echo "selected";
-				        } ?>><?php echo $category; ?></option>
+				        } ?>><?php echo $thiscategory; ?></option>
 			        <?php endforeach; ?>
                 </select></dd>
 
