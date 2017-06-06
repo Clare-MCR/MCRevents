@@ -1252,11 +1252,10 @@ function create_event() {
 
 
 	# Apply defaults if not given, these default to opening 5 days before at 18:00 and closing 2 days before at 9am
-	# For regular formals this corresponds to Sunday 18:00 and Wednesday 9:00 respectively
+	# For regular formals this corresponds to Sunday 21:00 and Wednesday 22:00 respectively
 	if ( ! isset( $open_date ) ) {
-		$open_date  = date( "Y-m-d", strtotime( $event_date . "-5 days" ) ) . " 18:00:00";
-		$close_date = date( "Y-m-d", strtotime( $event_date . "-2 days" ) ) . " 09:00:00";
-
+		$open_date  = date( "Y-m-d", strtotime( $event_date . "-5 days" ) ) . " 21:00:00";
+		$close_date = date( "Y-m-d", strtotime( $event_date . "-3 days" ) ) . " 22:00:00";
 	}
 
 	# Several Date Checks
