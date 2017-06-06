@@ -829,6 +829,13 @@ function newEventForm() {
 		12 => 'December'
 	);
 
+	$categories = array(
+		"Formal",
+		"Swap",
+		"Welfare",
+		"Other"
+	);
+
 	$timenos = array(
 		'Midnight' => '00:00:00',
 		'9AM'      => '09:00:00',
@@ -879,6 +886,16 @@ function newEventForm() {
 	echo "<dd><input type=\"number\" min=\"0\" size=\"5\" name=\"total_guests\" value=\"" . $def_total_guests . "\" required></dd>";
 	echo "<dt>Maximum number of guests each person can bring</dt>";
 	echo "<dd><input type=\"number\" min=\"0\" size=\"5\" name=\"max_guests\" value=\"" . $def_max_guests . "\" required></dd>";
+	?>
+    <dt><label for="category">Event Category</label></dt>
+    <dd><select id="category" name="category">
+			<?php foreach ( $categories as $category ): ?>
+                <option value="<?php echo $category; ?>" <?php if ( $category == "Formal" ) {
+					echo "selected";
+				} ?>><?php echo $category; ?></option>
+			<?php endforeach; ?>
+        </select></dd>
+	<?php
 
 	echo "<dt>Enter the date for the event</dt>";
 	# Date picking for the event date
@@ -944,7 +961,7 @@ function newEventForm() {
 
 	echo "<h3>Booking Details</h3>";
 	echo "<div class=\"note\">";
-	echo "<p>If the below checkbox is selected, the system will resort to using the default times of opening at 6pm five days previous to the event, and closing 9am two days before. For a regular formal on Friday, this will open at 6pm on Sunday and close at 9am on the Wednesday before.</p>";
+	echo "<p>If the below checkbox is selected, the system will resort to using the default times of opening at 6pm five days previous to the event, and closing 9am two days before. For a regular formal on Friday, this will open at 6pm on Sunday and close at 10pm on the Tuesday before.</p>";
 	echo "<p><input type=\"checkbox\" id=\"default_openclose\" name=\"default_openclose\" onchange=\"toggleDetails()\" /><label for=\"default_openclose\"> Use default open and close times</label></p>";
 	echo "</div>";
 
@@ -1027,10 +1044,16 @@ function newEventForm() {
 	echo "</dd>";
 	echo "</dl>";
 	#ugly inline script; will move it to a centralized script file once I get round to it
-	echo "<script type=\"text/javascript\">";
-	echo "function toggleDetails() { details=document.getElementById('bookingdetails'); checkbox=document.getElementById('default_openclose'); checkbox.checked?details.style.display='none':details.style.display='block'; }";
-	echo "</script>";
+    ?>
+	<script type="text/javascript">
+	    function toggleDetails() {
+	        var details=document.getElementById('bookingdetails');
+	        var checkbox=document.getElementById('default_openclose');
+	        checkbox.checked?details.style.display='none':details.style.display='block';
+	    }
+	</script>
 
+    <?php
 	# Echo a choice form for number of repeats - if any.
 
 	echo "<h3>Repeating Events</h3>\n";
@@ -1212,17 +1235,27 @@ function create_event() {
 	$eventname = stripslashes( $_POST['event_name'] );
 	$eventname = htmlentities( $eventname, ENT_QUOTES );
 
+	# Validate event name, include lots of things.
+
+	if ( ! preg_match( '/^[\w\s-\.\']+$/', stripslashes( $_POST['category'] ) ) ) {
+		trigger_error( "Category may include whitespace, alphanumeric characters, hyphens, periods and inverted commas only.", E_USER_ERROR );
+	}
+
+	# Once validated, escape the event name
+
+	$category = stripslashes( $_POST['category'] );
+	$category = htmlentities( $category, ENT_QUOTES );
+
 	# Then create the correctly formatted event date
 
 	$event_date = $_POST['event_year'] . '-' . $_POST['event_month'] . '-' . $_POST['event_day'] . " " . $_POST['event_hour'] . ":" . $_POST['event_minute'] . ":" . "00";
 
 
 	# Apply defaults if not given, these default to opening 5 days before at 18:00 and closing 2 days before at 9am
-	# For regular formals this corresponds to Sunday 18:00 and Wednesday 9:00 respectively
+	# For regular formals this corresponds to Sunday 21:00 and Wednesday 22:00 respectively
 	if ( ! isset( $open_date ) ) {
-		$open_date  = date( "Y-m-d", strtotime( $event_date . "-5 days" ) ) . " 18:00:00";
-		$close_date = date( "Y-m-d", strtotime( $event_date . "-2 days" ) ) . " 09:00:00";
-
+		$open_date  = date( "Y-m-d", strtotime( $event_date . "-5 days" ) ) . " 21:00:00";
+		$close_date = date( "Y-m-d", strtotime( $event_date . "-3 days" ) ) . " 22:00:00";
 	}
 
 	# Several Date Checks
@@ -1246,6 +1279,7 @@ function create_event() {
 
 	# And give it some variables
 	$event->setValue( 'name', $eventname );
+	$event->setValue( 'category', $category );
 	$event->setValue( 'total_guests', $_POST['total_guests'] );
 	$event->setValue( 'current_guests', 0 );
 	$event->setValue( 'max_guests', $_POST['max_guests'] );
@@ -1267,6 +1301,7 @@ function create_event() {
 	# And lets have some output...
 	echo "<p>Congratulations, you have successfully created the following event:</p>";
 	echo "<p><b>Event Name: </b>" . $eventname . "</p>";
+	echo "<p><b>Category: </b>" . $category . "</p>";
 	echo "<p><b>On the Date: </b>" . $event_date . "</p>";
 	echo "<p><b>Total Guests: </b>" . $_POST['total_guests'] . "</p>";
 	echo "<p><b>Maximum Guests for each Member: </b>" . $_POST['max_guests'] . "</p>";
@@ -1880,6 +1915,12 @@ function editEvent( $eventid ) {
 	}
 
 	# Get the existing values from the database
+	$categories = array(
+		"Formal",
+		"Swap",
+		"Welfare",
+		"Other"
+	);
 
 	$event = new classes\event();
 	$event->getEventFromID( $eventid );
@@ -1898,6 +1939,8 @@ function editEvent( $eventid ) {
 	$mcr_member       = $event->getValue( 'mcr_member' );
 	$cra              = $event->getValue( 'cra' );
 	$associate_member = $event->getValue( 'associate_member' );
+	$category         = $event->getValue('category');
+
 	?>
     <h1>Edit Event</h1>
     <h3>Event Details</h3>
@@ -1915,6 +1958,14 @@ function editEvent( $eventid ) {
             <dd><input type="number" min="0" size="5" id="max_guests" name="max_guests"
                        value="<?php echo $def_max_guests; ?>" required></dd>
 
+            <dt><label for="category">Event Category</label></dt>
+            <dd><select id="category" name="category">
+			        <?php foreach ( $categories as $thiscategory ): ?>
+                        <option value="<?php echo $thiscategory; ?>" <?php if ( $thiscategory == $category ) {
+					        echo "selected";
+				        } ?>><?php echo $thiscategory; ?></option>
+			        <?php endforeach; ?>
+                </select></dd>
 
             <dt>Enter the date for the event</dt>
             <dd>
@@ -2015,6 +2066,7 @@ function CommiteditEvent( $eventid ) {
 	$close_date = new Datetime( $closeday['date'] . " " . $closeday['time'] );
 
 	$event->setValue( 'name', $_POST['event_name'] );
+	$event->setValue( 'category', $_POST['category'] );
 
 	$event->setValue( 'cost_normal', $_POST['standard_price'] );
 	$event->setValue( 'cost_second', $_POST['second_price'] );
@@ -2039,6 +2091,7 @@ function CommiteditEvent( $eventid ) {
 	# Let the user know what we've changed.
 	echo "<p>Congratulations, you have successfully edited the following event:</p>";
 	echo "<p><b>Event Name: </b>" . $event->getValue( 'name' ) . "</p>";
+	echo "<p><b>Category: </b>" . $event->getValue( 'category' ) . "</p>";
 	echo "<p><b>On the Date: </b>" . $event->getValue( 'event_date' ) . "</p>";
 	echo "<p><b>Total Guests: </b>" . $event->getValue( 'total_guests' ) . "</p>";
 	echo "<p><b>Maximum Guests for each Member: </b>" . $event->getValue( 'max_guests' ) . "</p>";
