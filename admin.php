@@ -118,7 +118,7 @@ if ( is_locked() == 'Y' ) {
 	<?php
 	$logger->info( "laying out the welcome mat" );
 	if ( $user->has_perm( 'e_adm' ) or $user->has_perm( 's_adm' ) ) {
-		echo "<div id=\"user_welcome\">Welcome Administrator " . $user->getValue( 'name' ) . " <a href='mealbooker.py'>Go to Main</a><a href='admin.php'>Go to Admin</a></div>\n";
+		echo "<div id=\"user_welcome\">Welcome Administrator " . $user->getValue( 'name' ) . " <a href='mealbooker.py/'>Go to Main</a><a href='admin.php'>Go to Admin</a></div>\n";
 	}
 
 	mainStuff( $user );
