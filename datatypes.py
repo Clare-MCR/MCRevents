@@ -72,32 +72,31 @@ class Event(object):
         if sent == 'Y':
             self.sent = True
         self.dietaryOptions = ['Normal',
-                               #        'Normal + Wine (+'+u"\xA3"+'5)',
+                               'Normal + Wine (+'+u"\xA3"+'5)',
                                'Vegetarian',
-                               #        'Vegetarian + Wine (+'+u"\xA3"+'5)',
+                               'Vegetarian + Wine (+'+u"\xA3"+'5)',
                                'Pesco Vegetarian',
-                               #        'Pesco Vegetarian + Wine (+'+u"\xA3"+'5)',
+                               'Pesco Vegetarian + Wine (+'+u"\xA3"+'5)',
                                'Vegan',
-                               #        'Vegan + Wine (+'+u"\xA3"+'5)',
+                               'Vegan + Wine (+'+u"\xA3"+'5)',
                                'Lactose Free',
-                               #        'Lactose Free + Wine (+'+u"\xA3"+'5)',
+                               'Lactose Free + Wine (+'+u"\xA3"+'5)',
                                'Gluten Free',
-                               #        'Gluten Free + Wine (+'+u"\xA3"+'5)',
+                               'Gluten Free + Wine (+'+u"\xA3"+'5)',
                                'Nut Allergy',
-                               #        'Nut Allergy + Wine (+'+u"\xA3"+'5)',
+                               'Nut Allergy + Wine (+'+u"\xA3"+'5)',
                                'Hallal',
-                               #        'Hallal + Wine (+'+u"\xA3"+'5)',
+                               'Hallal + Wine (+'+u"\xA3"+'5)',
                                'No Beef',
-                               #        'No Beef + Wine (+'+u"\xA3"+'5)',
+                               'No Beef + Wine (+'+u"\xA3"+'5)',
                                'No Pork',
-                               #        'No Pork + Wine (+'+u"\xA3"+'5)',
+                               'No Pork + Wine (+'+u"\xA3"+'5)',
                                'No Fish',
-                               #        'No Fish + Wine (+'+u"\xA3"+'5)',
+                               'No Fish + Wine (+'+u"\xA3"+'5)',
                                'Diametic',
-                               #        'Diametic + Wine (+'+u"\xA3"+'5)',
-                               'Other']
-
-    #        'Other + Wine (+'+u"\xA3"+'5)']
+                               'Diametic + Wine (+'+u"\xA3"+'5)',
+                               'Other',
+                               'Other + Wine (+'+u"\xA3"+'5)']
 
     def isOpen(self):
         from datetime import datetime
